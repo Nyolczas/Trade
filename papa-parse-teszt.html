@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PapaParse Teszt</title>
+</head>
+
+<body>
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="files">Upload a CSV formatted file:</label>
+            <input type="file" id="files" class="form-control" accept=".csv" required />
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+    <script>
+        $('#submit').on("click", function (e) {
+            e.preventDefault();
+
+            $('#files').parse({
+                config: {
+                    delimiter: "auto",
+                    complete: buildTable,
+                },
+                before: function (file, inputElem) {
+                    //console.log("Parsing file...", file);
+                },
+                error: function (err, file) {
+                    //console.log("ERROR:", err, file);
+                },
+                complete: function () {
+                    //console.log("Done with all files");
+                }
+            });
+        });
+
+        function buildTable(results) {
+            var markup = "<table class='table'>";
+            var data = results.data;
+
+            for (i = 0; i < data.length; i++) {
+                markup += "<tr>";
+                var row = data[i];
+                var cells = row.join(",").split(",");
+
+                for (j = 0; j < cells.length; j++) {
+                    markup += "<td>";
+                    markup += cells[j];
+                    markup += "</th>";
+                }
+                markup += "</tr>";
+            }
+            markup += "</table>";
+            $("#app").html(markup);
+        }
+    </script>
+</body>
+
+</html>
