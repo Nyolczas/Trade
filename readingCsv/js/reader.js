@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $.ajax({
         type: "GET",
-        url: "data.txt",
+        url: "C:/Users/User/Documents/Tozsde/MT4ek/XM1/MQL4/Files/XM_19061180.csv",
         dataType: "text",
         success: function(data) {processData(data);}
      });
@@ -22,5 +22,5 @@ function processData(allText) {
         }
         lines.push(tarr);
     }
-     //alert(lines);
+     alert(lines);
 }
