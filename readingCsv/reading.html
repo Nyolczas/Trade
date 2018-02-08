@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FileReader</title>
 </head>
+
 <body>
-    
+    <div>
+        <form class="form-horizontal well">
+            <h3 id="title">Strategy</h3>
+            <label for="csvFileInput">
+                <strong>Statement:</strong>
+            </label>
+            <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
+        </form>
+    </div>
+
+    <div id="output"></div>
+
+    <script type="text/javascript" src="js/read-csv.js"></script>
+
 </body>
+
 </html>
