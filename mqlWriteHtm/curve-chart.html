@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {
+            packages: ['corechart', 'line']
+        });
+        google.charts.setOnLoadCallback(drawBackgroundColor);
+
+        function drawBackgroundColor() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'X');
+            data.addColumn('number', 'Dogs');
+
+            data.addRows([
+                [1802.01, 0],
+                [1802.02, 10],
+                [1802.03, 23],
+                [1802.04, 17],
+                [1802.05, 18],
+                [1802.06, 9],
+                [1802.07, 11],
+                [1802.08, 27],
+                [1802.09, 33],
+                [1802.10, 40],
+                [1802.11, 32],
+                [1802.12, 35],
+                [1802.13, 30],
+                [1802.14, 40],
+                [1802.15, 42],
+                [1802.16, 47],
+                [1802.17, 44],
+                [1802.18, 48],
+                [1802.19, 52],
+                [1802.20, 54],
+                [1802.21, 42],
+                [1802.22, 55],
+                [1802.23, 56],
+                [1802.24, 57],
+                [1802.25, 60],
+                [1802.26, 50],
+                [1802.27, 52],
+                [1802.28, 51],
+                [1802.29, 49],
+                [1802.30, 53],
+                [1802.31, 55],
+                [1802.32, 60],
+                [1802.33, 61],
+                [1802.34, 59],
+                [1802.35, 62],
+                [1802.36, 65],
+                [1802.37, 62],
+                [1802.38, 58],
+                [1802.39, 55],
+                [1802.40, 61],
+                [1802.41, 64],
+                [1802.42, 65],
+                [1802.43, 63],
+                [1802.44, 66],
+                [1802.45, 67],
+                [1802.46, 69],
+                [1802.47, 69],
+                [1802.48, 70],
+                [1802.49, 72],
+                [1802.50, 68],
+                [1802.51, 66],
+                [1802.52, 65],
+                [1802.53, 67],
+                [1802.54, 70],
+                [1802.55, 71],
+                [1802.56, 72],
+                [1802.57, 73],
+                [1802.58, 75],
+                [1802.59, 70],
+                [1802.60, 68],
+                [1802.61, 64],
+                [1802.62, 60],
+                [1802.63, 65],
+                [1802.64, 67],
+                [1802.65, 68],
+                [1802.66, 69],
+                [1802.67, 70],
+                [1802.68, 72],
+                [1802.69, 75],
+                [1802.70, 80]
+            ]);
+
+            var options = {
+                hAxis: {
+                    title: 'Time'
+                },
+                vAxis: {
+                    title: 'Popularity'
+                },
+                // backgroundColor: '#f1f8e9'
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="chart_div"></div>
+</body>
+
+</html>
