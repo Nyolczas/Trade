@@ -1,80 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Balance</title>
+    <link rel="stylesheet" href="css/minta.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load('current', {
-            'packages': ['corechart']
-        });
-        google.charts.setOnLoadCallback(drawChart);
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
-        function drawChart() {
-            var data = google.visualization.arrayToDataTable([
-                ['Dátum', 'Balance', 'Equity'],
-                ['18.02.01', 1000, 1400],
-                ['18.02.02', 1170, 1560],
-                ['18.02.03', 660, 1120],
-                ['18.02.04', 1030, 1540],
-                ['18.02.05', 1110, 1640]
-            ]);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Dátum', 'Balance', 'Equity'],
+          ['18.02.01',  1000,      1400],
+          ['18.02.02',  1170,      1560],
+          ['18.02.03',  660,       1120],
+          ['18.02.04',  1030,      1540],
+          ['18.02.05',  1110,      1640]
+        ]);
 
-            var options = {
-                title: 'Index Robot Portfólió',
-                hAxis: {
-                    title: 'Dátum',
-                    titleTextStyle: {
-                        color: '#333'
-                    }
-                },
-                vAxis: {
-                    minValue: 0
-                },
-                annotations: {
-                    boxStyle: {
-                        // Color of the box outline.
-                        stroke: 'green',
-                        // Thickness of the box outline.
-                        strokeWidth: 1,
-                        // x-radius of the corner curvature.
-                        rx: 10,
-                        // y-radius of the corner curvature.
-                        ry: 10,
-                        // Attributes for linear gradient fill.
-                        gradient: {
-                            // Start color for gradient.
-                            color1: 'green',
-                            // Finish color for gradient.
-                            color2: '#33b679',
-                            // Where on the boundary to start and
-                            // end the color1/color2 gradient,
-                            // relative to the upper left corner
-                            // of the boundary.
-                            x1: '0%',
-                            y1: '0%',
-                            x2: '100%',
-                            y2: '100%',
-                            // If true, the boundary for x1,
-                            // y1, x2, and y2 is the box. If
-                            // false, it's the entire chart.
-                            useObjectBoundingBoxUnits: true
-                        }
-                    }
-                }
-            };
+        var options = {
+          title: 'Index Robot Portfólió',
+          hAxis: {title: 'Dátum',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
 
-            var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-        }
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
     </script>
 </head>
-
 <body>
     <div id="chart_div" style="width: 100%; height: 500px;"></div>
 </body>
-
 </html>
