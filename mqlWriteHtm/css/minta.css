@@ -8,11 +8,12 @@ html, body{
     color: hsla(0, 0%, 0%, 0.63);
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: auto;
-}
+body {
+    min-height: 75rem;
+    padding-top: 4.5rem;
+  }
 
-h1{
+
+h1, .navbar-brand{
     font-family: 'Courgette', cursive;
 }
