@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Courgette|Roboto&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto&subset=latin-ext');
 
 html, body{
     margin: 0;
@@ -14,8 +14,8 @@ body {
   }
 
 
-h1, h2, h3, h4, .dollar, .navbar-brand{
-    font-family: 'Courgette', cursive;
+h1, h2, h3, h4, .navbar-brand{
+    font-family: 'Raleway', sans-serif;
 }
 
 .vesztes{
@@ -38,6 +38,14 @@ h1, h2, h3, h4, .dollar, .navbar-brand{
 
 .dollar{
     font-style: normal;
+    font-weight: bold;
     font-size: 1.3rem;
     letter-spacing: 2px;
+    margin-left: 8px;
+}
+
+.chart-wrapper{
+    width: 78vw;
+    height: 100px;
+    margin: auto;
 }
