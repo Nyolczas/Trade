@@ -14,6 +14,30 @@ body {
   }
 
 
-h1, .navbar-brand{
+h1, h2, h3, h4, .dollar, .navbar-brand{
     font-family: 'Courgette', cursive;
+}
+
+.vesztes{
+    color: hsl(14, 100%, 50%);
+}
+
+.semleges{
+    color: hsl(0, 0%, 73%);
+}
+
+.profitos{
+    color: hsl(101, 100%, 50%);
+}
+
+.nav-profit{
+    font-size: 1.1rem;
+    padding: 0.2rem 2rem;
+    font-style: italic;
+}
+
+.dollar{
+    font-style: normal;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
 }

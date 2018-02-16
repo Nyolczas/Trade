@@ -36,14 +36,14 @@
                 }
             };
 
-            var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+            var chart = new google.visualization.AreaChart(document.getElementById('equity-chart'));
             chart.draw(data, options);
         }
     </script>
 </head>
 
 <body>
-
+    <!-- ================================ navbar  ================================ -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">XM Robot Portfólió</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
@@ -70,14 +70,15 @@
                 </li>
             </ul>
             <ul class="navbar-nav mt-2 mt-md-0">
-                <li class="">Havi profit: $25.42</li>
-                <li class="">Heti profit: $-2.4</li>
-                <li class="">Mai profit: $2.56</li>
+                <li class="nav-profit profitos"> Havi: <span class="dollar"> $+25.42</span>  </li>
+                <li class="nav-profit vesztes">Heti: <span class="dollar"> $-2.4</span> </li>
+                <li class="nav-profit semleges">Mai: <span class="dollar"> $0</span> </li>
             </ul>
         </div>
     </nav>
+    <!-- ================================ /navbar  ================================ -->
 
-    <div id="chart_div" style="width: 100%; height: 500px;"></div>
+    <div id="equity-chart" style="width: 100%; height: 500px;"></div>
 </body>
 
 </html>
