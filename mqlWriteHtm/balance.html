@@ -25,20 +25,20 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Balance
+                    <a class="nav-link" href="balance.html">Balance
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Instrumentumok</a>
+                    <a class="nav-link" href="instruments.html">Instrumentumok</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Stratégiák</a>
+                    <a class="nav-link" href="strategies.html">Stratégiák</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Mesterlista</a>
+                    <a class="nav-link" href="masterlist.html">Mesterlista</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Statisztika</a>
+                    <a class="nav-link" href="statistic.html">Statisztika</a>
                 </li>
             </ul>
             <!-- csak a balance-on -->
@@ -61,8 +61,8 @@
     <!-- ================================ equity chart  ================================ -->
 
     <div class="chart-wrapper">
-            <canvas id="equityChart"></canvas>
-        </div>
+        <canvas id="equityChart"></canvas>
+    </div>
 
     <!-- ================================ /equity chart  ================================ -->
 
@@ -76,47 +76,47 @@
 
     <!-- ================================ szkript equity chart  ================================ -->
     <script>
-            var ctx = document.getElementById('equityChart').getContext('2d');
-            var chart = new Chart(ctx, {
-                // The type of chart we want to create
-                type: 'line',
-    
-                // The data for our dataset
-                data: {
-                    labels: ["18.02.01", "18.02.02", "18.02.03", "18.02.04", "18.02.05", "18.02.06", "18.02.07"],
-                    datasets: [{
-                        label: "equity",
-                        backgroundColor: 'rgba(255, 99, 133, 0.5)',
-                        borderColor: 'rgb(255, 99, 132)',
-                        data: [600, 620, 580, 590, 610, 665, 648],
-                    },{
-                        label: "balance",
-                        backgroundColor: 'rgba(255, 99, 133, 0.5)',
-                        borderColor: 'rgb(255, 99, 132)',
-                        data: [500, 520, 480, 490, 510, 565, 548],
-                    }]
+        var ctx = document.getElementById('equityChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ["18.02.01", "18.02.02", "18.02.03", "18.02.04", "18.02.05", "18.02.06", "18.02.07"],
+                datasets: [{
+                    label: "equity",
+                    backgroundColor: 'rgba(255, 99, 133, 0.5)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [600, 620, 580, 590, 610, 665, 648],
+                }, {
+                    label: "balance",
+                    backgroundColor: 'rgba(255, 99, 133, 0.5)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [500, 520, 480, 490, 510, 565, 548],
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                tooltips: {
+                    mode: 'index',
+                    axis: 'y'
                 },
-    
-                // Configuration options go here
-                options: {
-                    tooltips: {
-                        mode: 'index',
-                        axis: 'y'
-                    },
-                    layout: {
-                        padding: {
-                            left: 0,
-                            right: 0,
-                            top: 20,
-                            bottom: 20
-                        }
+                layout: {
+                    padding: {
+                        left: 0,
+                        right: 0,
+                        top: 20,
+                        bottom: 20
                     }
                 }
-            });
-        </script>
-    
-        <!-- ================================ /szkript equity chart  ================================ -->
-    
+            }
+        });
+    </script>
+
+    <!-- ================================ /szkript equity chart  ================================ -->
+
 
     <!-- ================================ szkript robot chart  ================================ -->
     <script>
@@ -127,7 +127,9 @@
 
             // The data for our dataset
             data: {
-                labels: ["January", "February", "March", "April", "May", "June", "July", "18.02.04", "18.02.05", "18.02.06", "18.02.07"],
+                labels: ["January", "February", "March", "April", "May", "June", "July", "18.02.04", "18.02.05",
+                    "18.02.06", "18.02.07"
+                ],
                 datasets: [{
                     label: "Robot hozam",
                     backgroundColor: 'rgba(255, 99, 133, 0.5)',
