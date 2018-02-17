@@ -91,7 +91,6 @@ h4,
 .symbol-column,
 .avr-updt-column {
     flex: 10%;
-    background-color: aquamarine;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -100,6 +99,11 @@ h4,
 
 .strategies-column {
     flex: 80%;
+    font-weight: 700;
+}
+
+.elsosor {
+	background-color: rgb(245, 245, 245);
 }
 
 .stat-column-block {
@@ -109,13 +113,13 @@ h4,
 }
 
 .name-col {
-    flex-basis: 230px;
+    flex: 230px;
     border: 1px solid hsla(0, 0%, 0%, 0.63);
     margin:-1px;
 }
 
 .profact-col {
-    flex-basis: 150px;
+    flex-basis: 200px;
     border-right: 1px solid hsla(0, 0%, 0%, 0.63);
     margin:-1px;
 }
@@ -126,47 +130,56 @@ h4,
 }
 
 .profact-head{
-    min-width: 150px;
+    min-width: 200px;
 }
 
 .profact-back-col {
-    flex-basis: 75px;
+    flex-basis: 100px;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
 }
 
 .profact-real-col {
-    flex-basis: 75px;
+    flex-basis: 100px;
 }
 
 .hozam-col {
-    flex: 20px;
+    flex-basis: 100px;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    color: white;
 }
 
-.talalati-col {
-    flex: 20px;
+.talalati {
+    flex-basis: 100px;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
 }
 
-.maxdd-col {
-    flex: 20px;
+.maxdd {
+    flex-basis: 100px;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
 }
 
 .old-col {
-    flex: 20px;
+    flex-basis: 100px;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
 }
 
 .darab-col {
-    flex: 20px;
+    flex-basis: 100px;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
 }
 
 .db-upd-col {
-    flex: 20px;
+    flex-basis: 100px;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
 }
 
 .update-col {
-    flex: 70px;
+    flex-basis: 200px;
 }
 
 .header{
     border: none;
     font-size: 0.7rem;
+    align-items: flex-end;
 }
 /* ================================ /Mesterlista ================================ */
