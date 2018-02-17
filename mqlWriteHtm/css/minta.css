@@ -1,16 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto&subset=latin-ext');
-html,
-body {
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:700,700i,900,900i|Roboto:100,100i,400,400i,700,700i,900,900i&subset=latin-ext');
+
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    color: hsla(0, 0%, 0%, 0.63);
+    font-family: 'Roboto', sans-serif; 
 }
 
 body {
     min-height: 75rem;
     padding-top: 4.5rem;
+    color: rgb(93,93,93);
+}
+
+p{
+    margin: 0;
 }
 
 h1,
@@ -19,6 +25,7 @@ h3,
 h4,
 .navbar-brand {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
 /* ================================ navbar ================================ */
 
@@ -72,55 +79,86 @@ h4,
 
 .masterlist-table {
     text-align: center;
+    padding: 8px;
 }
 
-.stat-column-block,
+.strat-column-block,
 .profact-col {
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .instrument-block {
     margin: 5px;
     border-collapse: collapse;
     display: flex;
-    border: 2px solid hsla(0, 0%, 0%, 0.63);
+    border: 2px solid rgb(93,93,93);
+    font-weight: 700;
+}
+
+.instrument-block a{
+    text-decoration: none;
+    color:  rgb(93,93,93);
 }
 
 .symbol-column,
-.avr-updt-column {
-    flex: 10%;
+.symbol-head,
+.avr-updt-column{
+    flex: 17%;
     justify-content: center;
     align-items: center;
     display: flex;
     margin: 0;
 }
 
+.symbol-column{
+    font-size: 1.8rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.symbol-column:hover{
+    font-size: 2rem;
+}
+
+.profit-column{
+    border-left: 1px solid rgb(93,93,93);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    flex-basis: 200px;
+    color: white;
+}
+
 .strategies-column {
     flex: 80%;
-    font-weight: 700;
 }
 
 .elsosor {
 	background-color: rgb(245, 245, 245);
 }
 
-.stat-column-block {
+.strat-column-block {
     display: flex;
-    border: 1px solid hsla(0, 0%, 0%, 0.63);
+    border: 1px solid rgb(93,93,93);
     margin:-1px 0;
 }
 
+.strat-column-block a:hover{
+    background-color: rgb(93,93,93);
+    color: rgb(255, 255, 255);
+}
+
 .name-col {
-    flex: 230px;
-    border: 1px solid hsla(0, 0%, 0%, 0.63);
+    flex: 340px;
+    border: 1px solid rgb(93,93,93);
     margin:-1px;
 }
 
 .profact-col {
-    flex-basis: 200px;
-    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    flex-basis: 300px;
+    border-right: 1px solid rgb(93,93,93);
     margin:-1px;
 }
 
@@ -130,56 +168,59 @@ h4,
 }
 
 .profact-head{
-    min-width: 200px;
+    min-width: 300px;
 }
 
 .profact-back-col {
-    flex-basis: 100px;
-    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    flex-basis: 150px;
+    border-right: 1px solid rgb(93,93,93);
 }
 
 .profact-real-col {
-    flex-basis: 100px;
+    flex-basis: 150px;
 }
 
 .hozam-col {
-    flex-basis: 100px;
-    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    flex-basis: 150px;
+    border-right: 1px solid rgb(93,93,93);
     color: white;
 }
 
 .talalati {
-    flex-basis: 100px;
-    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    flex-basis: 150px;
+    border-right: 1px solid rgb(93,93,93);
 }
 
 .maxdd {
-    flex-basis: 100px;
-    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    flex-basis: 150px;
+    border-right: 1px solid rgb(93,93,93);
 }
 
 .old-col {
-    flex-basis: 100px;
-    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    flex-basis: 150px;
+    border-right: 1px solid rgb(93,93,93);
 }
 
 .darab-col {
-    flex-basis: 100px;
-    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    flex-basis: 150px;
+    border-right: 1px solid rgb(93,93,93);
 }
 
 .db-upd-col {
-    flex-basis: 100px;
-    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    flex-basis: 150px;
+    border-right: 1px solid rgb(93,93,93);
 }
 
 .update-col {
-    flex-basis: 200px;
+    flex-basis: 300px;
 }
 
 .header{
     border: none;
     font-size: 0.7rem;
     align-items: flex-end;
+    color:  rgb(93,93,93);
+    font-weight: 300;
+    font-style: italic;
 }
 /* ================================ /Mesterlista ================================ */

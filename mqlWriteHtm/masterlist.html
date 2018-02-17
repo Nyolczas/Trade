@@ -9,6 +9,7 @@
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/minta.css">
+    <link rel="stylesheet" href="css/symcolors.css">
 </head>
 
 <body>
@@ -45,10 +46,16 @@
     <div class="masterlist-table">
         <!-- ================================ header  ================================ -->
         <div class="instrument-block header">
-            <div class="symbol-column header">Instrumentum</div>
+            <div class="symbol-head header">Instrumentum</div>
+
+            <div class="profit-column header">
+                    <div class="profit-block header">
+                        <p>összprofit</p>
+                    </div>
+                </div>
 
             <div class="strategies-column header">
-                <div class="stat-column-block header">
+                <div class="strat-column-block header">
                     <div class="name-col header">Stratégia</div>
                     <div class="profact-col header">
                         <div class="profact-block header">
@@ -74,17 +81,25 @@
         <!-- ================================ AUDUSD  ================================ -->
         <div class="instrument-block">
             <!-- szimbólum -->
-            <H3 class="symbol-column">
-                <a href="#">AUDUSD</a>
-            </H3>
+            <a href="#" class="symbol-column" id="audusd">
+                AUDUSD
+            </a>
             <!-- /szimbólum -->
+
+            <!-- összprofit -->
+            <div class="profit-column" style="background-color: rgb(0, 180, 0)">
+                <div class="profit-block">
+                    <p>$25.48</p>
+                </div>
+            </div>
+            <!-- /összprofit -->
 
             <div class="strategies-column">
                 <!-- return -->
-                <div class="stat-column-block elsosor">
-                    <div class="name-col">
-                        <a href="#">AUDUSD_Return</a>
-                    </div>
+                <div class="strat-column-block elsosor">
+                    <a href="#" class="name-col">
+                        AUDUSD_Return
+                    </a>
                     <div class="profact-col">
                         <div class="profact-block">
                             <div class="profact-head"></div>
@@ -92,21 +107,21 @@
                             <div class="profact-real-col">5.20</div>
                         </div>
                     </div>
-                    <div class="hozam-col" style="background-color: rgb(121, 121, 121)">6.70%</div>
+                    <div class="hozam-col" style="background-color: rgb(93, 93, 93)">6.70%</div>
                     <div class="talalati">50%</div>
                     <div class="maxdd">2.56%</div>
                     <div class="old-col">555</div>
                     <div class="darab-col">48</div>
                     <div class="db-upd-col">0</div>
-                    <div class="update-col">2017.09.03</div>
+                    <div class="update-col" style="background-color: rgb(255, 123, 123)">2017.09.03</div>
                 </div>
                 <!-- /return -->
 
                 <!-- h tsq -->
-                <div class="stat-column-block masodiksor">
-                    <div class="name-col">
-                        <a href="">AUDUSD_H_TSQ</a>
-                    </div>
+                <div class="strat-column-block masodiksor">
+                    <a href="#" class="name-col">
+                        AUDUSD_H_TSQ
+                    </a>
                     <div class="profact-col">
                         <div class="profact-block">
                             <div class="profact-head"></div>
@@ -120,15 +135,15 @@
                     <div class="old-col">555</div>
                     <div class="darab-col">48</div>
                     <div class="db-upd-col">0</div>
-                    <div class="update-col">2017.09.03</div>
+                    <div class="update-col" style="background-color: rgb(120, 255, 108)">2017.09.03</div>
                 </div>
                 <!-- /h tsq -->
 
                 <!-- m5_zm -->
-                <div class="stat-column-block elsosor">
-                    <div class="name-col">
-                        <a href="#">AUDUSD_M5_ZOOM</a>
-                    </div>
+                <div class="strat-column-block elsosor">
+                    <a href="#" class="name-col">
+                        AUDUSD_M5_ZOOM
+                    </a>
                     <div class="profact-col">
                         <div class="profact-block">
                             <div class="profact-head"></div>
@@ -142,15 +157,15 @@
                     <div class="old-col">555</div>
                     <div class="darab-col">48</div>
                     <div class="db-upd-col">0</div>
-                    <div class="update-col">2017.09.03</div>
+                    <div class="update-col" style="background-color: rgb(168, 168, 168)">2017.09.03</div>
                 </div>
                 <!-- /m5_zm -->
 
                 <!-- m5_adx -->
-                <div class="stat-column-block masodiksor">
-                    <div class="name-col">
-                        <a href="#">AUDUSD_M5_ADX</a>
-                    </div>
+                <div class="strat-column-block masodiksor">
+                    <a href="#" class="name-col">
+                        AUDUSD_M5_ADX
+                    </a>
                     <div class="profact-col">
                         <div class="profact-block">
                             <div class="profact-head"></div>
@@ -158,21 +173,21 @@
                             <div class="profact-real-col">5.20</div>
                         </div>
                     </div>
-                    <div class="hozam-col" style="background-color: rgb(121, 121, 121)">6.70%</div>
+                    <div class="hozam-col" style="background-color: rgb(93, 93, 93)">6.70%</div>
                     <div class="talalati">50%</div>
                     <div class="maxdd">2.56%</div>
                     <div class="old-col">555</div>
                     <div class="darab-col">48</div>
                     <div class="db-upd-col">0</div>
-                    <div class="update-col">2017.09.03</div>
+                    <div class="update-col" style="background-color: rgb(255, 123, 123)">2017.09.03</div>
                 </div>
                 <!-- /m5_adx -->
 
                 <!-- gap -->
-                <div class="stat-column-block elsosor">
-                    <div class="name-col">
-                        <a href="#">AUDUSD_GAP</a>
-                    </div>
+                <div class="strat-column-block elsosor">
+                    <a href="#" class="name-col">
+                        AUDUSD_GAP
+                    </a>
                     <div class="profact-col">
                         <div class="profact-block">
                             <div class="profact-head"></div>
@@ -186,13 +201,13 @@
                     <div class="old-col">555</div>
                     <div class="darab-col">48</div>
                     <div class="db-upd-col">0</div>
-                    <div class="update-col">2017.09.03</div>
+                    <div class="update-col" style="background-color: rgb(120, 255, 108)">2017.09.03</div>
                 </div>
             </div>
             <!-- /gap -->
 
             <!-- average update -->
-            <div class="avr-updt-column">2017.07.31</div>
+            <div class="avr-updt-column" style="background-color: rgb(120, 255, 108)">2017.07.31</div>
             <!-- /average update -->
         </div>
         <!-- ================================ /AUDUSD  ================================ -->
@@ -200,17 +215,25 @@
         <!-- ================================ AUDCAD  ================================ -->
         <div class="instrument-block">
             <!-- szimbólum -->
-            <H3 class="symbol-column">
-                <a href="#">AUDCAD</a>
-            </H3>
+            <a class="symbol-column" id="audcad" href="#">
+                AUDCAD
+            </a>
             <!-- /szimbólum -->
+
+            <!-- összprofit -->
+            <div class="profit-column" style="background-color: rgb(255, 0, 0)">
+                <div class="profit-block">
+                    <p>$25.48</p>
+                </div>
+            </div>
+            <!-- /összprofit -->
 
             <div class="strategies-column">
                 <!-- return -->
-                <div class="stat-column-block elsosor">
-                    <div class="name-col">
-                        <a href="#">AUDCAD_Return</a>
-                    </div>
+                <div class="strat-column-block elsosor">
+                    <a href="#" class="name-col">
+                        AUDCAD_Return
+                    </a>
                     <div class="profact-col">
                         <div class="profact-block">
                             <div class="profact-head"></div>
@@ -224,15 +247,15 @@
                     <div class="old-col">555</div>
                     <div class="darab-col">48</div>
                     <div class="db-upd-col">0</div>
-                    <div class="update-col">2017.09.03</div>
+                    <div class="update-col" style="background-color: rgb(168, 168, 168)">2017.09.03</div>
                 </div>
                 <!-- /return -->
 
                 <!-- gap -->
-                <div class="stat-column-block masodiksor">
-                    <div class="name-col">
-                        <a href="#">AUDCAD_GAP</a>
-                    </div>
+                <div class="strat-column-block masodiksor">
+                    <a href="#" class="name-col">
+                        AUDCAD_GAP
+                    </a>
                     <div class="profact-col">
                         <div class="profact-block">
                             <div class="profact-head"></div>
@@ -240,19 +263,19 @@
                             <div class="profact-real-col">5.20</div>
                         </div>
                     </div>
-                    <div class="hozam-col" style="background-color: rgb(121, 121, 121)">6.70%</div>
+                    <div class="hozam-col" style="background-color: rgb(93, 93, 93)">6.70%</div>
                     <div class="talalati">50%</div>
                     <div class="maxdd">2.56%</div>
                     <div class="old-col">555</div>
                     <div class="darab-col">48</div>
                     <div class="db-upd-col">0</div>
-                    <div class="update-col">2017.09.03</div>
+                    <div class="update-col" style="background-color: rgb(255, 123, 123)">2017.09.03</div>
                 </div>
             </div>
             <!-- /gap -->
 
             <!-- average update -->
-            <div class="avr-updt-column">2017.07.31</div>
+            <div class="avr-updt-column" style="background-color: rgb(120, 255, 108)">2017.07.31</div>
             <!-- /average update -->
         </div>
         <!-- ================================ /AUDCAD  ================================ -->
@@ -260,17 +283,25 @@
         <!-- ================================ AUDJPY  ================================ -->
         <div class="instrument-block">
             <!-- szimbólum -->
-            <H3 class="symbol-column">
-                <a href="#">AUDJPY</a>
-            </H3>
+            <a href="#" class="symbol-column" id="audcad">
+                AUDJPY
+            </a>
             <!-- /szimbólum -->
+
+            <!-- összprofit -->
+            <div class="profit-column" style="background-color: rgb(93, 93, 93)">
+                <div class="profit-block">
+                    <p>$25.48</p>
+                </div>
+            </div>
+            <!-- /összprofit -->
 
             <div class="strategies-column">
                 <!-- return -->
-                <div class="stat-column-block elsosor">
-                    <div class="name-col">
-                        <a href="#">AUDJPY_Return</a>
-                    </div>
+                <div class="strat-column-block elsosor">
+                    <a class="name-col" href="#">
+                        AUDJPY_Return
+                    </a>
                     <div class="profact-col">
                         <div class="profact-block">
                             <div class="profact-head"></div>
@@ -278,21 +309,21 @@
                             <div class="profact-real-col">5.20</div>
                         </div>
                     </div>
-                    <div class="hozam-col" style="background-color: rgb(0, 180, 0)">6.70%</div>
+                    <div class="hozam-col" style="background-color: rgb(0, 158, 0)">6.70%</div>
                     <div class="talalati">50%</div>
                     <div class="maxdd">2.56%</div>
                     <div class="old-col">555</div>
                     <div class="darab-col">48</div>
                     <div class="db-upd-col">0</div>
-                    <div class="update-col">2017.09.03</div>
+                    <div class="update-col" style="background-color: rgb(120, 255, 108)">2017.09.03</div>
                 </div>
                 <!-- /return -->
 
                 <!-- gap -->
-                <div class="stat-column-block masodiksor">
-                    <div class="name-col">
-                        <a href="#">AUDJPY_GAP</a>
-                    </div>
+                <div class="strat-column-block masodiksor">
+                    <a href="#" class="name-col">
+                        AUDJPY_GAP
+                    </a>
                     <div class="profact-col">
                         <div class="profact-block">
                             <div class="profact-head"></div>
@@ -306,13 +337,13 @@
                     <div class="old-col">555</div>
                     <div class="darab-col">48</div>
                     <div class="db-upd-col">0</div>
-                    <div class="update-col">2017.09.03</div>
+                    <div class="update-col" style="background-color: rgb(168, 168, 168)">2017.09.03</div>
                 </div>
             </div>
             <!-- /gap -->
 
             <!-- average update -->
-            <div class="avr-updt-column">2017.07.31</div>
+            <div class="avr-updt-column" style="background-color: rgb(168, 168, 168)">2017.07.31</div>
             <!-- /average update -->
         </div>
         <!-- ================================ /AUDJPY  ================================ -->
