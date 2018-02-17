@@ -70,6 +70,34 @@ h1, h2, h3, h4, .navbar-brand{
 
 /* ================================ Mesterlista ================================ */
 
+.masterlist-table{
+    text-align: center;
+}
 
+.instrument-block, .stat-column-block, .profact-col{
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    
+}
 
+.instrument-block{
+    flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.symbol-column, .avr-updt-column{
+    -ms-flex: 16%; /* IE10 */
+    flex: 16%;
+    max-width: 16%;
+    align-content: stretch;
+}
+
+.strategies-column{
+    -ms-flex: 68%; /* IE10 */
+    flex: 68%;
+    max-width: 68%;
+    border: 1px solid red;
+}
 /* ================================ /Mesterlista ================================ */
