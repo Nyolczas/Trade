@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:700|Roboto&subset=latin-ext');
-
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,45 +11,48 @@ html, body{
 body {
     min-height: 75rem;
     padding-top: 4.5rem;
-  }
+}
 
-
-h1, h2, h3, h4, .navbar-brand{
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
     font-family: 'Raleway', sans-serif;
 }
 
-.header{
+.header {
     text-align: center;
     padding: 32px;
 }
+
 /* ================================ navbar ================================ */
-
-
 
 /* ================================ /navbar ================================ */
 
 /* ================================ Balance ================================ */
+
 /* nav */
 
-.vesztes{
+.vesztes {
     color: hsl(24, 100%, 54%);
 }
 
-.semleges{
+.semleges {
     color: hsl(0, 0%, 73%);
 }
 
-.profitos{
+.profitos {
     color: hsl(101, 99%, 40%);
 }
 
-.nav-profit{
+.nav-profit {
     /* font-size: 1rem; */
     padding: 0.2rem 1rem;
     font-style: italic;
 }
 
-.dollar{
+.dollar {
     font-style: normal;
     font-weight: bold;
     font-size: 1.2rem;
@@ -60,44 +63,105 @@ h1, h2, h3, h4, .navbar-brand{
 /* /nav */
 
 /* charts */
-.chart-wrapper{
+
+.chart-wrapper {
     width: 78vw;
     height: 100%;
     margin: auto;
 }
+
 /* charts */
+
 /* ================================ /Balance ================================ */
 
 /* ================================ Mesterlista ================================ */
 
-.masterlist-table{
+.masterlist-table {
     text-align: center;
 }
 
-.instrument-block, .stat-column-block, .profact-col{
-    display: -ms-flexbox; /* IE10 */
+.stat-column-block,
+.profact-col {
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    
 }
 
-.instrument-block{
+.instrument-block {
+    margin: 5px;
+    border-collapse: collapse;
+    display: flex;
+    border: 2px solid hsla(0, 0%, 0%, 0.63);
+}
+
+.symbol-column,
+.avr-updt-column {
+    flex: 10%;
+    background-color: aquamarine;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+
+.strategies-column {
+    flex: 80%;
+}
+
+.stat-column-block {
+    display: flex;
     flex-wrap: wrap;
-  align-content: stretch;
+    border: 1px solid hsla(0, 0%, 0%, 0.63);
+    margin:-1px 0;
 }
 
-.symbol-column, .avr-updt-column{
-    -ms-flex: 16%; /* IE10 */
-    flex: 16%;
-    max-width: 16%;
-    align-content: stretch;
+.name-col {
+    flex: 80px;
 }
 
-.strategies-column{
-    -ms-flex: 68%; /* IE10 */
-    flex: 68%;
-    max-width: 68%;
-    border: 1px solid red;
+.profact-col {
+    flex: 40px;
 }
+
+.profact-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profact-back-col {
+    flex: 50%;
+}
+
+.profact-real-col {
+    flex: 50%;
+}
+
+.hozam-col {
+    flex: 20px;
+}
+
+.talalati-col {
+    flex: 20px;
+}
+
+.maxdd-col {
+    flex: 20px;
+}
+
+.old-col {
+    flex: 20px;
+}
+
+.darab-col {
+    flex: 20px;
+}
+
+.db-upd-col {
+    flex: 20px;
+}
+
+.update-col {
+    flex: 70px;
+}
+
 /* ================================ /Mesterlista ================================ */
