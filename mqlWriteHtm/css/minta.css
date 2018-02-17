@@ -20,12 +20,6 @@ h4,
 .navbar-brand {
     font-family: 'Raleway', sans-serif;
 }
-
-.header {
-    text-align: center;
-    padding: 32px;
-}
-
 /* ================================ navbar ================================ */
 
 /* ================================ /navbar ================================ */
@@ -110,17 +104,20 @@ h4,
 
 .stat-column-block {
     display: flex;
-    flex-wrap: wrap;
     border: 1px solid hsla(0, 0%, 0%, 0.63);
     margin:-1px 0;
 }
 
 .name-col {
-    flex: 80px;
+    flex-basis: 230px;
+    border: 1px solid hsla(0, 0%, 0%, 0.63);
+    margin:-1px;
 }
 
 .profact-col {
-    flex: 40px;
+    flex-basis: 150px;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.63);
+    margin:-1px;
 }
 
 .profact-block {
@@ -128,12 +125,16 @@ h4,
     flex-wrap: wrap;
 }
 
+.profact-head{
+    min-width: 150px;
+}
+
 .profact-back-col {
-    flex: 50%;
+    flex-basis: 75px;
 }
 
 .profact-real-col {
-    flex: 50%;
+    flex-basis: 75px;
 }
 
 .hozam-col {
@@ -164,4 +165,8 @@ h4,
     flex: 70px;
 }
 
+.header{
+    border: none;
+    font-size: 0.7rem;
+}
 /* ================================ /Mesterlista ================================ */
