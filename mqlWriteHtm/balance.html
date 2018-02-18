@@ -57,30 +57,22 @@
         </div>
     </nav>
     <!-- ================================ /navbar  ================================ -->
-
     <!-- ================================ equity chart  ================================ -->
-
     <div class="chart-wrapper">
         <canvas id="equityChart"></canvas>
     </div>
-
     <!-- ================================ /equity chart  ================================ -->
-
     <!-- ================================ robot chart  ================================ -->
-
     <div class="chart-wrapper">
         <canvas id="robotChart"></canvas>
     </div>
-
     <!-- ================================ /robot chart  ================================ -->
-
     <!-- ================================ szkript equity chart  ================================ -->
     <script>
         var ctx = document.getElementById('equityChart').getContext('2d');
         var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'line',
-
             // The data for our dataset
             data: {
                 labels: ["18.02.01", "18.02.02", "18.02.03", "18.02.04", "18.02.05", "18.02.06", "18.02.07"],
