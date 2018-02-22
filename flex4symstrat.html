@@ -90,7 +90,7 @@
             padding: 0;
         }
 
-        .symstrat-container{
+        .symstrat-container {
             max-width: 1500px;
             margin: auto;
         }
@@ -100,7 +100,7 @@
             justify-content: space-between;
             align-items: stretch;
             background-color: DodgerBlue;
-            width: 100%; 
+            width: 100%;
         }
 
         .stat-wrapper {
@@ -116,11 +116,21 @@
             height: 70%;
         }
 
-        .symstrat-tabla-sor{
-            display: flex;
-            justify-content: space-between;
-            width: 100%; 
+        .symstrat-tabla-sor {
+            display: grid;
+            grid-template-columns: 5% 35% 15% 7.5% 7.5% 15% 15%;
+            width: 100%;
         }
+        
+        .symstat-tabla-oszlop{
+            border: 1px solid red;
+            text-align: center;
+        }
+
+        .tabla-tol-ig{
+            /* grid-column: 2 / span 4; */
+        }
+
     </style>
 </head>
 
@@ -132,6 +142,15 @@
                 <div id="Hozam_chart"></div>
                 <div id="Lots_chart"></div>
             </div>
+        </div>
+        <div class="symstrat-tabla-sor">
+            <div class="symstat-tabla-oszlop tabla-nr">Nr</div>
+            <div class="symstat-tabla-oszlop tabla-tol-ig">tól -ig</div>
+            <div class="symstat-tabla-oszlop tabla-hossz">tréd hossz</div>
+            <div class="symstat-tabla-oszlop tabla-xit">kilépés</div>
+            <div class="symstat-tabla-oszlop tabla-profit-dollar">profit $</div>
+            <div class="symstat-tabla-oszlop tabla-profit-percent">profit %</div>
+            <div class="symstat-tabla-oszlop tabla-megjegyzes">megjegyzés</div>
         </div>
         <div class="symstrat-tabla-sor">
             <div class="symstat-tabla-oszlop tabla-nr">1.</div>
