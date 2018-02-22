@@ -63,7 +63,7 @@
 
             var options = {
                 seriesType: 'bars',
-                colors: ['#613400'],
+                colors: ['#a17849'],
                 legend: { position: 'none' },
                 chartArea: {
                     left: 0,
@@ -81,9 +81,21 @@
         }
     </script>
     <style>
+        body{
+            box-sizing: border-box;
+            margin: 0;
+            padding:0;
+        }
+
+        .stat-wrapper{
+            width: 20%;
+            height: 500px;
+            background-color: bisque;
+            float:left;
+        }
         .chart-wrapper {
-            width: 80%;
-            margin: auto;
+            float:right;
+            width: 75%;
         }
 
         #Hozam_chart{
@@ -93,6 +105,7 @@
 </head>
 
 <body>
+    <div class="stat-wrapper"></div>
     <div class="chart-wrapper">
         <div id="Hozam_chart"></div>
         <div id="Lots_chart"></div>
