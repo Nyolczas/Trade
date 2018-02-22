@@ -8,16 +8,18 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
 
+        // ================================ Load charts ================================
         google.charts.load('current', { 'packages': ['corechart', 'table'] });
 
         google.charts.setOnLoadCallback(drawHozamChart);
-
         google.charts.setOnLoadCallback(drawLotsChart);
+        google.charts.setOnLoadCallback(drawDaysChart);
+        google.charts.setOnLoadCallback(drawHoursChart);
+        google.charts.setOnLoadCallback(drawScatterChart);
 
-        google.charts.setOnLoadCallback(drawTable);
-
+        // ================================ /Load charts ================================
+        // ================================ Hozam chart ================================
         function drawHozamChart() {
-            // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
                 ['Month', 'Hozam', 'Longs', 'Shorts'],
                 ['', 0, 0, 0],
@@ -49,10 +51,9 @@
             var chart = new google.visualization.ComboChart(document.getElementById('Hozam_chart'));
             chart.draw(data, options);
         }
-
-        // Callback that draws the pie chart for Anthony's pizza.
+        // ================================ /Hozam chart ================================
+        // ================================ Lots chart ================================
         function drawLotsChart() {
-
             var data = google.visualization.arrayToDataTable([
                 ['date', 'lots'],
                 ['', 0],
@@ -77,11 +78,87 @@
                 }
             };
 
-            // Instantiate and draw the chart for Anthony's pizza.
             var chart = new google.visualization.ComboChart(document.getElementById('Lots_chart'));
             chart.draw(data, options);
         }
+    // ================================ /Lots chart ================================
+        // ================================ Days chart ================================
+        function drawDaysChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['nap', 'profit'],
+                ['hétfő', 25.5],
+                ['kedd', 38.2],
+                ['szerda', 40.1],
+                ['csütörtök', 83.2],
+                ['péntek', -12.9],
+            ]);
 
+            var options = {
+                seriesType: 'bars',
+                colors: ['#ffd900'],
+                legend: { position: 'none' },
+                chartArea: {
+                    left: 0,
+                    right: 0,
+                    bottom: 20,
+                    top: 0,
+                    width: "100%",
+                    height: "100%"
+                }
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('days-chart'));
+            chart.draw(data, options);
+        }
+    // ================================ /Days chart ================================
+        // ================================ Hours chart ================================
+        function drawHoursChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['nap', 'profit'],
+                ['0', 0],
+                ['1', -1.2],
+                ['2', 4.1],
+                ['3', 0.2],
+                ['4', -12.9],
+                ['5', 25.9],
+                ['6', 30.9],
+                ['7', -8.9],
+                ['8', 7.9],
+                ['9', 82.9],
+                ['10', 74.9],
+                ['11', -15.9],
+                ['12', -40.9],
+                ['13', 33.9],
+                ['14', 42.9],
+                ['15', 10.9],
+                ['16', 5.9],
+                ['17', -2.9],
+                ['18', 25.9],
+                ['19', 7.9],
+                ['20', 5.9],
+                ['21', -5.9],
+                ['22', -6.9],
+                ['23', -8.9],
+            ]);
+
+            var options = {
+                seriesType: 'bars',
+                colors: ['#ffd900'],
+                legend: { position: 'none' },
+                chartArea: {
+                    left: 0,
+                    right: 0,
+                    bottom: 20,
+                    top: 0,
+                    width: "100%",
+                    height: "100%"
+                }
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('hours-chart'));
+            chart.draw(data, options);
+        }
+    // ================================ /Hours chart ================================
     </script>
     <style>
         body {
@@ -96,41 +173,42 @@
         }
 
         .charts-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: stretch;
-            background-color: DodgerBlue;
+            display: grid;
+            grid-template-columns: 15% 25% 60%;
             width: 100%;
         }
 
         .stat-wrapper {
-            width: 20%;
             background-color: bisque;
         }
 
-        .chart-wrapper {
-            width: 80%;
-        }
+        .main-charts {}
 
         #Hozam_chart {
-            height: 70%;
+            height: 500px;
+        }
+
+        #Lots_chart {
+            height: 100px;
+        }
+
+        .side-charts {
+            background-color: rgb(184, 161, 133);
         }
 
         .symstrat-tabla-sor {
             display: grid;
-            grid-template-columns: 5% 35% 15% 7.5% 7.5% 15% 15%;
+            grid-template-columns: 5% 35% 15% 5% 10% 10% 20%;
             width: 100%;
         }
-        
-        .symstat-tabla-oszlop{
-            border: 1px solid red;
+
+        .symstat-tabla-oszlop {
             text-align: center;
         }
 
-        .tabla-tol-ig{
+        .tabla-tol-ig {
             /* grid-column: 2 / span 4; */
         }
-
     </style>
 </head>
 
@@ -138,7 +216,12 @@
     <div class="symstrat-container">
         <div class="charts-container">
             <div class="stat-wrapper"></div>
-            <div class="chart-wrapper">
+            <div class="side-charts">
+                <div id="days-chart"></div>
+                <div id="hours-chart"></div>
+                <div id="scatter-chart"></div>
+            </div>
+            <div class="main-charts">
                 <div id="Hozam_chart"></div>
                 <div id="Lots_chart"></div>
             </div>
