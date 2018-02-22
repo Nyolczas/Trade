@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+        // Load Charts and the corechart package.
+        google.charts.load('current', { 'packages': ['corechart'] });
+
+        // Draw the pie chart for Sarah's pizza when Charts is loaded.
+        google.charts.setOnLoadCallback(drawHozamChart);
+
+        // Draw the pie chart for the Anthony's pizza when Charts is loaded.
+        google.charts.setOnLoadCallback(drawLotsChart);
+
+        // Callback that draws the pie chart for Sarah's pizza.
+        function drawHozamChart() {
+            // Some raw data (not necessarily accurate)
+            var data = google.visualization.arrayToDataTable([
+                ['Month', 'Hozam', 'Longs', 'Shorts'],
+                ['', 0, 0, 0],
+                ['', 165, 238, -120],
+                ['', 235, 120, 115],
+                ['optim', 357, 267, 90],
+                ['', 339, 110, 229],
+                ['', 436, 200, 236]
+            ]);
+
+            var options = {
+                seriesType: 'bars',
+                series: {
+                    1: { type: 'line' },
+                    2: { type: 'line' }
+                },
+                colors: ['#ffd900', '#0050b8', '#b80000'],
+                legend: { position: 'none' },
+                chartArea: {
+                    left: 10,
+                    right: 10, // !!! works !!!
+                    bottom: 20,  // !!! works !!!
+                    top: 20,
+                    width: "100%",
+                    height: "100%"
+                }
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('Hozam_chart'));
+            chart.draw(data, options);
+        }
+
+        // Callback that draws the pie chart for Anthony's pizza.
+        function drawLotsChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['date', 'lots'],
+                ['', 0],
+                ['', 0.8],
+                ['', 0.91],
+                ['', 0.95],
+                ['', 0.89],
+                ['', 0.98]
+            ]);
+
+            var options = {
+                seriesType: 'bars',
+                colors: ['#613400'],
+                legend: { position: 'none' }
+            };
+
+            // Instantiate and draw the chart for Anthony's pizza.
+            var chart = new google.visualization.ComboChart(document.getElementById('Lots_chart'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="Hozam_chart" style="width: 100%; height: 75vh;"></div>
+    <div id="Lots_chart" style="width: 98%; height: 40vh"></div>
+</body>
+
+</html>
