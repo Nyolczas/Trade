@@ -18,20 +18,26 @@
             ]);
 
             var options = {
-                title: 'Monthly Coffee Production by Country',
-                vAxis: { title: 'Cups' },
+                title: 'EURUSD H Batman',
+                vAxis: { title: 'Dollar' },
                 hAxis: { title: 'Month' },
                 seriesType: 'bars',
                 series: {
                     1: { type: 'line' },
                     2: { type: 'line' }
-                }
+                },
+                colors: ['#ffd900', '#0050b8', '#b80000']
             };
 
             var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
             chart.draw(data, options);
         }
     </script>
+    <style>
+        .color{
+            background-color: #ffd900;
+        }
+    </style>
 </head>
 
 <body>
