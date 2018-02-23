@@ -59,11 +59,16 @@ body {
     display: grid;
     grid-template-columns: 15% 25% 60%;
     width: 100%;
-    margin: 120px 0 20px 0;
+    margin: 100px 0 20px 0;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 6px;
+    padding-right: 5px;
+    background-color:white;
 }
 
 .stat-wrapper {
-    background-color: bisque;
+    background-color: rgb(129, 129, 129);
+    border-radius: 6px 0 0 6px;
 }
 
 #Hozam_chart {
@@ -75,7 +80,7 @@ body {
 }
 
 .side-charts {
-    background-color: rgb(184, 161, 133);
+    /* background-color: rgb(184, 161, 133); */
 }
 
 .symstrat-tabla-sor {
