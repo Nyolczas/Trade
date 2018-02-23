@@ -54,7 +54,7 @@ body {
     font-weight: 900;
 }
 /* ================ /nav ================ */
-
+/* ================ chart box ================ */
 .charts-container {
     display: grid;
     grid-template-columns: 15% 25% 60%;
@@ -64,11 +64,11 @@ body {
     border-radius: 6px;
     padding-right: 5px;
     background-color:white;
+    overflow: hidden;
 }
 
 .stat-wrapper {
-    background-color: rgb(129, 129, 129);
-    border-radius: 6px 0 0 6px;
+    background-color: rgb(85, 85, 85);
 }
 
 #Hozam_chart {
@@ -83,12 +83,33 @@ body {
     /* background-color: rgb(184, 161, 133); */
 }
 
+/* ================ /chart box ================ */
+/* ================ táblázat ================ */
+
+.symstrat-tabla{
+    background-color: white;
+    border: 1px solid  rgb(129, 129, 129);
+    
+    border-radius: 6px;
+    overflow: hidden;
+}
+
 .symstrat-tabla-sor {
     display: grid;
     grid-template-columns: 5% 35% 15% 5% 10% 10% 20%;
     width: 100%;
+    border-top: 1px solid  rgb(129, 129, 129);
+    padding: 5px;
+}
+
+.tabla-head{
+    border-top: 0px;
+    font-style: italic;
+    background-color: rgb(85, 85, 85);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .symstat-tabla-oszlop {
     text-align: center;
 }
+/* ================ /táblázat ================ */
