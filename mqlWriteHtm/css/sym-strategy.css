@@ -79,12 +79,20 @@ body {
 
 .stat-kat, .stat-val {
     background-color: white;
-    border: 1px solid rgb(129, 129, 129);
+    border-top: 1px solid rgb(129, 129, 129);
+    border-bottom: 1px solid rgb(129, 129, 129);
     margin: -1px;
-    text-align: center;
-    padding: 21px 0;
+    padding: 21px 10px;
 }
 
+.stat-kat {
+    text-align: right;
+    font-style: italic;
+}
+
+.stat-val{
+    font-weight: 600;
+}
 
 #Hozam_chart {
     height: 500px;
