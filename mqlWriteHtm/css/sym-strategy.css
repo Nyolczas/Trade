@@ -2,6 +2,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: #F2F2F2;
 }
 
 .symstrat-container {
@@ -9,17 +10,61 @@ body {
     margin: auto;
 }
 
+/* ================ nav ================ */
+
+.sym-navbar {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: grid;
+    align-items: center; 
+    grid-template-columns: 15% 15% 20% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    width: 1800px;
+    background-color: rgb(85, 85, 85);
+    font-family: 'Raleway', sans-serif;
+}
+
+.sym-navitem {
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.sym-navlink {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.sym-navlink:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 20px rgb(0, 25, 50);
+}
+
+.symbol {
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.symbol:hover {
+    text-shadow: 0 0 20px rgb(0, 25, 50);
+}
+
+.strategy{
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+/* ================ /nav ================ */
+
 .charts-container {
     display: grid;
     grid-template-columns: 15% 25% 60%;
     width: 100%;
+    margin: 120px 0 20px 0;
 }
 
 .stat-wrapper {
     background-color: bisque;
 }
-
-.main-charts {}
 
 #Hozam_chart {
     height: 500px;
@@ -41,8 +86,4 @@ body {
 
 .symstat-tabla-oszlop {
     text-align: center;
-}
-
-.tabla-tol-ig {
-    /* grid-column: 2 / span 4; */
 }
