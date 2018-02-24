@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Symbol</title>
     <link rel="stylesheet" href="css/minta.css">
-    <link rel="stylesheet" href="css/symbol.css">
+    <link rel="stylesheet" href="css/sym-strategy.css">
     <link rel="stylesheet" href="css/symcolors.css">
     <!-- chartloaders -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- chart scripts -->
     <script type="text/javascript">
-    // ================================ Load charts ================================
-    google.charts.load('current', {
+        // ================================ Load charts ================================
+        google.charts.load('current', {
             'packages': ['corechart', 'table']
         });
 
         google.charts.setOnLoadCallback(drawStratsChart);
-// ================================ /Load charts ================================
-// ================================ Strats charts ================================
-function drawStratsChart() {
+        // ================================ /Load charts ================================
+        // ================================ Strats charts ================================
+        function drawStratsChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Month', 'Hozam', 'M5_ADX', 'M15_Zoom', 'H_TSQ', 'D1_Return', 'D1_Gap'],
                 ['', 0, 0, 0, 0, 5, 7],
                 ['', 165, 238, -120, 45, 82, -100],
                 ['', 235, 120, 115, 145, -12, -20],
                 ['optim', 357, 267, 90, 120, 50, 75],
-                ['', 339, 110, 229, ],
-                ['', 436, 200, 236]
+                ['', 339, 110, 229, 185, 251, 380],
+                ['', 436, 200, 236, -20, 310, 824]
             ]);
 
             var options = {
@@ -39,9 +40,18 @@ function drawStratsChart() {
                     },
                     2: {
                         type: 'line'
+                    },
+                    3: {
+                        type: 'line'
+                    },
+                    4: {
+                        type: 'line'
+                    },
+                    5: {
+                        type: 'line'
                     }
                 },
-                colors: ['#ffd900', '#0050b8', '#b80000'],
+                colors: ['#ffd900', '#0050b8', '#b80000', '#0050b8', '#b80000', '#0050b8'],
                 legend: {
                     position: 'none'
                 },
@@ -58,10 +68,29 @@ function drawStratsChart() {
             var chart = new google.visualization.ComboChart(document.getElementById('Hozam_chart'));
             chart.draw(data, options);
         }
-// ================================ /Strats charts ================================
+        // ================================ /Strats charts ================================
     </script>
 </head>
+
 <body>
-    
+    <div class="symstrat-container">
+        <div class="sym-navbar">
+            <a class="sym-navitem sym-navlink symbol" id="audusd" href="#">AUDUSD</a>
+            <a class="sym-navitem sym-navlink" href="#">Instrumentumok</a>
+            <a class="sym-navitem sym-navlink" href="#">Mesterlista</a>            
+            <div class="sym-navitem"></div>
+            <div class="sym-navitem"></div>
+            <div class="sym-navitem"></div>
+            <div class="sym-navitem"></div>
+            <div class="sym-navitem"></div>
+            <a class="sym-navitem sym-navlink" href="#">M15 Zoom</a>
+            <a class="sym-navitem sym-navlink" href="#">H TSQ</a>
+            <a class="sym-navitem sym-navlink" href="#">D1 Return</a>
+            <a class="sym-navitem sym-navlink" href="#">D1 Gap</a>
+            <a class="sym-navitem sym-navlink" href="#">M5 ADX</a>
+        </div>
+    </div>
+
 </body>
+
 </html>
