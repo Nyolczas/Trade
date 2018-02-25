@@ -65,7 +65,7 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Hozam_chart'));
+            var chart = new google.visualization.ComboChart(document.getElementById('Strats_chart'));
             chart.draw(data, options);
         }
         // ================================ /Strats charts ================================
@@ -74,7 +74,8 @@
 
 <body>
     <div class="symstrat-container">
-        <div class="sym-navbar">
+        <!-- ================================ navbar ================================ -->
+        <div class="navbar">
             <a class="sym-navitem sym-navlink symbol" id="audusd" href="#">AUDUSD</a>
             <a class="sym-navitem sym-navlink" href="#">Instrumentumok</a>
             <a class="sym-navitem sym-navlink" href="#">Mesterlista</a>            
@@ -89,6 +90,12 @@
             <a class="sym-navitem sym-navlink" href="#">D1 Gap</a>
             <a class="sym-navitem sym-navlink" href="#">M5 ADX</a>
         </div>
+<!-- ================================ /navbar ================================ -->
+<!-- ================================ strats chart ================================ -->
+<div>
+    <div id="Strats_chart"></div>
+</div>
+<!-- ================================ /strats chart ================================ -->
     </div>
 
 </body>
