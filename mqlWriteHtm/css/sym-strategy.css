@@ -17,7 +17,8 @@ body {
     z-index: 100;
     display: grid;
     align-items: center;
-    grid-template-columns: 30% 10% 10% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    grid-template-columns: 25% 10% 10% 10% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    grid-template-rows: 100px;
     width: 1800px;
     background-color: rgb(85, 85, 85);
     font-family: 'Raleway', sans-serif;
@@ -25,6 +26,14 @@ body {
     overflow: hidden;
 }
 
+.symbol-main {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(85, 85, 85);
+    font-size: 6.5rem;
+    font-weight: 900;
+    grid-row: 1 / span 2;
+    line-height: 5.8rem;
+}
 /* ================================ /symbol ================================ */
 
 /* ================================ sym-strategy ================================ */
