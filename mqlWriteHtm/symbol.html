@@ -19,6 +19,7 @@
         });
 
         google.charts.setOnLoadCallback(drawStratsChart);
+        google.charts.setOnLoadCallback(drawHozamChart);
         // ================================ /Load charts ================================
         // ================================ Strats charts ================================
         function drawStratsChart() {
@@ -69,6 +70,46 @@
             chart.draw(data, options);
         }
         // ================================ /Strats charts ================================
+        // ================================ Hozam chart ================================
+        function drawHozamChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Month', 'Hozam', 'Longs', 'Shorts'],
+                ['', 0, 0, 0],
+                ['', 165, 238, -120],
+                ['', 235, 120, 115],
+                ['optim', 357, 267, 90],
+                ['', 339, 110, 229],
+                ['', 436, 200, 236]
+            ]);
+
+            var options = {
+                seriesType: 'bars',
+                series: {
+                    1: {
+                        type: 'line'
+                    },
+                    2: {
+                        type: 'line'
+                    }
+                },
+                colors: ['#ffd900', '#0050b8', '#b80000'],
+                legend: {
+                    position: 'none'
+                },
+                chartArea: {
+                    left: 40,
+                    right: 40,
+                    bottom: 40,
+                    top: 20,
+                    width: "100%",
+                    height: "100%"
+                }
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('Hozam_chart'));
+            chart.draw(data, options);
+        }
+        // ================================ /Hozam chart ================================
     </script>
 </head>
 
@@ -78,7 +119,7 @@
         <div class="navbar">
             <a class="sym-navitem sym-navlink symbol-main" id="audusd" href="#">AUDUSD</a>
             <a class="sym-navitem sym-navlink" href="#">Instrumentumok</a>
-            <a class="sym-navitem sym-navlink" href="#">Mesterlista</a>            
+            <a class="sym-navitem sym-navlink" href="#">Mesterlista</a>
             <div class="sym-navitem"></div>
             <div class="sym-navitem"></div>
             <div class="sym-navitem"></div>
@@ -90,13 +131,17 @@
             <a class="sym-navitem sym-navlink" href="#">D1 Gap</a>
             <a class="sym-navitem sym-navlink" href="#">M5 ADX</a>
         </div>
-<!-- ================================ /navbar ================================ -->
-<!-- ================================ strats chart ================================ -->
-<div id="strats-wrapper">
-    <div id="strats"></div>
-    <div id="Strats_chart"></div>
-</div>
-<!-- ================================ /strats chart ================================ -->
+        <!-- ================================ /navbar ================================ -->
+        <!-- ================================ strats chart ================================ -->
+        <div class="chart-wrapper">
+            <div id="stat"></div>
+            <div id="Hozam_chart"></div>
+        </div>
+        <div class="chart-wrapper" id="strats-wrapper">
+            <div id="strats"></div>
+            <div id="Strats_chart"></div>
+        </div>
+        <!-- ================================ /strats chart ================================ -->
     </div>
 
 </body>
