@@ -8,6 +8,8 @@
     <!-- Bootstrap core CSS -->
     <link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/minta.css">
+    <link rel="stylesheet" href="css/symcolors.css">
+    <link rel="stylesheet" href="css/instruments.css">
     <!-- chart scripts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -15,7 +17,7 @@
         google.charts.setOnLoadCallback(drawChart);
         function drawChart() {
           var data = google.visualization.arrayToDataTable([
-            ["Element", "Density", { role: "style" } ],
+            ["Instrument", "Hozam", { role: "style" } ],
             ["Copper", 8.94, "#b87333"],
             ["Silver", 10.49, "silver"],
             ["Gold", 19.30, "gold"],
@@ -31,9 +33,6 @@
                            2]);
     
           var options = {
-            title: "Density of Precious Metals, in g/cm^3",
-            width: 600,
-            height: 400,
             bar: {groupWidth: "95%"},
             legend: { position: "none" },
           };
@@ -72,6 +71,6 @@
             </div>
         </nav>
 
-        <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+        <div id="columnchart_values"></div>
 </body>
 </html>
