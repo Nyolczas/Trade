@@ -1,19 +1,4 @@
-:root {
-    --nav-bg-color: #343a40;
-    --nav-text-color: rgba(255, 255, 255, 0.75);
-}
 
-body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #F2F2F2;
-}
-
-.symstrat-container {
-    max-width: 1800px;
-    margin: auto;
-}
 
 /* ================================ symbol ================================ */
 

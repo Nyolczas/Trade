@@ -30,3 +30,10 @@
     text-shadow: 0 0 20px rgb(0, 25, 50);
 }
 
+.chart-group {
+    background-color: white;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 6px;
+    overflow: hidden;
+}
+

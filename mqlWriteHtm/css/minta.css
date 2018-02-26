@@ -12,6 +12,8 @@
 body {
     min-height: 75rem;
     padding-top: 4.5rem;
+    box-sizing: border-box;
+    background-color: #F2F2F2;
     color: rgb(93,93,93);
 }
 
@@ -26,6 +28,16 @@ h4,
 .navbar-brand {
     font-family: 'Raleway', sans-serif;
     margin: 0;
+}
+
+:root {
+    --nav-bg-color: #343a40;
+    --nav-text-color: rgba(255, 255, 255, 0.75);
+}
+
+.symstrat-container {
+    max-width: 1800px;
+    margin: auto;
 }
 /* ================================ navbar ================================ */
 
