@@ -77,6 +77,14 @@ body {
     line-height: 70px;
     height: 80px;
 }
+
+#Sym-hozam_chart {
+    height: 500px;
+}
+
+#Sym-lots_chart {
+    height: 100px;
+}
 /* ================ /strats - strats chart ================ */
 
 /* ================================ /symbol ================================ */
