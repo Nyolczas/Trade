@@ -58,6 +58,10 @@ body {
 #strats-wrapper {
     margin-top: 0;
 }
+
+.maestro{
+    grid-column: 1 / 3;
+}
 /* ================ /strats - strats chart ================ */
 
 /* ================================ /symbol ================================ */
