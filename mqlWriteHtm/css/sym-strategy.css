@@ -70,6 +70,15 @@
 #Sym-lots_chart {
     height: 100px;
 }
+
+.maestro-charts {
+    border-left: 1px solid rgb(129, 129, 129);
+}
+
+#Strats_chart {
+    height: 100%;
+}
+
 /* ================ /strats - strats chart ================ */
 
 /* ================================ /symbol ================================ */
