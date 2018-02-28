@@ -1,4 +1,4 @@
-#audusd {
+#audusd, .audusd {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 175, 79, 1)), color-stop(1, rgba(237, 32, 36, 1)));
@@ -10,7 +10,7 @@
     color: white;
 }
 
-#audcad {
+#audcad .audcad{
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(217, 150, 148, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(217, 150, 148, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 175, 79, 1)), color-stop(1, rgba(217, 150, 148, 1)));
@@ -22,7 +22,7 @@
     color: white;
 }
 
-#audjpy {
+#audjpy .audjpy{
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 175, 79, 1)), color-stop(1, rgba(247, 150, 70, 1)));
@@ -30,6 +30,30 @@
     background: -ms-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(247, 150, 70, 1) 100%);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
     background: linear-gradient(90deg, rgba(0, 175, 79, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+    color: white;
+}
+
+#cadjpy .cadjpy{
+    background: -moz-linear-gradient(0% 50% 0deg, rgba(217, 150, 148, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(217, 150, 148, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(217, 150, 148, 1)), color-stop(1, rgba(247, 150, 70, 1)));
+    background: -o-linear-gradient(0deg, rgba(217, 150, 148, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    background: -ms-linear-gradient(0deg, rgba(217, 150, 148, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
+    background: linear-gradient(90deg, rgba(217, 150, 148, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+    color: white;
+}
+
+#chfjpy .chfjpy{
+    background: -moz-linear-gradient(0% 50% 0deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(112, 48, 160, 1)), color-stop(1, rgba(247, 150, 70, 1)));
+    background: -o-linear-gradient(0deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    background: -ms-linear-gradient(0deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
+    background: linear-gradient(90deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
     color: white;
 }
