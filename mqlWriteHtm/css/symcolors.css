@@ -1,4 +1,4 @@
-#audusd, .AUDUSD {
+.AUDUSD  {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 175, 79, 1)), color-stop(1, rgba(237, 32, 36, 1)));
@@ -10,7 +10,7 @@
     color: white;
 }
 
-#audcad .AUDCAD{
+.AUDCAD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(217, 150, 148, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(217, 150, 148, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 175, 79, 1)), color-stop(1, rgba(217, 150, 148, 1)));
@@ -22,7 +22,7 @@
     color: white;
 }
 
-#audjpy .AUDJPY{
+.AUDJPY {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 175, 79, 1)), color-stop(1, rgba(247, 150, 70, 1)));
@@ -34,7 +34,7 @@
     color: white;
 }
 
-#cadjpy .CADJPY{
+.CADJPY {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(217, 150, 148, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(217, 150, 148, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(217, 150, 148, 1)), color-stop(1, rgba(247, 150, 70, 1)));
@@ -46,7 +46,7 @@
     color: white;
 }
 
-#chfjpy .CHFJPY{
+.CHFJPY {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(112, 48, 160, 1)), color-stop(1, rgba(247, 150, 70, 1)));
@@ -58,7 +58,7 @@
     color: white;
 }
 
-#euraud .EURAUD{
+.EURAUD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 176, 240, 1) 0%, rgba(0, 176, 80, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 176, 240, 1) 0%, rgba(0, 176, 80, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 176, 240, 1)), color-stop(1, rgba(0, 176, 80, 1)));
@@ -70,7 +70,7 @@
     color: white;
 }
 
-#eurgbp .EURGBP{
+.EURGBP {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 176, 240, 1) 0%, rgba(0, 32, 96, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 176, 240, 1) 0%, rgba(0, 32, 96, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 176, 240, 1)), color-stop(1, rgba(0, 32, 96, 1)));
@@ -82,7 +82,7 @@
     color: white;
 }
 
-#eurjpy .EURJPY{
+.EURJPY {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 176, 240, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 176, 240, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 176, 240, 1)), color-stop(1, rgba(247, 150, 70, 1)));
@@ -94,7 +94,7 @@
     color: white;
 }
 
-#eurusd .EURUSD{
+.EURUSD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 176, 240, 1) 0%, rgba(255, 0, 0, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 176, 240, 1) 0%, rgba(255, 0, 0, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 176, 240, 1)), color-stop(1, rgba(255, 0, 0, 1)));
@@ -106,7 +106,7 @@
     color: white;
 }
 
-#gbpaud .GBPAUD{
+.GBPAUD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 32, 96, 1) 0%, rgba(0, 176, 80, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 32, 96, 1) 0%, rgba(0, 176, 80, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 32, 96, 1)), color-stop(1, rgba(0, 176, 80, 1)));
@@ -118,7 +118,7 @@
     color: white;
 }
 
-#gbpchf .GBPCHF{
+.GBPCHF {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 32, 96, 1) 0%, rgba(112, 48, 160, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 32, 96, 1) 0%, rgba(112, 48, 160, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 32, 96, 1)), color-stop(1, rgba(112, 48, 160, 1)));
@@ -130,7 +130,7 @@
     color: white;
 }
 
-#gbpjpy .GBPJPY{
+.GBPJPY {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 32, 96, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 32, 96, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 32, 96, 1)), color-stop(1, rgba(247, 150, 70, 1)));
@@ -142,7 +142,7 @@
     color: white;
 }
 
-#gbpusd .GBPUSD{
+.GBPUSD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 32, 96, 1) 0%, rgba(255, 0, 0, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 32, 96, 1) 0%, rgba(255, 0, 0, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 32, 96, 1)), color-stop(1, rgba(255, 0, 0, 1)));
@@ -154,7 +154,7 @@
     color: white;
 }
 
-#gold .GOLD{
+.GOLD {
     background : -moz-linear-gradient(0% 0% -45deg,rgba(250, 223, 112, 1) 0%,rgba(250, 166, 26, 1) 17.33%,rgba(254, 223, 0, 1) 34.65%,rgba(246, 136, 31, 1) 56.19%,rgba(249, 188, 52, 1) 74.75%,rgba(251, 185, 21, 1) 88.37%,rgba(254, 223, 0, 1) 100%);
     background : -webkit-linear-gradient(-45deg, rgba(250, 223, 112, 1) 0%, rgba(250, 166, 26, 1) 17.33%, rgba(254, 223, 0, 1) 34.65%, rgba(246, 136, 31, 1) 56.19%, rgba(249, 188, 52, 1) 74.75%, rgba(251, 185, 21, 1) 88.37%, rgba(254, 223, 0, 1) 100%);
     background : -webkit-gradient(linear,0% 0% ,100% 100% ,color-stop(0,rgba(250, 223, 112, 1) ),color-stop(0.1733,rgba(250, 166, 26, 1) ),color-stop(0.3465,rgba(254, 223, 0, 1) ),color-stop(0.5619,rgba(246, 136, 31, 1) ),color-stop(0.7475,rgba(249, 188, 52, 1) ),color-stop(0.8837,rgba(251, 185, 21, 1) ),color-stop(1,rgba(254, 223, 0, 1) ));
@@ -166,7 +166,7 @@
     color: rgb(192, 0, 0);
 }
 
-#nzdusd .NZDUSD{
+.NZDUSD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(146, 208, 80, 1) 0%, rgba(255, 0, 0, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(146, 208, 80, 1) 0%, rgba(255, 0, 0, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(146, 208, 80, 1)), color-stop(1, rgba(255, 0, 0, 1)));
@@ -178,7 +178,7 @@
     color: white;
 }
 
-#usdcad .USDCAD{
+.USDCAD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(255, 0, 0, 1) 0%, rgba(217, 150, 148, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(217, 150, 148, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(255, 0, 0, 1)), color-stop(1, rgba(217, 150, 148, 1)));
@@ -190,7 +190,7 @@
     color: white;
 }
 
-#usdchf .USDCHF{
+.USDCHF {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(255, 0, 0, 1) 0%, rgba(112, 48, 160, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(112, 48, 160, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(255, 0, 0, 1)), color-stop(1, rgba(112, 48, 160, 1)));
@@ -202,7 +202,7 @@
     color: white;
 }
 
-#usdjpy .USDJPY{
+.USDJPY {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(255, 0, 0, 1) 0%, rgba(112, 48, 160, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(112, 48, 160, 1) 100%);
     background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(255, 0, 0, 1)), color-stop(1, rgba(112, 48, 160, 1)));
