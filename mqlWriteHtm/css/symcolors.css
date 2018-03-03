@@ -229,3 +229,43 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
     color:  var(--sym-text-color);
 }
+
+.ADX {
+    background-color: #C00000;
+}
+
+.Classic {
+    background-color: #7230A0;
+}
+
+.Gap {
+    background-color: #FFC000;
+}
+
+.Batman {
+    background-color: #31849B;
+}
+
+.Return {
+    background-color: #0070C0;
+}
+
+.St4 {
+    background-color: #C0504D;
+}
+
+.T200 {
+    background-color: #1F497D;
+}
+
+.TSQ {
+    background-color: #FF66FF;
+}
+
+.X3 {
+    background-color: #00B0F0;
+}
+
+.Zoom {
+    background-color: #008000;
+}
