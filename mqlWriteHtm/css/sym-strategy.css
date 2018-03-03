@@ -10,7 +10,7 @@
     z-index: 100;
     display: grid;
     align-items: center;
-    grid-template-columns: 15% 15% 20% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    grid-template-columns: 15% 20% 15% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
     width: 1800px;
     background-color: var(--nav-bg-color);
     font-family: 'Raleway', sans-serif;
@@ -27,21 +27,25 @@
 
 .sym-navlink {
     color: rgba(255, 255, 255, 0.75);
+    transition: 0.5s;
 }
 
 .sym-navlink:hover {
     color: rgb(255, 255, 255);
-    text-shadow: 0 0 20px rgb(0, 25, 39);
+    text-shadow: 0 0 60px rgb(162, 221, 255);
+    transition: 0.5s;
 }
 
 .symbol {
     font-size: 3.5rem;
     font-weight: 900;
+    transition: 0.5s;
 }
 
 .symbol:hover {
     color: rgb(255, 255, 255);
     text-shadow: 0 0 60px rgb(162, 221, 255);
+    transition: 0.5s;
 }
 
 .strategy {
