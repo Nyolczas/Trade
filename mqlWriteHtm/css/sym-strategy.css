@@ -28,6 +28,7 @@
 .sym-navlink {
     color: rgba(255, 255, 255, 0.75);
     transition: 0.5s;
+    text-shadow: 0 0 70px black, 0 0 35px rgba(0, 0, 0, 0.746);
 }
 
 .sym-navlink:hover {
@@ -42,13 +43,15 @@
     transition: 0.5s;
 }
 
-.symbol:hover {
+.symbol:hover , .strategy:hover{
     color: rgb(255, 255, 255);
     text-shadow: 0 0 60px rgb(162, 221, 255);
     transition: 0.5s;
 }
 
 .strategy {
+    color: rgba(255, 255, 255, 0.75);
+    transition: 0.5s;
     font-size: 3.5rem;
     font-weight: 900;
     height: 100%;
