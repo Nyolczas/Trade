@@ -1,11 +1,11 @@
 // Adatmegjelenítés
 var adatMezo = document.querySelector(".adatot-kerek");
 
-function adatotAd( adatok ) {
+function adatotAd( data ) {
     var tartalom = '<ul';
-    adatok = JSON.parse(adatok);
-    for ( var k in adatok) {
-        tartalom += '<li>' +adatok[k].profit+'</li>';
+    data = JSON.parse(data);
+    for ( var k in data) {
+        tartalom += '<li>' +data[k].profit+'</li>';
     }
     tartalom += '</ul>';
     adatMezo.innerHTML =  tartalom;
