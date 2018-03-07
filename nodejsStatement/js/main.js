@@ -5,7 +5,7 @@ function adatotAd( adatok ) {
     var tartalom = '<ul';
     adatok = JSON.parse(adatok);
     for ( var k in adatok) {
-        tartalom += '<li>' +adatok[k].name+'</li>';
+        tartalom += '<li>' +adatok[k].profit+'</li>';
     }
     tartalom += '</ul>';
     adatMezo.innerHTML =  tartalom;
