@@ -5,6 +5,7 @@ body {
     box-sizing: border-box;
     background-image: url("../img/pattern-xm.jpg");
     font-family: 'Poppins', sans-serif;
+    font-size: 10px;
 }
 
 :root {
