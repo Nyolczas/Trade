@@ -14,6 +14,8 @@ body {
     --shadow-50-color: hsla(246, 100%, 6%, 0.5);
     --shadow-25-color: hsla(246, 100%, 6%, 0.25);
     --dekor-color: #c94a7f;
+    --winner-color:hsl(103, 100%, 18%);
+    --looser-color:hsl(345, 100%, 22%);
 }
 
 /* ================================ nav ================================ */
@@ -86,11 +88,12 @@ body {
 .home-main-grid {
     display: grid;
     grid-template-columns: auto 23.6%;
-    /* background-color: var(--basic-light);   */
     min-height: 200px;
     max-width: 1800px;
     margin: 33px auto;
     box-shadow: 0px 0px 180px var(--shadow-50-color);
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
 }
 
 .home-charts {
@@ -141,9 +144,44 @@ body {
     color: white;
 }
 
-.light-italic {
+.small-light-italic {
+    font-size: 13px;
     font-weight: 300;
     font-style: italic;
+    padding-right: 5px;
+}
+
+.big-bold {
+    font-size: 19px;
+    font-weight: 700;  
+}
+
+.winner {
+    text-shadow: 
+    0px 0px 10px var(--winner-color),
+    0px 0px 10px var(--winner-color),
+    0px 0px 20px var(--winner-color),
+    0px 0px 40px var(--winner-color),
+    0px 0px 45px var(--winner-color),
+    0px 0px 50px var(--winner-color),
+    0px 0px 53px var(--winner-color),
+    0px 0px 55px var(--winner-color);
+}
+
+.neutral{
+    color: var(--basic-light);
+}
+
+.looser {
+    text-shadow: 
+    0px 0px 10px var(--looser-color),
+    0px 0px 10px var(--looser-color),
+    0px 0px 20px var(--looser-color),
+    0px 0px 40px var(--looser-color),
+    0px 0px 45px var(--looser-color),
+    0px 0px 50px var(--looser-color),
+    0px 0px 53px var(--looser-color),
+    0px 0px 55px var(--looser-color);
 }
 /* ---------------- /aside ----------------*/
 /* ================================ /Home ================================ */
