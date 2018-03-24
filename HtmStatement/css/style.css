@@ -10,7 +10,7 @@ body {
 :root {
     --basic-dark: #3A3A3A;
     --basic-light: #CCCCCC;
-    --shadow-color: #050035;
+    --shadow-color: #030020;
 }
 
 /* ================================ nav ================================ */
@@ -21,6 +21,7 @@ body {
     position: fixed;
     top: 0;
     background-color: var(--basic-dark);
+    box-shadow: 0px 0px 80px var(--shadow-color), 0px 0px 150px var(--shadow-color);
 }
 
 .nav-regular {
@@ -75,3 +76,26 @@ body {
 }
 
 /* ================================ /Lighting Shading ================================ */
+
+/* ================================ Home ================================ */
+.home-main-grid {
+    display: grid;
+    grid-template-columns: auto 23.6%;
+    /* background-color: var(--basic-light);   */
+    min-height: 200px;
+    max-width: 1800px;
+    margin: 46px auto;
+    box-shadow: 0px 0px 150px var(--shadow-color);
+}
+
+.home-charts {
+    background-color: var(--basic-light); 
+    border: 1px solid var(--basic-dark); 
+}
+
+.home-aside {
+    background-color: var(--basic-dark);
+}
+
+
+/* ================================ /Home ================================ */
