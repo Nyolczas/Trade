@@ -23,26 +23,19 @@
         // -------------------------------- Hozam chart --------------------------------
         function drawHozamChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Month', 'Hozam', 'Longs', 'Shorts'],
-                ['', 0, 0, 0],
-                ['', 165, 238, -120],
-                ['', 235, 120, 115],
-                ['optim', 357, 267, 90],
-                ['', 339, 110, 229],
-                ['', 436, 200, 236]
+                ['trade', 'Hozam'],
+                ['1', 0],
+                ['2', 165],
+                ['3', 235],
+                ['4', 357],
+                ['5', 339],
+                ['6', 436]
             ]);
 
             var options = {
                 seriesType: 'area',
-                series: {
-                    1: {
-                        type: 'line'
-                    },
-                    2: {
-                        type: 'line'
-                    }
-                },
-                colors: ['#ffd900', '#0050b8', '#b80000'],
+                colors: ['#c94a7f'],
+                areaOpacity: 0.5,
                 legend: {
                     position: 'none'
                 },
@@ -57,7 +50,7 @@
                 fontSize: 12,
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Sym-hozam_chart'));
+            var chart = new google.visualization.ComboChart(document.getElementById('hozam-chart'));
             chart.draw(data, options);
         }
         // -------------------------------- /Hozam chart --------------------------------
@@ -75,7 +68,7 @@
 
             var options = {
                 seriesType: 'bars',
-                colors: ['#a17849'],
+                colors: ['#c94a7f'],
                 legend: {
                     position: 'none'
                 },
@@ -90,42 +83,26 @@
                 fontSize: 12,
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Sym-lots_chart'));
+            var chart = new google.visualization.ComboChart(document.getElementById('lots-chart'));
             chart.draw(data, options);
         }
         // -------------------------------- /Lots chart --------------------------------
         // -------------------------------- Strats charts --------------------------------
         function drawStratsChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Month', 'Hozam', 'M5_ADX', 'M15_Zoom', 'H_TSQ', 'D1_Return', 'D1_Gap'],
-                ['', 0, 0, 0, 0, 5, 7],
-                ['', 165, 238, -120, 45, 82, -100],
-                ['', 235, 120, 115, 145, -12, -20],
-                ['optim', 357, 267, 90, 120, 50, 75],
-                ['', 339, 110, 229, 185, 251, 380],
-                ['', 436, 200, 236, -20, 310, 824]
+                ['Month', 'Balance', 'Equity'],
+                ['2015.01.12', 0, 0],
+                ['2015.01.12', 165, 238],
+                ['2015.01.12', 235, 120],
+                ['2015.01.12', 357, 458],
+                ['2015.01.12', 339, 110],
+                ['2015.01.12', 436, 200]
             ]);
 
             var options = {
-                seriesType: 'bars',
-                series: {
-                    1: {
-                        type: 'line'
-                    },
-                    2: {
-                        type: 'line'
-                    },
-                    3: {
-                        type: 'line'
-                    },
-                    4: {
-                        type: 'line'
-                    },
-                    5: {
-                        type: 'line'
-                    }
-                },
-                colors: ['#ffd900', '#0050b8', '#b80000', '#0050b8', '#b80000', '#0050b8'],
+                seriesType: 'area',
+
+                colors: ['#c94a7f', '#c94a7f'],
                 legend: {
                     position: 'none'
                 },
@@ -140,11 +117,11 @@
                 fontSize: 12,
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Strats_chart'));
+            var chart = new google.visualization.ComboChart(document.getElementById('balance-chart'));
             chart.draw(data, options);
         }
         // -------------------------------- /Strats charts --------------------------------
-    </script> 
+    </script>
     <!-- ================================ /google charts ================================ -->
 </head>
 
@@ -163,12 +140,29 @@
     <!-- ================================ /nav ================================ -->
     <!-- ================================ main ================================ -->
     <main class="home-main-grid">
+        <!-- :::::::::::::::::: charts :::::::::::::::::: -->
         <section class="home-charts">
-                <div id="Sym-hozam_chart"></div>
-                <div id="Sym-lots_chart"></div>
-                <div id="Strats_chart"></div>
+            <div class="home-charts-wrapper">
+                <div id="hozam-chart"></div>
+                <div id="lots-chart"></div>
+            </div>
+            <div class="home-charts-wrapper">
+                <div id="balance-chart"></div>
+            </div>
         </section>
-        <aside class="home-aside"></aside>
+        <!-- :::::::::::::::::: /charts :::::::::::::::::: -->
+        <aside class="home-aside">
+            <!-- :::::::::::::::::: profits :::::::::::::::::: -->
+            <div class="flex-container">
+                <div class="profit winner">
+                    <span class="light-italic">Március:</span>
+                    <span class="bold"> $ 5.51 (4.3%)</span> 
+                </div>
+                <div class="profit neutral">12.hét: $ 9.42 (7.3%)</div>
+                <div class="profit looser">23. Péntek: $ 6.01 (1.0%)</div>
+            </div>
+            <!-- :::::::::::::::::: profits :::::::::::::::::: -->
+        </aside>
     </main>
     <!-- ================================ /main ================================ -->
 </body>
