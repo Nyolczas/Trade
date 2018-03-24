@@ -1,6 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,500,700&subset=latin-ext');
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-image: url("../img/pattern-xm.jpg");
+    font-family: 'Poppins', sans-serif;
 }
+
+/* ================================ nav ================================ */
+
+.nav-regular {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav-regular a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+/* ================================ /nav ================================ */
