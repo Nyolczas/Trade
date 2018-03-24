@@ -141,14 +141,27 @@
     <!-- ================================ main ================================ -->
     <main class="home-main-grid">
         <!-- :::::::::::::::::: charts :::::::::::::::::: -->
+
         <section class="home-charts">
-            <div class="home-charts-wrapper">
-                <div id="hozam-chart"></div>
-                <div id="lots-chart"></div>
+                        <ul class="tabs">
+                <li class="tab-link current" data-tab="tab-1">$</li>
+                <li class="tab-link" data-tab="tab-2">%</li>
+            </ul>
+
+            <div class="home-charts-wrapper tab-content current">
+                <div class="hozam-chart" id="hozam-chart"></div>
+                <div class="lots-chart" id="lots-chart"></div>
             </div>
+
+            <!-- <div class="home-charts-wrapper tab-content">
+                <div class="hozam-chart" id="hozam-perc-chart"></div>
+                <div class="lots-chart" id="lots-chart"></div>
+            </div> -->
+
             <div class="home-charts-wrapper">
-                <div id="balance-chart"></div>
+                <div class="hozam-chart" id="balance-chart"></div>
             </div>
+
         </section>
         <!-- :::::::::::::::::: /charts :::::::::::::::::: -->
         <aside class="home-aside">
@@ -169,10 +182,13 @@
             </div>
             <!-- :::::::::::::::::: /profits :::::::::::::::::: -->
             <!-- :::::::::::::::::: loosers :::::::::::::::::: -->
+
             <!-- :::::::::::::::::: /loosers :::::::::::::::::: -->
             <!-- :::::::::::::::::: winners :::::::::::::::::: -->
+
             <!-- :::::::::::::::::: /winners :::::::::::::::::: -->
             <!-- :::::::::::::::::: last trades :::::::::::::::::: -->
+
             <!-- :::::::::::::::::: /last trades :::::::::::::::::: -->
 
         </aside>
