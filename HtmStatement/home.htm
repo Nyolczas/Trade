@@ -42,7 +42,7 @@
                 legend: {
                     position: 'none'
                 },
-                
+
                 chartArea: {
                     left: 60,
                     right: 30,
@@ -71,8 +71,8 @@
             ]);
 
             var options = {
-                'width':1303,
-                'height':580,
+                'width': 1303,
+                'height': 580,
                 seriesType: 'area',
                 colors: ['#c94a7f'],
                 areaOpacity: 0.5,
@@ -94,7 +94,7 @@
             chart.draw(data, options);
         }
         // -------------------------------- /Hozam percent chart --------------------------------
-        
+
         // -------------------------------- Lots chart --------------------------------
         function drawLotsChart() {
             var data = google.visualization.arrayToDataTable([
@@ -222,7 +222,14 @@
             </div>
             <!-- :::::::::::::::::: /profits :::::::::::::::::: -->
             <!-- :::::::::::::::::: loosers :::::::::::::::::: -->
-
+            <div class="loosers-container">
+                <div class="gomb-shading"></div>
+                <div class="flex-container">
+                    <div class="sym">EURUSD</div>
+                    <div class="instr">H1_Classic</div>
+                    <div class="eredm">$ 25.19 2.4 %</div>
+                </div>
+            </div>
             <!-- :::::::::::::::::: /loosers :::::::::::::::::: -->
             <!-- :::::::::::::::::: winners :::::::::::::::::: -->
 
