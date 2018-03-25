@@ -9,7 +9,7 @@ body {
 }
 
 :root {
-    --basic-dark: #3A3A3A;
+    --basic-dark: rgb(17, 34, 56);
     --basic-light: #CCCCCC;
     --shadow-color: #030020;
     --shadow-50-color: hsla(246, 100%, 6%, 0.5);
@@ -62,7 +62,7 @@ body {
 }
 
 .active {
-    color: black;
+    color: var(--dekor-color);
     /* text-shadow: 0 0 13px black; */
 }
 
@@ -120,6 +120,17 @@ body {
     position: absolute;
     right: 50px;
     top: 5px;
+}
+
+.tab-link {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
 }
 
 ul.tabs {
@@ -180,7 +191,6 @@ ul.tabs li.current {
 
 .home-aside {
     background-color: var(--basic-dark);
-    padding: 12px 0 12px 0;
 }
 
 .flex-container {
@@ -229,14 +239,14 @@ ul.tabs li.current {
 .loosers-container {
     background-color: var(--looser-color);
     background-image: url("../img/looser.jpg");
-    background-size:250px 250px;
+    background-size: 250px 250px;
     color: rgba(255, 255, 255, 0.88);
 }
 
 .winners-container {
     background-color: var(--winner-color);
     background-image: url("../img/winner.jpg");
-    background-size:350px 350px;
+    background-size: 350px 350px;
     color: rgba(255, 255, 255, 0.88);
 }
 
@@ -264,12 +274,11 @@ ul.tabs li.current {
     transition: 0.4s;
 }
 
-.gomb-container:hover{
-    box-shadow: 0 1px 8px  var(--shadow-25-color);
+.gomb-container:hover {
+    box-shadow: 0 1px 8px var(--shadow-25-color);
     border: 1px solid rgb(32, 32, 32);
     transition: 0.4s;
 }
-
 
 .flex-container {
     display: flex;
@@ -294,8 +303,45 @@ ul.tabs li.current {
 .res {
     background-color: var(--basic-dark);
 }
-.symb, .strat{
+
+.symb, .strat {
     text-shadow: 0px 3px 7px var(--shadow-color), 0px 0px 3px var(--shadow-color);
+}
+
+/* ---- last trades ---- */
+
+.last-trades-tabla {
+    background-color: white;
+    border: 1px solid rgb(129, 129, 129);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tabla-head, .tabla-sor {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.tabla-sor {
+    border-top: 1px solid rgb(129, 129, 129);
+    padding: 5px;
+}
+
+.tabla-sor:hover {
+    background-color: rgb(225, 255, 254);
+}
+
+.tabla-head {
+    border-top: 0px;
+    font-style: italic;
+    background-color: var(--basic-dark);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 5px;
+}
+
+.symstat-tabla-oszlop {
+    text-align: center;
 }
 
 /* ---------------- /aside ----------------*/
