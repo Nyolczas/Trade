@@ -151,6 +151,11 @@ ul.tabs li.current{
     height: 480px;
 }
 
+.percent-chart {
+    width: 100%;
+    height: 580px;
+}
+
 .lots-chart {
     height: 100px;
 }

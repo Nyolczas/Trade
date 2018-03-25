@@ -19,13 +19,14 @@
         });
 
         google.charts.setOnLoadCallback(drawStratsChart);
-        google.charts.setOnLoadCallback(drawHozamChart);
+        google.charts.setOnLoadCallback(drawDollarCharts);
+        google.charts.setOnLoadCallback(drawPercentChart);
         google.charts.setOnLoadCallback(drawLotsChart);
         // -------------------------------- /Load charts --------------------------------
-        // -------------------------------- Hozam chart --------------------------------
-        function drawHozamChart() {
+        // -------------------------------- Hozam dollar chart --------------------------------
+        function drawDollarCharts() {
             var data = google.visualization.arrayToDataTable([
-                ['trade', 'Hozam'],
+                ['trade', '$ Hozam'],
                 ['1', 0],
                 ['2', 165],
                 ['3', 235],
@@ -35,6 +36,43 @@
             ]);
 
             var options = {
+                seriesType: 'area',
+                colors: ['#c94a7f'],
+                areaOpacity: 0.5,
+                legend: {
+                    position: 'none'
+                },
+                
+                chartArea: {
+                    left: 60,
+                    right: 30,
+                    bottom: 40,
+                    top: 20,
+                    width: "100%",
+                    height: "100%"
+                },
+                fontSize: 12,
+            };
+
+            var chart = new google.visualization.ComboChart(document.getElementById('hozam-chart'));
+            chart.draw(data, options);
+        }
+        // -------------------------------- /Hozam dollar chart --------------------------------
+        // -------------------------------- Hozam percent chart --------------------------------
+        function drawPercentChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['trade', '% Hozam'],
+                ['1', 0],
+                ['2', 1.65],
+                ['3', 2.35],
+                ['4', 3.57],
+                ['5', 3.39],
+                ['6', 4.36]
+            ]);
+
+            var options = {
+                'width':1303,
+                'height':580,
                 seriesType: 'area',
                 colors: ['#c94a7f'],
                 areaOpacity: 0.5,
@@ -52,10 +90,11 @@
                 fontSize: 12,
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('hozam-chart'));
+            var chart = new google.visualization.AreaChart(document.getElementById('percent-chart'));
             chart.draw(data, options);
         }
-        // -------------------------------- /Hozam chart --------------------------------
+        // -------------------------------- /Hozam percent chart --------------------------------
+        
         // -------------------------------- Lots chart --------------------------------
         function drawLotsChart() {
             var data = google.visualization.arrayToDataTable([
@@ -156,8 +195,7 @@
             </div>
 
             <div id="tab-2" class="tab-content home-charts-wrapper">
-                <div class="hozam-chart" id="hozam-perc-chart"></div>
-                <div class="lots-chart" id="lots-chart"></div>
+                <div class="percent-chart" id="percent-chart"></div>
             </div>
 
             <div class="home-charts-wrapper">
