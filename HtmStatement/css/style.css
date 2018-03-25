@@ -229,12 +229,14 @@ ul.tabs li.current {
 .loosers-container {
     background-color: var(--looser-color);
     background-image: url("../img/looser.jpg");
-    background-size:200px 200px;
+    background-size:250px 250px;
     color: rgba(255, 255, 255, 0.88);
 }
 
 .winners-container {
     background-color: var(--winner-color);
+    background-image: url("../img/winner.jpg");
+    background-size:350px 350px;
     color: rgba(255, 255, 255, 0.88);
 }
 
@@ -289,6 +291,9 @@ ul.tabs li.current {
     flex-grow: 3;
 }
 
+.res {
+    background-color: var(--basic-dark);
+}
 .symb, .strat{
     text-shadow: 0px 3px 7px var(--shadow-color), 0px 0px 3px var(--shadow-color);
 }
