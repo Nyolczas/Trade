@@ -96,13 +96,47 @@ body {
     overflow: hidden;
 }
 
+/* ---------------- charts ----------------*/
 .home-charts {
     background-color: var(--basic-light);
     border: 1px solid var(--basic-dark);
     padding-bottom: 15px;
+    position: relative;
+}
+/* tabs */
+.tabs {
+    position: absolute;
+    right: 30px;
+}
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.tabs li{
+    background: none;
+    color: var(--basic-dark);
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
 }
 
-/* ---------------- charts ----------------*/
+ul.tabs li.current{
+    background: #ededed;
+    color: #222;
+}
+
+.tab-content{
+    display: none;
+    background: #ededed;
+    padding: 15px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+/* /tabs */
 
 .home-charts-wrapper {
     margin: 20px 20px 30px 20px;
@@ -111,16 +145,12 @@ body {
     box-shadow: 0px 10px 50px var(--shadow-25-color);
 }
 
-#hozam-chart {
+.hozam-chart {
     height: 480px;
 }
 
-#lots-chart {
+.lots-chart {
     height: 100px;
-}
-
-#balance-chart {
-    height: 480px;
 }
 
 /* ---------------- /charts ----------------*/

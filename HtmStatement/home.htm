@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- ================================ jquery ================================ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- ================================ google charts ================================ -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- chart scripts -->
@@ -143,20 +145,20 @@
         <!-- :::::::::::::::::: charts :::::::::::::::::: -->
 
         <section class="home-charts">
-                        <ul class="tabs">
+            <ul class="tabs">
                 <li class="tab-link current" data-tab="tab-1">$</li>
                 <li class="tab-link" data-tab="tab-2">%</li>
             </ul>
 
-            <div class="home-charts-wrapper tab-content current">
+            <div id="tab-1" class="tab-content home-charts-wrapper current">
                 <div class="hozam-chart" id="hozam-chart"></div>
                 <div class="lots-chart" id="lots-chart"></div>
             </div>
 
-            <!-- <div class="home-charts-wrapper tab-content">
+            <div id="tab-2" class="tab-content home-charts-wrapper">
                 <div class="hozam-chart" id="hozam-perc-chart"></div>
                 <div class="lots-chart" id="lots-chart"></div>
-            </div> -->
+            </div>
 
             <div class="home-charts-wrapper">
                 <div class="hozam-chart" id="balance-chart"></div>
@@ -194,6 +196,7 @@
         </aside>
     </main>
     <!-- ================================ /main ================================ -->
+    <script src="js/jquery.js"></script>
 </body>
 
 </html>
