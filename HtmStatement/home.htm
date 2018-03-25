@@ -27,7 +27,7 @@
         // -------------------------------- Hozam dollar chart --------------------------------
         function drawDollarCharts() {
             var data = google.visualization.arrayToDataTable([
-                ['trade', '$ Hozam'],
+                ['trade', '$'],
                 ['1', 0],
                 ['2', 165],
                 ['3', 235],
@@ -62,7 +62,7 @@
         // -------------------------------- Hozam percent chart --------------------------------
         function drawPercentChart() {
             var data = google.visualization.arrayToDataTable([
-                ['trade', '% Hozam'],
+                ['trade', '%'],
                 ['1', 0],
                 ['2', 1.65],
                 ['3', 2.35],
@@ -73,7 +73,7 @@
 
             var options = {
                 'width': 1303,
-                'height': 580,
+                'height': 480,
                 seriesType: 'area',
                 colors: ['#c94a7f'],
                 areaOpacity: 0.5,
@@ -190,7 +190,6 @@
             </ul>
             <div id="tab-1" class="tab-content home-charts-wrapper current">
                 <div class="hozam-chart" id="hozam-chart"></div>
-                <div class="lots-chart" id="lots-chart"></div>
             </div>
 
             <div id="tab-2" class="tab-content home-charts-wrapper">
@@ -199,6 +198,7 @@
 
             <div class="home-charts-wrapper">
                 <div class="hozam-chart" id="balance-chart"></div>
+                <div class="lots-chart" id="lots-chart"></div>
             </div>
 
         </section>
@@ -330,7 +330,7 @@
                             Legutóbbi trédek
                         </h1>
                 <div class="last-trades-tabla">
-                    <div class="tabla-head">
+                    <div class="tabla-head small-light-italic">
                         <div class="tabla-oszlop osym">symbol</div>
                         <div class="tabla-oszlop ostrat">strat</div>
                         <div class="tabla-oszlop otype">type</div>
@@ -372,21 +372,21 @@
                         <div class="tabla-oszlop okomm">[sl]</div>
                         <div class="tabla-oszlop oprofit">$ 25.19 (2.4 %)</div>
                     </a>
-                    <a href="#" class="tabla-sor winner">
+                    <a href="#" class="tabla-sor light-winner">
                         <div class="tabla-oszlop osym">EURUSD</div>
                         <div class="tabla-oszlop ostrat">M15_Zoom</div>
                         <div class="tabla-oszlop otype">buy</div>
                         <div class="tabla-oszlop okomm">[sl]</div>
                         <div class="tabla-oszlop oprofit">$ 25.19 (2.4 %)</div>
                     </a>
-                    <a href="#" class="tabla-sor looser">
+                    <a href="#" class="tabla-sor light-looser">
                         <div class="tabla-oszlop osym">EURUSD</div>
                         <div class="tabla-oszlop ostrat">M15_Zoom</div>
                         <div class="tabla-oszlop otype">buy</div>
                         <div class="tabla-oszlop okomm">[sl]</div>
                         <div class="tabla-oszlop oprofit">$ 25.19 (2.4 %)</div>
                     </a>
-                    <a href="#" class="tabla-sor neutral">
+                    <a href="#" class="tabla-sor light-neutral">
                         <div class="tabla-oszlop osym">EURUSD</div>
                         <div class="tabla-oszlop ostrat">M15_Zoom</div>
                         <div class="tabla-oszlop otype">buy</div>
