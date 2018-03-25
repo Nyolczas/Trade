@@ -256,19 +256,25 @@
 
 .M5 {
     border-left: 6px solid #E86800;
+    border-right: 6px solid #E86800;
 }
 .M15 {
     border-left: 6px solid #FA9F00;
+    border-right: 6px solid #FA9F00;
 }
 .M30 {
     border-left: 6px solid #D7DF22;
+    border-right: 6px solid #D7DF22;
 }
 .H1 {
     border-left: 6px solid #4CC92A;
+    border-right: 6px solid #4CC92A;
 }
 .H4 {
     border-left: 6px solid #00B2ED;
+    border-right: 6px solid #00B2ED;
 }
 .D1  {
     border-left: 6px solid #C39BFF;
+    border-right: 6px solid #C39BFF;
 }
