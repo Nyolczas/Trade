@@ -32,12 +32,14 @@ body {
 }
 
 .nav-regular {
+    z-index: 2;
     width: 520px;
     max-width: 100%;
     margin: auto;
 }
 
 .nav-regular a {
+    z-index: 2;
     float: left;
     display: block;
     text-align: center;
@@ -50,6 +52,7 @@ body {
     color: var(--basic-light);
     transition: 0.4s;
     text-shadow: 0px 10px 25px var(--shadow-color), 0px 6px 14px var(--shadow-color), 0px 2px 6px var(--shadow-color);
+    z-index: 2;
 }
 
 .menu-link:hover {
@@ -225,15 +228,19 @@ ul.tabs li.current {
 
 .loosers-container {
     background-color: var(--looser-color);
-    color: rgba(255, 255, 255, 0.822);
-    opacity: 0.8;
+    background-image: url("../img/looser.jpg");
+    background-size:200px 200px;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.winners-container {
+    background-color: var(--winner-color);
+    color: rgba(255, 255, 255, 0.88);
 }
 
 .aside-cont a {
     text-decoration: none;
 }
-
-
 
 .container-title {
     margin-top: 0;
@@ -256,10 +263,11 @@ ul.tabs li.current {
 }
 
 .gomb-container:hover{
-    box-shadow: 0 0 10px  var(--shadow-25-color);
+    box-shadow: 0 1px 8px  var(--shadow-25-color);
+    border: 1px solid rgb(32, 32, 32);
     transition: 0.4s;
-    border: 1px solid rgba(0, 0, 0, 0.5);
 }
+
 
 .flex-container {
     display: flex;
@@ -279,6 +287,10 @@ ul.tabs li.current {
 
 .strat {
     flex-grow: 3;
+}
+
+.symb, .strat{
+    text-shadow: 0px 3px 7px var(--shadow-color), 0px 0px 3px var(--shadow-color);
 }
 
 /* ---------------- /aside ----------------*/
