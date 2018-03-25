@@ -14,8 +14,8 @@ body {
     --shadow-50-color: hsla(246, 100%, 6%, 0.5);
     --shadow-25-color: hsla(246, 100%, 6%, 0.25);
     --dekor-color: #c94a7f;
-    --winner-color:hsl(103, 100%, 18%);
-    --looser-color:hsl(345, 100%, 22%);
+    --winner-color: hsl(103, 100%, 18%);
+    --looser-color: hsl(345, 100%, 22%);
 }
 
 /* ================================ nav ================================ */
@@ -79,6 +79,11 @@ body {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF' ,GradientType=0)";
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 228, 185, 0.5) 25.68%, rgba(21, 0, 73, 0.2) 82.97%, rgba(255, 255, 255, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#FFFFFF', GradientType=0);
+    mix-blend-mode: overlay;
+}
+
+.gomb-shading::after {
+    mix-blend-mode: normal;
 }
 
 /* ================================ /Lighting Shading ================================ */
@@ -97,24 +102,29 @@ body {
 }
 
 /* ---------------- charts ----------------*/
+
 .home-charts {
     background-color: var(--basic-light);
     border: 1px solid var(--basic-dark);
     padding-bottom: 15px;
     position: relative;
 }
+
 /* tabs */
+
 .tabs {
     position: absolute;
     right: 50px;
     top: 5px;
 }
-ul.tabs{
+
+ul.tabs {
     margin: 0px;
     padding: 0px;
     list-style: none;
 }
-ul.tabs li{
+
+ul.tabs li {
     background: none;
     color: var(--basic-dark);
     display: inline-block;
@@ -123,18 +133,18 @@ ul.tabs li{
     border-radius: 10px;
 }
 
-ul.tabs li.current{
+ul.tabs li.current {
     background: white;
     color: var(--dekor-color);
 }
 
-.tab-content{
+.tab-content {
     display: none;
     background: white;
     padding: 15px;
 }
 
-.tab-content.current{
+.tab-content.current {
     display: inherit;
 }
 
@@ -161,7 +171,9 @@ ul.tabs li.current{
 }
 
 /* ---------------- /charts ----------------*/
+
 /* ---------------- aside ----------------*/
+
 .home-aside {
     background-color: var(--basic-dark);
     padding: 12px 0 12px 0;
@@ -190,35 +202,60 @@ ul.tabs li.current{
 
 .big-bold {
     font-size: 19px;
-    font-weight: 700;  
+    font-weight: 700;
 }
 
 .winner {
-    text-shadow: 
-    0px 0px 10px var(--winner-color),
-    0px 0px 10px var(--winner-color),
-    0px 0px 20px var(--winner-color),
-    0px 0px 40px var(--winner-color),
-    0px 0px 45px var(--winner-color),
-    0px 0px 50px var(--winner-color),
-    0px 0px 53px var(--winner-color),
-    0px 0px 55px var(--winner-color);
+    text-shadow: 0px 0px 10px var(--winner-color), 0px 0px 10px var(--winner-color), 0px 0px 20px var(--winner-color), 0px 0px 40px var(--winner-color), 0px 0px 45px var(--winner-color), 0px 0px 50px var(--winner-color), 0px 0px 53px var(--winner-color), 0px 0px 55px var(--winner-color);
 }
 
-.neutral{
+.neutral {
     color: var(--basic-light);
 }
 
 .looser {
-    text-shadow: 
-    0px 0px 10px var(--looser-color),
-    0px 0px 10px var(--looser-color),
-    0px 0px 20px var(--looser-color),
-    0px 0px 40px var(--looser-color),
-    0px 0px 45px var(--looser-color),
-    0px 0px 50px var(--looser-color),
-    0px 0px 53px var(--looser-color),
-    0px 0px 55px var(--looser-color);
+    text-shadow: 0px 0px 10px var(--looser-color), 0px 0px 10px var(--looser-color), 0px 0px 20px var(--looser-color), 0px 0px 40px var(--looser-color), 0px 0px 45px var(--looser-color), 0px 0px 50px var(--looser-color), 0px 0px 53px var(--looser-color), 0px 0px 55px var(--looser-color);
 }
+
+.aside-cont {
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.loosers-container {
+    background-color: var(--looser-color);
+    color: rgba(255, 255, 255, 0.822);
+    opacity: 0.8;
+}
+
+.aside-cont a {
+    text-decoration: none;
+}
+
+.container-title {
+    margin-top: 0;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.gomb-container {
+    z-index: 1;
+    width: 100%;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid gray;
+    box-shadow: 0px 15px 30px var(--shadow-color);
+}
+
+.gomb-item {
+    z-index: -2;
+    padding: 3px 15px;
+    color: white;
+}
+
 /* ---------------- /aside ----------------*/
+
 /* ================================ /Home ================================ */

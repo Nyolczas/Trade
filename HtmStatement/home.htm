@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/symcolors.css">
     <!-- ================================ jquery ================================ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- ================================ google charts ================================ -->
@@ -206,7 +207,7 @@
         <!-- :::::::::::::::::: /charts :::::::::::::::::: -->
         <aside class="home-aside">
             <!-- :::::::::::::::::: profits :::::::::::::::::: -->
-            <div class="flex-container">
+            <div class="aside-cont flex-container">
                 <div class="profit winner">
                     <span class="small-light-italic">Március: </span>
                     <span class="big-bold"> $ 5.51 (4.3%)</span>
@@ -222,13 +223,20 @@
             </div>
             <!-- :::::::::::::::::: /profits :::::::::::::::::: -->
             <!-- :::::::::::::::::: loosers :::::::::::::::::: -->
-            <div class="loosers-container">
-                <div class="gomb-shading"></div>
-                <div class="flex-container">
-                    <div class="sym">EURUSD</div>
-                    <div class="instr">H1_Classic</div>
-                    <div class="eredm">$ 25.19 2.4 %</div>
-                </div>
+            <div class="aside-cont loosers-container">
+                <h1 class="container-title">
+                    Az elmúlt 12 nap vesztesei:
+                </h1>
+                <a href="#">
+                    <div class="gomb-container">
+                        <div class="gomb-shading"></div>
+                        <div class="flex-container">
+                            <div class="gomb-item EURUSD">EURUSD</div>
+                            <div class="gomb-item H1 Classic">H1_Classic</div>
+                            <div class="gomb-item looser">$ 25.19 (2.4 %)</div>
+                        </div>
+                    </div>
+                </a>
             </div>
             <!-- :::::::::::::::::: /loosers :::::::::::::::::: -->
             <!-- :::::::::::::::::: winners :::::::::::::::::: -->
