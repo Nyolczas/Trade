@@ -19,7 +19,7 @@
             'packages': ['corechart', 'table']
         });
 
-        google.charts.setOnLoadCallback(drawStratsChart);
+        google.charts.setOnLoadCallback(drawEqChart);
         google.charts.setOnLoadCallback(drawDollarCharts);
         google.charts.setOnLoadCallback(drawPercentChart);
         google.charts.setOnLoadCallback(drawLotsChart);
@@ -37,6 +37,24 @@
             ]);
 
             var options = {
+                // backgroundColor: '#112238',
+                backgroundColor: {
+                    fill: '#112238',
+                },
+
+                hAxis: {
+                    textStyle: {
+                        color: '#c94a7f',
+                    }
+                },
+                vAxis: {
+                    textStyle: {
+                        color: '#c94a7f',
+                    },
+                    gridlines: {
+                        color: '#1d3246',
+                    }
+                },
                 seriesType: 'area',
                 colors: ['#c94a7f'],
                 areaOpacity: 0.5,
@@ -74,6 +92,23 @@
             var options = {
                 'width': 1303,
                 'height': 480,
+                backgroundColor: {
+                    fill: '#112238',
+                },
+
+                hAxis: {
+                    textStyle: {
+                        color: '#c94a7f',
+                    }
+                },
+                vAxis: {
+                    textStyle: {
+                        color: '#c94a7f',
+                    },
+                    gridlines: {
+                        color: '#1d3246',
+                    }
+                },
                 seriesType: 'area',
                 colors: ['#c94a7f'],
                 areaOpacity: 0.5,
@@ -109,6 +144,23 @@
             ]);
 
             var options = {
+                backgroundColor: {
+                    fill: '#112238',
+                },
+
+                hAxis: {
+                    textStyle: {
+                        color: '#c94a7f',
+                    }
+                },
+                vAxis: {
+                    textStyle: {
+                        color: '#c94a7f',
+                    },
+                    gridlines: {
+                        color: '#1d3246',
+                    }
+                },
                 seriesType: 'bars',
                 colors: ['#c94a7f'],
                 legend: {
@@ -129,8 +181,8 @@
             chart.draw(data, options);
         }
         // -------------------------------- /Lots chart --------------------------------
-        // -------------------------------- Strats charts --------------------------------
-        function drawStratsChart() {
+        // -------------------------------- Eq charts --------------------------------
+        function drawEqChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Month', 'Balance', 'Equity'],
                 ['2015.01.12', 0, 0],
@@ -143,7 +195,23 @@
 
             var options = {
                 seriesType: 'area',
+                backgroundColor: {
+                    fill: '#112238',
+                },
 
+                hAxis: {
+                    textStyle: {
+                        color: '#c94a7f',
+                    }
+                },
+                vAxis: {
+                    textStyle: {
+                        color: '#c94a7f',
+                    },
+                    gridlines: {
+                        color: '#1d3246',
+                    }
+                },
                 colors: ['#c94a7f', '#c94a7f'],
                 legend: {
                     position: 'none'
@@ -162,7 +230,7 @@
             var chart = new google.visualization.ComboChart(document.getElementById('balance-chart'));
             chart.draw(data, options);
         }
-        // -------------------------------- /Strats charts --------------------------------
+        // -------------------------------- /Eq charts --------------------------------
     </script>
     <!-- ================================ /google charts ================================ -->
 </head>

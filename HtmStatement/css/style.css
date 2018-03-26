@@ -9,7 +9,8 @@ body {
 }
 
 :root {
-    --basic-dark: rgb(17, 34, 56);
+    --basic-dark: #112238;
+    --basic-dark-textured: #1d3246;
     --basic-light: #CCCCCC;
     --shadow-color: #030020;
     --shadow-50-color: hsla(246, 100%, 6%, 0.5);
@@ -122,7 +123,7 @@ body {
 /* ---------------- charts ----------------*/
 
 .home-charts {
-    background-color: var(--basic-light);
+    background-color: var(--basic-dark-textured);
     border: 1px solid var(--basic-dark);
     padding-bottom: 15px;
     position: relative;
@@ -155,7 +156,7 @@ ul.tabs {
 
 ul.tabs li {
     background: none;
-    color: var(--basic-dark);
+    color: var(--basic-light);
     display: inline-block;
     padding: 5px 15px 30px 15px;
     cursor: pointer;
@@ -163,13 +164,13 @@ ul.tabs li {
 }
 
 ul.tabs li.current {
-    background: white;
+    background: var(--basic-dark);
     color: var(--dekor-color);
 }
 
 .tab-content {
     display: none;
-    background: white;
+    background: var(--basic-dark);
     padding: 15px;
 }
 
@@ -185,7 +186,7 @@ ul.tabs li.current {
     border-radius: 10px;
     box-shadow: 0px 10px 50px var(--shadow-25-color);
     padding: 15px;
-    background: white;
+    background: var(--basic-dark);
 }
 
 
