@@ -7,6 +7,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Symbols</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- chart scripts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load("current", { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ["Instrument", "Hozam", { role: "style" }],
+                ["AUDUSD", 17.56, "color: #5D753E"],
+                ["AUDCAD", 3.14, "color: #67976D"],
+                ["AUDJPY", 11.50, "color: #939F4A"],
+                ["CADJPY", -3.97, "color: #E1926A"],
+                ["CHFJPY", 11.05, "color: #B1626F"],
+                ["EURAUD", 11.23, "color: #00AB94"],
+                ["EURGBP", -57.78, "color: #00619F"],
+                ["EURJPY", 26.29, "color: #AF9C77"],
+                ["EURUSD", -23.80, "color: #894C69"],
+                ["GBPAUD", -3.88, "color: #007550"],
+                ["GBPCHF", -39.45, "color: #3D2981"],
+                ["GBPJPY", -63.59, "color: #7B5A52"],
+                ["GBPUSD", -24.72, "color: #8B0E2A"],
+                ["GOLD", 0.01, "color: #F89A19"],
+                ["NZDUSD", -0.17, "color: #C76126"],
+                ["USDCAD", -3.67, "color: #E06665"],
+                ["USDCHF", 6.61, "color: #A21E65"],
+                ["USDJPY", -6.14, "color: #F65026"],
+                ["USDMXN", -2.69, "color: #9F1D21"]
+            ]);
+
+            var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                {
+                    calc: "stringify",
+                    sourceColumn: 1,
+                    type: "string",
+                    role: "annotation"
+                },
+                2]);
+
+            var options = {
+                bar: { groupWidth: "92%" },
+                legend: { position: "none" },
+                chartArea: {
+                    left: 40,
+                    right: 40,
+                    bottom: 20,
+                    top: 20,
+                    width: "100%",
+                    height: "100%"
+                }
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+            chart.draw(view, options);
+        }
+    </script>
 </head>
 
 <body>
@@ -23,6 +79,53 @@
         </nav>
     </div>
     <!-- ================================ /nav ================================ -->
+    <div class="symstrat-container">
+        <div class="chart-group">
+            <div class="flex-container">
+                <a class="instr-button AUDUSD" href="AUDUSD/AUDUSD.htm">AUDUSD</a>
+                <a class="instr-button AUDCAD" href="AUDCAD/AUDCAD.htm">AUDCAD</a>
+                <a class="instr-button AUDJPY" href="AUDJPY/AUDJPY.htm">AUDJPY</a>
+                <a class="instr-button CADJPY" href="CADJPY/CADJPY.htm">CADJPY</a>
+                <a class="instr-button CHFJPY" href="CHFJPY/CHFJPY.htm">CHFJPY</a>
+                <a class="instr-button EURAUD" href="EURAUD/EURAUD.htm">EURAUD</a>
+                <a class="instr-button EURGBP" href="EURGBP/EURGBP.htm">EURGBP</a>
+                <a class="instr-button EURJPY" href="EURJPY/EURJPY.htm">EURJPY</a>
+                <a class="instr-button EURUSD" href="EURUSD/EURUSD.htm">EURUSD</a>
+                <a class="instr-button GBPAUD" href="GBPAUD/GBPAUD.htm">GBPAUD</a>
+                <a class="instr-button GBPCHF" href="GBPCHF/GBPCHF.htm">GBPCHF</a>
+                <a class="instr-button GBPJPY" href="GBPJPY/GBPJPY.htm">GBPJPY</a>
+                <a class="instr-button GBPUSD" href="GBPUSD/GBPUSD.htm">GBPUSD</a>
+                <a class="instr-button GOLD" href="GOLD/GOLD.htm">GOLD</a>
+                <a class="instr-button NZDUSD" href="NZDUSD/NZDUSD.htm">NZDUSD</a>
+                <a class="instr-button USDCAD" href="USDCAD/USDCAD.htm">USDCAD</a>
+                <a class="instr-button USDCHF" href="USDCHF/USDCHF.htm">USDCHF</a>
+                <a class="instr-button USDJPY" href="USDJPY/USDJPY.htm">USDJPY</a>
+                <a class="instr-button USDMXN" href="USDMXN/USDMXN.htm">USDMXN</a>
+            </div>
+            <div id="columnchart_values"></div>
+            <div class="flex-container">
+                <a class="instr-button AUDUSD" href="AUDUSD/AUDUSD.htm">AUDUSD</a>
+                <a class="instr-button AUDCAD" href="AUDCAD/AUDCAD.htm">AUDCAD</a>
+                <a class="instr-button AUDJPY" href="AUDJPY/AUDJPY.htm">AUDJPY</a>
+                <a class="instr-button CADJPY" href="CADJPY/CADJPY.htm">CADJPY</a>
+                <a class="instr-button CHFJPY" href="CHFJPY/CHFJPY.htm">CHFJPY</a>
+                <a class="instr-button EURAUD" href="EURAUD/EURAUD.htm">EURAUD</a>
+                <a class="instr-button EURGBP" href="EURGBP/EURGBP.htm">EURGBP</a>
+                <a class="instr-button EURJPY" href="EURJPY/EURJPY.htm">EURJPY</a>
+                <a class="instr-button EURUSD" href="EURUSD/EURUSD.htm">EURUSD</a>
+                <a class="instr-button GBPAUD" href="GBPAUD/GBPAUD.htm">GBPAUD</a>
+                <a class="instr-button GBPCHF" href="GBPCHF/GBPCHF.htm">GBPCHF</a>
+                <a class="instr-button GBPJPY" href="GBPJPY/GBPJPY.htm">GBPJPY</a>
+                <a class="instr-button GBPUSD" href="GBPUSD/GBPUSD.htm">GBPUSD</a>
+                <a class="instr-button GOLD" href="GOLD/GOLD.htm">GOLD</a>
+                <a class="instr-button NZDUSD" href="NZDUSD/NZDUSD.htm">NZDUSD</a>
+                <a class="instr-button USDCAD" href="USDCAD/USDCAD.htm">USDCAD</a>
+                <a class="instr-button USDCHF" href="USDCHF/USDCHF.htm">USDCHF</a>
+                <a class="instr-button USDJPY" href="USDJPY/USDJPY.htm">USDJPY</a>
+                <a class="instr-button USDMXN" href="USDMXN/USDMXN.htm">USDMXN</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
