@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url("../img/pattern-xm.jpg");
+    /* background-image: url("../img/pattern-xm.jpg"); */
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.05rem;
 }
@@ -47,7 +47,7 @@ body {
     text-align: center;
     padding: 5px 18px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .menu-link {
@@ -272,7 +272,7 @@ ul.tabs li.current {
 .container-title {
     margin-top: 0;
     padding: 5px;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     font-style: italic;
     color: rgba(255, 255, 255, 0.88);
@@ -343,7 +343,7 @@ ul.tabs li.current {
 .tabla-sor {
     border-top: 1px solid rgb(0, 0, 0);
     padding: 9px;
-    font-size: 13px;
+    font-size: 10px;
 
     background : -moz-linear-gradient(50% 100% 90deg,rgba(0, 0, 0, 1) 0%,rgba(57, 55, 84, 1) 30.5%,rgba(94, 90, 72, 1) 87.82%,rgba(0, 0, 0, 1) 100%);
     background : -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(57, 55, 84, 1) 30.5%, rgba(94, 90, 72, 1) 87.82%, rgba(0, 0, 0, 1) 100%);
@@ -375,7 +375,7 @@ ul.tabs li.current {
 .tabla-head {
     border-top: 0px;
     font-style: italic;
-    font-size: 10px;
+    font-size: 8px;
     background-color: var(--basic-dark);
     color: rgba(255, 255, 255, 0.75);
     padding: 5px;
