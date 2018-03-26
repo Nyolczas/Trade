@@ -325,10 +325,26 @@ ul.tabs li.current {
 .tabla-sor {
     border-top: 1px solid rgb(129, 129, 129);
     padding: 5px;
+
+    background : -moz-linear-gradient(50% 100% 90deg,rgba(179, 179, 179, 1) 0%,rgba(255, 255, 255, 1) 30%,rgba(255, 255, 255, 1) 70%,rgba(179, 179, 179, 1) 100%);
+    background : -webkit-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(179, 179, 179, 1) 100%);
+    background : -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0,rgba(179, 179, 179, 1) ),color-stop(0.3,rgba(255, 255, 255, 1) ),color-stop(0.7,rgba(255, 255, 255, 1) ),color-stop(1,rgba(179, 179, 179, 1) ));
+    background : -o-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(179, 179, 179, 1) 100%);
+    background : -ms-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(179, 179, 179, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3', endColorstr='#B3B3B3' ,GradientType=0)";
+    background : linear-gradient(0deg, rgba(179, 179, 179, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(179, 179, 179, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3',endColorstr='#B3B3B3' , GradientType=0);
 }
 
 .tabla-sor:hover {
-    background-color: rgb(225, 255, 254);
+    background : -moz-linear-gradient(50% 100% 90deg,rgba(179, 179, 179, 1) 0%,rgba(230, 230, 230, 1) 30%,rgba(230, 230, 230, 1) 70%,rgba(179, 179, 179, 1) 100%);
+    background : -webkit-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(230, 230, 230, 1) 30%, rgba(230, 230, 230, 1) 70%, rgba(179, 179, 179, 1) 100%);
+    background : -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0,rgba(179, 179, 179, 1) ),color-stop(0.3,rgba(230, 230, 230, 1) ),color-stop(0.7,rgba(230, 230, 230, 1) ),color-stop(1,rgba(179, 179, 179, 1) ));
+    background : -o-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(230, 230, 230, 1) 30%, rgba(230, 230, 230, 1) 70%, rgba(179, 179, 179, 1) 100%);
+    background : -ms-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(230, 230, 230, 1) 30%, rgba(230, 230, 230, 1) 70%, rgba(179, 179, 179, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3', endColorstr='#B3B3B3' ,GradientType=0)";
+    background : linear-gradient(0deg, rgba(179, 179, 179, 1) 0%, rgba(230, 230, 230, 1) 30%, rgba(230, 230, 230, 1) 70%, rgba(179, 179, 179, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3',endColorstr='#B3B3B3' , GradientType=0);
 }
 
 .tabla-head {
@@ -341,6 +357,21 @@ ul.tabs li.current {
 
 .symstat-tabla-oszlop {
     text-align: center;
+}
+
+.light-neutral{
+    color: rgb(95, 95, 95);
+    text-shadow: 0px 0px 30px gray;
+}
+
+.light-looser{
+    color: var(--looser-color);
+    text-shadow: 0px 0px 30px red;
+}
+
+.light-winner{
+    color: var(--winner-color);
+    text-shadow: 0px 0px 30px limegreen;
 }
 
 /* ---------------- /aside ----------------*/
