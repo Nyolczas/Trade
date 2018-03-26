@@ -389,3 +389,13 @@ ul.tabs li.current {
 /* ---------------- /aside ----------------*/
 
 /* ================================ /Home ================================ */
+/* ================================ Symbols ================================ */
+.syms-container{
+    min-height: 200px;
+    max-width: 1800px;
+    margin: 33px auto;
+    box-shadow: 0px 0px 180px var(--shadow-50-color);
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+}
+/* ================================ /Symbols ================================ */
