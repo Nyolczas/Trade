@@ -219,6 +219,7 @@ ul.tabs li.current {
 }
 
 .winner {
+    color: white;
     text-shadow: 0px 0px 10px var(--winner-color), 0px 0px 10px var(--winner-color), 0px 0px 20px var(--winner-color), 0px 0px 40px var(--winner-color), 0px 0px 45px var(--winner-color), 0px 0px 50px var(--winner-color), 0px 0px 53px var(--winner-color), 0px 0px 55px var(--winner-color);
 }
 
@@ -227,6 +228,7 @@ ul.tabs li.current {
 }
 
 .looser {
+    color: white;
     text-shadow: 0px 0px 10px var(--looser-color), 0px 0px 10px var(--looser-color), 0px 0px 20px var(--looser-color), 0px 0px 40px var(--looser-color), 0px 0px 45px var(--looser-color), 0px 0px 50px var(--looser-color), 0px 0px 53px var(--looser-color), 0px 0px 55px var(--looser-color);
 }
 
@@ -270,13 +272,13 @@ ul.tabs li.current {
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0px 15px 30px var(--shadow-50-color);
     margin: 2px 2px 20px 2px;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .gomb-container:hover {
     box-shadow: 0 1px 8px var(--shadow-25-color);
     border: 1px solid rgb(32, 32, 32);
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .flex-container {
@@ -323,33 +325,41 @@ ul.tabs li.current {
 }
 
 .tabla-sor {
-    border-top: 1px solid rgb(129, 129, 129);
-    padding: 5px;
+    border-top: 1px solid rgb(0, 0, 0);
+    padding: 9px;
+    font-size: 13px;
 
-    background : -moz-linear-gradient(50% 100% 90deg,rgba(179, 179, 179, 1) 0%,rgba(255, 255, 255, 1) 30%,rgba(255, 255, 255, 1) 70%,rgba(179, 179, 179, 1) 100%);
-    background : -webkit-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(179, 179, 179, 1) 100%);
-    background : -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0,rgba(179, 179, 179, 1) ),color-stop(0.3,rgba(255, 255, 255, 1) ),color-stop(0.7,rgba(255, 255, 255, 1) ),color-stop(1,rgba(179, 179, 179, 1) ));
-    background : -o-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(179, 179, 179, 1) 100%);
-    background : -ms-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(179, 179, 179, 1) 100%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3', endColorstr='#B3B3B3' ,GradientType=0)";
-    background : linear-gradient(0deg, rgba(179, 179, 179, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(179, 179, 179, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3',endColorstr='#B3B3B3' , GradientType=0);
+    background : -moz-linear-gradient(50% 100% 90deg,rgba(0, 0, 0, 1) 0%,rgba(57, 55, 84, 1) 30.5%,rgba(94, 90, 72, 1) 87.82%,rgba(0, 0, 0, 1) 100%);
+    background : -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(57, 55, 84, 1) 30.5%, rgba(94, 90, 72, 1) 87.82%, rgba(0, 0, 0, 1) 100%);
+    background : -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0,rgba(0, 0, 0, 1) ),color-stop(0.305,rgba(57, 55, 84, 1) ),color-stop(0.8782,rgba(94, 90, 72, 1) ),color-stop(1,rgba(0, 0, 0, 1) ));
+    background : -o-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(57, 55, 84, 1) 30.5%, rgba(94, 90, 72, 1) 87.82%, rgba(0, 0, 0, 1) 100%);
+    background : -ms-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(57, 55, 84, 1) 30.5%, rgba(94, 90, 72, 1) 87.82%, rgba(0, 0, 0, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000' ,GradientType=0)";
+    background : linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(57, 55, 84, 1) 30.5%, rgba(94, 90, 72, 1) 87.82%, rgba(0, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000' , GradientType=0);
+
+    transition: 0.3s;
 }
 
 .tabla-sor:hover {
-    background : -moz-linear-gradient(50% 100% 90deg,rgba(179, 179, 179, 1) 0%,rgba(230, 230, 230, 1) 30%,rgba(230, 230, 230, 1) 70%,rgba(179, 179, 179, 1) 100%);
-    background : -webkit-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(230, 230, 230, 1) 30%, rgba(230, 230, 230, 1) 70%, rgba(179, 179, 179, 1) 100%);
-    background : -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0,rgba(179, 179, 179, 1) ),color-stop(0.3,rgba(230, 230, 230, 1) ),color-stop(0.7,rgba(230, 230, 230, 1) ),color-stop(1,rgba(179, 179, 179, 1) ));
-    background : -o-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(230, 230, 230, 1) 30%, rgba(230, 230, 230, 1) 70%, rgba(179, 179, 179, 1) 100%);
-    background : -ms-linear-gradient(90deg, rgba(179, 179, 179, 1) 0%, rgba(230, 230, 230, 1) 30%, rgba(230, 230, 230, 1) 70%, rgba(179, 179, 179, 1) 100%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3', endColorstr='#B3B3B3' ,GradientType=0)";
-    background : linear-gradient(0deg, rgba(179, 179, 179, 1) 0%, rgba(230, 230, 230, 1) 30%, rgba(230, 230, 230, 1) 70%, rgba(179, 179, 179, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B3B3B3',endColorstr='#B3B3B3' , GradientType=0);
+    color: rgba(255, 255, 255, 0.404);
+
+    background : -moz-linear-gradient(50% 100% 90deg,rgba(0, 0, 0, 1) 0%,rgba(43, 42, 64, 1) 30.5%,rgba(46, 43, 64, 1) 70.54%,rgba(0, 0, 0, 1) 100%);
+    background : -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(43, 42, 64, 1) 30.5%, rgba(46, 43, 64, 1) 70.54%, rgba(0, 0, 0, 1) 100%);
+    background : -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0,rgba(0, 0, 0, 1) ),color-stop(0.305,rgba(43, 42, 64, 1) ),color-stop(0.7054,rgba(46, 43, 64, 1) ),color-stop(1,rgba(0, 0, 0, 1) ));
+    background : -o-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(43, 42, 64, 1) 30.5%, rgba(46, 43, 64, 1) 70.54%, rgba(0, 0, 0, 1) 100%);
+    background : -ms-linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(43, 42, 64, 1) 30.5%, rgba(46, 43, 64, 1) 70.54%, rgba(0, 0, 0, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#000000' ,GradientType=0)";
+    background : linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(43, 42, 64, 1) 30.5%, rgba(46, 43, 64, 1) 70.54%, rgba(0, 0, 0, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000',endColorstr='#000000' , GradientType=0);
+
+    transition: 0.3s;
 }
 
 .tabla-head {
     border-top: 0px;
     font-style: italic;
+    font-size: 10px;
     background-color: var(--basic-dark);
     color: rgba(255, 255, 255, 0.75);
     padding: 5px;
@@ -359,20 +369,7 @@ ul.tabs li.current {
     text-align: center;
 }
 
-.light-neutral{
-    color: rgb(95, 95, 95);
-    text-shadow: 0px 0px 30px gray;
-}
 
-.light-looser{
-    color: var(--looser-color);
-    text-shadow: 0px 0px 30px red;
-}
-
-.light-winner{
-    color: var(--winner-color);
-    text-shadow: 0px 0px 30px limegreen;
-}
 
 /* ---------------- /aside ----------------*/
 
