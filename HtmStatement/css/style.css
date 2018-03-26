@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,500,700&subset=latin-ext');
 body {
+    background-color: black;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +16,7 @@ body {
     --shadow-color: #030020;
     --shadow-50-color: hsla(246, 100%, 6%, 0.5);
     --shadow-25-color: hsla(246, 100%, 6%, 0.25);
-    --dekor-color: #c94a7f;
+    --dekor-color: #ffd700;
     --winner-color: hsl(103, 100%, 18%);
     --looser-color: hsl(345, 100%, 22%);
 }
