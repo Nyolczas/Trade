@@ -11,3 +11,11 @@ $(document).ready(function(){
 	})
 
 })
+
+$( "#gc8" )
+  .mouseover(function() {
+    $("#os8").show();
+  })
+  .mouseout(function() {
+    $("#os8").hide();
+  });
