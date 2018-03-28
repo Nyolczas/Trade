@@ -28,3 +28,18 @@ body {
     border-width : 1px;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F2ECDC',endColorstr='#C3CFD9' , GradientType=0);
 }
+
+/* ================================ nav ================================ */
+.navbar {
+    display: grid;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.nav-regular {
+    margin: auto;
+}
+/* ================================ /nav ================================ */
