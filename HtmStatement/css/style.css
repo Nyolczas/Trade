@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,500,700&subset=latin-ext');
 
 :root {
-    --gray-mid: rgb(170, 180, 184);
+    --gray-mid: #D9DDDA;
+    --stroke-dark: #62668C;
     --text-basic: rgba(2, 0, 26, 0.8);
 }
 
@@ -11,4 +12,19 @@ body {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 0.05rem;
     background-color: var(--gray-mid) ;
+}
+
+.panel {
+    background : -moz-linear-gradient(50% 100% 90deg,rgba(195, 207, 217, 1) 0%,rgba(242, 236, 220, 1) 100%);
+    background : -webkit-linear-gradient(90deg, rgba(195, 207, 217, 1) 0%, rgba(242, 236, 220, 1) 100%);
+    background : -webkit-gradient(linear,50% 100% ,50% 0% ,color-stop(0,rgba(195, 207, 217, 1) ),color-stop(1,rgba(242, 236, 220, 1) ));
+    background : -o-linear-gradient(90deg, rgba(195, 207, 217, 1) 0%, rgba(242, 236, 220, 1) 100%);
+    background : -ms-linear-gradient(90deg, rgba(195, 207, 217, 1) 0%, rgba(242, 236, 220, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#C3CFD9', endColorstr='#F2ECDC' ,GradientType=0)";
+    background : linear-gradient(0deg, rgba(195, 207, 217, 1) 0%, rgba(242, 236, 220, 1) 100%);
+    border-style : Solid;
+    border-color : #62668C;
+    border-color : rgba(98, 102, 140, 1);
+    border-width : 1px;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F2ECDC',endColorstr='#C3CFD9' , GradientType=0);
 }
