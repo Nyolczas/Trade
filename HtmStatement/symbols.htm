@@ -11,11 +11,16 @@
     <!-- chart scripts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        google.charts.load("current", { packages: ['corechart'] });
+        google.charts.load("current", {
+            packages: ['corechart']
+        });
         google.charts.setOnLoadCallback(drawChart);
+
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ["Instrument", "Hozam", { role: "style" }],
+                ["Instrument", "Hozam", {
+                    role: "style"
+                }],
                 ["AUDUSD", 17.56, "color: #5D753E"],
                 ["AUDCAD", 3.14, "color: #67976D"],
                 ["AUDJPY", 11.50, "color: #939F4A"],
@@ -45,11 +50,16 @@
                     type: "string",
                     role: "annotation"
                 },
-                2]);
+                2
+            ]);
 
             var options = {
-                bar: { groupWidth: "92%" },
-                legend: { position: "none" },
+                bar: {
+                    groupWidth: "92%"
+                },
+                legend: {
+                    position: "none"
+                },
                 chartArea: {
                     left: 40,
                     right: 40,
@@ -79,6 +89,11 @@
     </div>
     <!-- ================================ /nav ================================ -->
     <div class="container">
+        <!-- :::::::::::::::::: header :::::::::::::::::: -->
+        <header>
+            <h1>XM Robot Portfólió</h1>
+        </header>
+        <!-- :::::::::::::::::: /header :::::::::::::::::: -->
         <div class="chart-group">
             <div class="flex-container">
                 <a class="instr-button AUDUSD" href="AUDUSD/AUDUSD.htm">AUDUSD</a>
