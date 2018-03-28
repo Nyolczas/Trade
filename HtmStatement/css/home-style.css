@@ -1,0 +1,7 @@
+.home-main-grid{
+    display: grid;
+    grid-template-columns: auto 300px;
+    box-shadow: 0px 0px 180px var(--shadow-color);
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+}
