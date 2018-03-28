@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,500,700&subset=latin-ext');
+
+:root {
+    --gray-mid: rgb(170, 180, 184);
+    --text-basic: rgba(2, 0, 26, 0.8);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.05rem;
+    background-color: var(--gray-mid) ;
+}
