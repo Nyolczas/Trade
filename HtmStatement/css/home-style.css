@@ -1,8 +1,19 @@
 .home-main-grid{
     display: grid;
     grid-template-columns: auto 400px;
+    grid-template-rows: auto auto;
     box-shadow: 0px 0px 70px var(--shadow-color);
     border-radius: 5px;
     overflow: hidden;
     margin: 0 10px 30px 10px;
+}
+
+#chartbox2 {
+    grid-column:1;
+    grid-row:2;
+}
+
+.home-aside{
+    grid-column: 2;
+    grid-row: 1 / span 2;
 }
