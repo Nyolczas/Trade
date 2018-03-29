@@ -22,6 +22,7 @@
 /* ---- last trades ---- */
 
 .last-trades-tabla {
+    position: relative;
     background-color: white;
     border: 1px solid var(--stroke-light);
     border-radius: 6px;
@@ -40,6 +41,10 @@
     color: white;
     border: 1px solid var(--stroke-light);
     text-decoration: none;
+}
+
+.tabla-head {
+    z-index: 4;
 }
 
 .tabla-sor {
