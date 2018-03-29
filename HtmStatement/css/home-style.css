@@ -8,9 +8,10 @@
     margin: 0 10px 30px 10px;
 }
 
+#chartbox1 {
+}
+
 #chartbox2 {
-    grid-column:1;
-    grid-row:2;
 }
 
 .home-aside{
