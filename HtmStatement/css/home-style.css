@@ -23,10 +23,11 @@
 
 .last-trades-tabla {
     background-color: white;
-    border: 1px solid rgb(129, 129, 129);
+    border: 1px solid var(--stroke-light);
     border-radius: 6px;
     overflow: hidden;
     text-align: center;
+    margin: 5px;
 }
 
 .tabla-head,
@@ -34,12 +35,18 @@
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+    color: white;
+    border: 1px solid var(--stroke-light);
+    text-decoration: none;
 }
 
 .tabla-sor {
-    padding: 9px;
     font-size: 14px;
     transition: 0.3s;
+}
+
+.tabla-oszlop{
+    padding: 3px;
 }
 
 .tabla-sor:hover {
