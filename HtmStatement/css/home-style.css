@@ -18,36 +18,36 @@
     grid-column: 2;
     grid-row: 1 / span 2;
 }
-
+ .container-title{
+     color: var(--dekor-color);
+     font-weight: 100;
+     font-style: italic;
+ }
 /* ---- last trades ---- */
 
 .last-trades-tabla {
     position: relative;
-    background-color: white;
-    border: 1px solid var(--stroke-light);
+    background-color: var(--gray-dark);
+    border: 1px solid white;
     border-radius: 6px;
     overflow: hidden;
     text-align: center;
     margin: 5px;
+    box-shadow: 0px 0px 5px var(--shadow-color);
 }
 
-
-.tabla-head,
 .tabla-sor {
     position: relative;
-    width: 100%;
+    width: calc(100% - 2px);
     display: grid;
     grid-template-columns: 90px 120px 27px auto;
     color: white;
-    border: 1px solid var(--stroke-light);
     text-decoration: none;
-}
-
-.tabla-head {
-    z-index: 4;
+    border-radius: 5px;
 }
 
 .tabla-sor {
+    border: 1px solid var(--shadow-color);
     font-size: 14px;
     transition: 0.3s;
     box-shadow: 0px 0px 0px var(--shadow-color); 
@@ -66,14 +66,5 @@
 
 .tabla-sor:hover {
     transition: 0.3s;
-}
-
-.tabla-head {
-    border-top: 0px;
-    font-style: italic;
-    font-size: 8px;
-    background-color: var(--dekor-color);
-    color: rgba(255, 255, 255, 0.75);
-    padding: 5px;
 }
 /* ---- last trades ---- */

@@ -295,13 +295,18 @@
 }
 
 .looser{
-    background-color: crimson;
+    color: white;
+    background-color: rgb(235, 116, 140);
+    text-shadow: 0 0px 20px rgb(153, 0, 0), 0 0px 8px red;
 }
 .winner{
-    background-color: green;
+    color: white;
+    background-color: rgb(98, 196, 98);
+    text-shadow: 0 0px 20px rgb(15, 88, 0), 0 0px 8px rgb(36, 153, 0);
 }
 
 .neutral{
+    color: rgba(255, 255, 255, 0.63);
     background-color: gray;
 }
 
