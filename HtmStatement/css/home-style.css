@@ -30,6 +30,10 @@
     margin: 5px;
 }
 
+.sorlink {
+    text-decoration: none;
+}
+
 .tabla-head,
 .tabla-sor {
     width: 100%;
