@@ -50,6 +50,14 @@
 .tabla-sor {
     font-size: 14px;
     transition: 0.3s;
+    box-shadow: 0px 0px 0px var(--shadow-color); 
+}
+
+.tabla-sor:hover {
+    border: 1px solid white;
+    box-shadow: 0px 20px 30px var(--shadow-color); 
+    z-index: 5;
+    transition: 0.3s;
 }
 
 .tabla-oszlop{

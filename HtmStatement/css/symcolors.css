@@ -279,3 +279,26 @@
     border-left: 6px solid #C39BFF;
     border-right: 6px solid #C39BFF;
 }
+
+/* trade actions */
+
+.buy{
+    background-color: dodgerblue;
+}
+
+.sell{
+    background-color: orangered;
+}
+
+.looser{
+    background-color: crimson;
+}
+.winner{
+    background-color: green;
+}
+
+.neutral{
+    background-color: gray;
+}
+
+/* /trade actions */
