@@ -37,7 +37,7 @@
     position: relative;
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 90px 120px 27px auto;
     color: white;
     border: 1px solid var(--stroke-light);
     text-decoration: none;

@@ -284,10 +284,14 @@
 
 .buy{
     background-color: dodgerblue;
+    background: url("../img/buy.jpg");
+    background-size: 27px 27px;
 }
 
 .sell{
     background-color: orangered;
+    background: url("../img/sell.jpg");
+    background-size: 27px 27px;
 }
 
 .looser{
