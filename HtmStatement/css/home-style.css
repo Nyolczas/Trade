@@ -1,4 +1,4 @@
-.home-main-grid{
+.home-main-grid {
     display: grid;
     grid-template-columns: auto 400px;
     grid-template-rows: auto auto;
@@ -8,28 +8,51 @@
     margin: 0 10px 30px 10px;
 }
 
-#chartbox1 {
-}
+#chartbox1 {}
 
-#chartbox2 {
-}
+#chartbox2 {}
 
-.home-aside{
+.home-aside {
     grid-column: 2;
     grid-row: 1 / span 2;
 }
- .container-title{
-     color: var(--dekor-color);
-     font-weight: 100;
-     font-style: italic;
- }
 
- .flex-container {
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    text-align: center;
+.aside-cont{
+    width: calc(100% - 22px);
+    padding: 10px;
 }
+
+.aside-cont a {
+    text-decoration: none;
+}
+
+.container-title {
+    color: var(--dekor-color);
+    font-weight: 100;
+    font-style: italic;
+    margin: 0;
+    padding: 0 5px 5px 5px;
+}
+
+.small-light {
+    font-size: 12px;
+}
+
+.gomb-container {
+    position: relative;
+    /* width: calc(100% - 2px); */
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.gomb-grid {
+    display: grid;
+    grid-template-columns: 90px 120px auto;
+    text-align: center;
+    width: calc(100% - 2px);
+}
+
 /* ---- last trades ---- */
 
 .last-trades-tabla {
@@ -39,7 +62,6 @@
     border-radius: 6px;
     overflow: hidden;
     text-align: center;
-    margin: 5px;
     box-shadow: 0px 0px 5px var(--shadow-color);
 }
 
@@ -57,21 +79,22 @@
     border: 1px solid var(--shadow-color);
     font-size: 14px;
     transition: 0.3s;
-    box-shadow: 0px 0px 0px var(--shadow-color); 
+    box-shadow: 0px 0px 0px var(--shadow-color);
 }
 
 .tabla-sor:hover {
     border: 1px solid white;
-    box-shadow: 0px 20px 30px var(--shadow-color); 
+    box-shadow: 0px 20px 30px var(--shadow-color);
     z-index: 5;
     transition: 0.3s;
 }
 
-.tabla-oszlop{
+.tabla-oszlop {
     padding: 3px;
 }
 
 .tabla-sor:hover {
     transition: 0.3s;
 }
+
 /* ---- last trades ---- */
