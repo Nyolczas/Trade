@@ -306,7 +306,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(235, 116, 140, 0.35);
+    background-color: rgba(235, 116, 140, 0.15);
 }
 
 .winner{
@@ -321,7 +321,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(98, 196, 98, 0.35);
+    background-color: rgba(98, 196, 98, 0.15);
 }
 
 .neutral{

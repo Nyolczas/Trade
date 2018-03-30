@@ -12,6 +12,12 @@
     position: relative;
 }
 
+.hozam-chart {
+    position: absolute;
+    width: calc( 100% - 30px);
+    height: calc(100% - 155px);
+}
+
 #chartbox2 {}
 /* tabs */
 
