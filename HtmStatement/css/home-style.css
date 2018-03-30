@@ -8,6 +8,11 @@
     margin: 0 10px 30px 10px;
 }
 
+.home-charts{
+    position: relative;
+}
+
+#chartbox2 {}
 /* tabs */
 
 .tabs {
@@ -49,8 +54,8 @@ ul.tabs li.current {
 
 .tab-content {
     display: none;
-    background: var(--basic-dark);
     padding: 15px;
+    margin-top: 25px;
 }
 
 .tab-content.current {
@@ -58,10 +63,6 @@ ul.tabs li.current {
 }
 
 /* /tabs */
-
-#chartbox1 {}
-
-#chartbox2 {}
 
 .home-aside {
     grid-column: 2;
