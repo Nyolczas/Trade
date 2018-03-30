@@ -23,6 +23,13 @@
      font-weight: 100;
      font-style: italic;
  }
+
+ .flex-container {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    text-align: center;
+}
 /* ---- last trades ---- */
 
 .last-trades-tabla {
