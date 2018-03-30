@@ -296,18 +296,18 @@
 
 .looser{
     color: white;
-    background-color: rgb(235, 116, 140);
+    background-color: rgba(235, 116, 140, 0.5);
     text-shadow: 0 0px 20px rgb(153, 0, 0), 0 0px 8px red;
 }
 .winner{
-    color: white;
-    background-color: rgb(98, 196, 98);
-    text-shadow: 0 0px 20px rgb(15, 88, 0), 0 0px 8px rgb(36, 153, 0);
+    color: rgb(0, 88, 69);
+    background-color: rgba(98, 196, 98, 0.5);
+    text-shadow: 0 0px 20px rgb(255, 255, 255), 0 0px 10px rgb(255, 255, 255), 0 0px 5px rgb(255, 255, 255);
 }
 
 .neutral{
-    color: rgba(255, 255, 255, 0.63);
-    background-color: gray;
+    color: rgba(223, 223, 223, 0.5);
+    background-color: rgba(128, 128, 128, 0.5);
 }
 
 /* /trade actions */

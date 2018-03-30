@@ -18,12 +18,16 @@
 }
 
 .aside-cont{
-    width: calc(100% - 22px);
+    width: calc(100% - 20px);
     padding: 10px;
 }
 
 .aside-cont a {
     text-decoration: none;
+}
+
+.profit{
+    font-size: 20px;
 }
 
 .container-title {
@@ -57,7 +61,6 @@
 
 .last-trades-tabla {
     position: relative;
-    background-color: var(--gray-dark);
     border: 1px solid white;
     border-radius: 6px;
     overflow: hidden;
