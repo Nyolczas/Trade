@@ -8,6 +8,57 @@
     margin: 0 10px 30px 10px;
 }
 
+/* tabs */
+
+.tabs {
+    position: absolute;
+    right: 50px;
+    top: 5px;
+}
+
+.tab-link {
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+ul.tabs li {
+    background: none;
+    color: var(--basic-light);
+    display: inline-block;
+    padding: 5px 15px 30px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+ul.tabs li.current {
+    background: var(--basic-dark);
+    color: var(--dekor-color);
+}
+
+.tab-content {
+    display: none;
+    background: var(--basic-dark);
+    padding: 15px;
+}
+
+.tab-content.current {
+    display: inherit;
+}
+
+/* /tabs */
+
 #chartbox1 {}
 
 #chartbox2 {}
@@ -18,7 +69,7 @@
 }
 
 .aside-cont{
-    width: calc(100% - 20px);
+    width: calc(100% - 22px);
     padding: 10px;
 }
 
@@ -28,12 +79,18 @@
 
 .profit{
     font-size: 20px;
+    border-style: solid;
+    border-width: 0 1px;
+    border-color: var(--stroke-dark);
+
 }
 
 .container-title {
-    color: var(--dekor-color);
-    font-weight: 100;
+    z-index: 4;
+    color: var(--text-basic);
+    font-weight: 400;
     font-style: italic;
+    font-size: 18px;
     margin: 0;
     padding: 0 5px 5px 5px;
 }
@@ -44,17 +101,27 @@
 
 .gomb-container {
     position: relative;
-    /* width: calc(100% - 2px); */
     color: white;
     border-radius: 5px;
     margin: 10px 0;
+    border: 1px solid var(--shadow-color);
+    transition: 0.3s;
+    box-shadow: 0px 0px 3px var(--shadow-color);
+    overflow: hidden;
+}
+
+.gomb-container:hover {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 15px 25px var(--shadow-color);
+    z-index: 5;
+    transition: 0.3s;
 }
 
 .gomb-grid {
     display: grid;
     grid-template-columns: 90px 120px auto;
     text-align: center;
-    width: calc(100% - 2px);
+    width: calc(100% - 0px);
 }
 
 /* ---- last trades ---- */
@@ -76,18 +143,15 @@
     color: white;
     text-decoration: none;
     border-radius: 5px;
-}
-
-.tabla-sor {
     border: 1px solid var(--shadow-color);
     font-size: 14px;
     transition: 0.3s;
-    box-shadow: 0px 0px 0px var(--shadow-color);
+    box-shadow: 0px 0px 3px var(--shadow-color);
 }
 
 .tabla-sor:hover {
-    border: 1px solid white;
-    box-shadow: 0px 20px 30px var(--shadow-color);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 15px 25px var(--shadow-color);
     z-index: 5;
     transition: 0.3s;
 }
