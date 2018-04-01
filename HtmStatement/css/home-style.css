@@ -1,7 +1,7 @@
 .home-main-grid {
     display: grid;
     grid-template-columns: auto 400px;
-    grid-template-rows: auto auto;
+    grid-template-rows: calc(50vh - 71px) calc(50vh - 71px);
     box-shadow: 0px 0px 70px var(--shadow-color);
     border-radius: 5px;
     overflow: hidden;
@@ -17,7 +17,7 @@
 }
 
 .hozam-chart {
-
+    height: calc(50vh - 150px);
 }
 
 #chartbox1 {
@@ -60,7 +60,7 @@ ul.tabs li {
 }
 
 ul.tabs li.current {
-    background: var(--gray-mid);
+    background-color: white;
     color: var(--dekor-color);
     z-index: 15;
 }
@@ -71,8 +71,8 @@ ul.tabs li.current {
     padding: 15px;
     margin: 35px 10px 10px 10px;
     display: none;
-    background: var(--gray-mid);
-    box-shadow: 0px 0px 3px var(--shadow-color);
+    background-color: white;
+    box-shadow: 0px 8px 8px var(--shadow-color);
 }
 
 .tab-content.current {
