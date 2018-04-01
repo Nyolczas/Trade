@@ -159,14 +159,15 @@
                     <li class="tab-link current" data-tab="tab-1">$</li>
                     <li class="tab-link" data-tab="tab-2">%</li>
                 </ul>
-                <div id="tab-1" class="tab-content home-charts-wrapper current">
+                <div id="tab-1" class="tab-content current">
                     <div class="hozam-chart" id="hozam-chart"></div>
                 </div>
 
-                <div id="tab-2" class="tab-content home-charts-wrapper">
-                    <canvas id="percent-chart"></canvas>
+                <div id="tab-2" class="tab-content">
+                    <canvas class="hozam-chart" id="percent-chart"></canvas>
                 </div>
             </section>
+
             <section class="home-charts panel" id="chartbox2">
                 <div class="home-charts-wrapper">
                     <div class="hozam-chart" id="balance-chart"></div>
@@ -400,7 +401,7 @@
         <!-- ================================ /main ================================ -->
     </div>
     <script src="js\buttonactions.js"></script>
-    <!-- ================================ szkript robot chart  ================================ -->
+    <!-- ================================ szkript percent chart  ================================ -->
     <script>
         var ctx = document.getElementById('percent-chart').getContext('2d');
         var chart = new Chart(ctx, {
@@ -762,7 +763,7 @@
                     "2018.03.19 15:09", "2018.03.19 17:46"
                 ],
                 datasets: [{
-                    label: "Robot hozam",
+                    label: "percent hozam",
                     backgroundColor: 'rgba(255, 99, 133, 0.5)',
                     borderColor: 'rgb(255, 99, 132)',
                     data: [0, 0.31, 0.62, 0.90, -2.50, -4.45, -4.54, -4.86, -4.87, -4.86, -2.96, -6.27, -
@@ -925,6 +926,7 @@
             },
             // Configuration options go here
             options: {
+                maintainAspectRatio: false,
                 legend: {
                     display: false
                 },
@@ -943,7 +945,7 @@
             }
         });
     </script>
-    <!-- ================================ /szkript robot chart  ================================ -->
+    <!-- ================================ /szkript percent chart  ================================ -->
 </body>
 
 </html>
