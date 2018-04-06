@@ -4,7 +4,7 @@
     grid-template-rows: calc(50vh - 71px) calc(50vh - 71px);
     box-shadow: 0px 0px 70px var(--shadow-color);
     border-radius: 5px;
-    overflow: hidden;
+    overflow: auto;
     margin: 0 10px 30px 10px;
 }
 
@@ -16,9 +16,29 @@
     height: calc(50vh - 150px);
 }
 
+#eq-cont, #lots-cont{
+    z-index: 1;
+    padding: 15px;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0px 8px 8px var(--shadow-color);
+}
+
+#eq-cont{
+    height: calc(35vh - 150px);
+}
+
+#lots-cont{
+    height: calc(8vh);
+}
+
 #chartbox1 {
     position: relative;
     height:100%;
+}
+
+#chartbox2 {
+    
 }
 
 /* --------------- tabs --------------- */
