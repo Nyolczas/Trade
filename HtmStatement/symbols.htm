@@ -18,7 +18,8 @@
         });
         google.charts.setOnLoadCallback(drawBarChart);
         google.charts.setOnLoadCallback(drawLineChart);
-
+        google.charts.setOnLoadCallback(drawPieChart);
+        // ================================ Bar chart ================================
         function drawBarChart() {
             var data = google.visualization.arrayToDataTable([
                 ["Instrument", "Hozam", {
@@ -72,10 +73,32 @@
                     height: "100%"
                 }
             };
-            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+            var chart = new google.visualization.ColumnChart(document.getElementById("barchart"));
             chart.draw(view, options);
         }
-        // ================================ Line charts ================================
+        // ================================ /Bar chart ================================
+        // ================================ Pie chart ================================
+        function drawPieChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work', 11],
+                ['Eat', 2],
+                ['Commute', 2],
+                ['Watch TV', 2],
+                ['Sleep', 7]
+            ]);
+
+            var options = {
+                title: 'My Daily Activities'
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+        // ================================ /Pie chart ================================
+        // ================================ Line chart ================================
         function drawLineChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Month', 'Hozam', 'M5_ADX', 'M15_Zoom', 'H_TSQ', 'D1_Return', 'D1_Gap'],
@@ -120,10 +143,10 @@
                 }
             };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('Line_chart'));
+            var chart = new google.visualization.ComboChart(document.getElementById('linechart'));
             chart.draw(data, options);
         }
-        // ================================ /Line charts ================================
+        // ================================ /Line chart ================================
     </script>
 </head>
 
@@ -169,7 +192,7 @@
                     <a class="instr-button USDJPY" href="USDJPY/USDJPY.htm">USDJPY</a>
                     <a class="instr-button USDMXN" href="USDMXN/USDMXN.htm">USDMXN</a>
                 </div>
-                <div id="columnchart_values"></div>
+                <div id="barchart"></div>
                 <div class="flex-container">
                     <a class="instr-button AUDUSD" href="AUDUSD/AUDUSD.htm">AUDUSD</a>
                     <a class="instr-button AUDCAD" href="AUDCAD/AUDCAD.htm">AUDCAD</a>
@@ -194,7 +217,7 @@
             </div>
             <div class="grid-item-mid1"></div>
             <div class="grid-item-mid2"></div>
-            <div class="grid-item-mid3"></div>
+            <div class="grid-item-mid3"><div id="piechart"></div></div>
             <div class="grid-item-bottom">
                 <div class="flex-container">
                     <a class="instr-button AUDUSD" href="AUDUSD/AUDUSD.htm">AUDUSD</a>
@@ -217,7 +240,7 @@
                     <a class="instr-button USDJPY" href="USDJPY/USDJPY.htm">USDJPY</a>
                     <a class="instr-button USDMXN" href="USDMXN/USDMXN.htm">USDMXN</a>
                 </div>
-                <div id="Line_chart"></div>
+                <div id="linechart"></div>
                 <div class="flex-container">
                     <a class="instr-button AUDUSD" href="AUDUSD/AUDUSD.htm">AUDUSD</a>
                     <a class="instr-button AUDCAD" href="AUDCAD/AUDCAD.htm">AUDCAD</a>
