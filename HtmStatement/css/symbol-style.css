@@ -15,3 +15,12 @@
     text-align: center;
     width: calc(100% - 0px);
 }
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 40px;
+    width: calc(100%-40px);
+    text-decoration: none;
+}
