@@ -224,3 +224,24 @@ h1 {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF',endColorstr='#FFFFFF' , GradientType=0);
 }
 /* ================================ /shading ================================ */
+/* ================================ buttons ================================ */
+.gomb-container {
+    position: relative;
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: 0.3s;
+    overflow: hidden;
+    border: 1px solid var(--shadow-color);
+    box-shadow: 0px 8px 12px var(--shadow-color);
+    z-index: 5;
+}
+
+.gomb-container:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 3px white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    transition: 0.3s;
+}
+/* ================================ buttons ================================ */
