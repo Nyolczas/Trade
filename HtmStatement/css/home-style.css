@@ -104,7 +104,6 @@ ul.tabs li.current {
 
 .aside-cont {
     width: calc(100% - 22px);
-    padding: 10px;
 }
 
 .aside-cont a {
@@ -118,19 +117,7 @@ ul.tabs li.current {
     border-color: var(--stroke-dark);
 }
 
-.container-title {
-    z-index: 4;
-    color: var(--text-basic);
-    font-weight: 400;
-    font-style: italic;
-    font-size: 18px;
-    margin: 0;
-    padding: 0 5px 5px 5px;
-}
 
-.small-light {
-    font-size: 12px;
-}
 
 .gomb-grid {
     display: grid;
