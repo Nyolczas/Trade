@@ -43,7 +43,7 @@ body {
     z-index: 4;
     color: var(--text-basic);
     font-weight: 400;
-    font-style: italic;
+    
     font-size: 18px;
     margin: 0;
     padding: 0 5px 5px 5px;
@@ -51,6 +51,7 @@ body {
 
 .small-light {
     font-size: 12px;
+    font-style: italic;
 }
 
 .aside-cont {
@@ -219,7 +220,7 @@ h1 {
 }
 
 .buttonshader {
-    display: none;
+    /* display: none; */
     position: absolute;
     top: 0;
     left: 0;
