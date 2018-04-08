@@ -91,14 +91,16 @@
             ]);
 
             var options = {
+                'title': 'trade darab',
                 legend: {
                     position: 'none'
                 },
+
                 chartArea: {
-                    left: 10,
-                    right: 10,
-                    bottom: 10,
-                    top: 10,
+                    left: 20,
+                    right: 20,
+                    bottom: 20,
+                    top: 20,
                 },
                 width: 600,
                 height: 600
@@ -122,14 +124,15 @@
             ]);
 
             var options = {
+                'title': 'lotok',
                 legend: {
                     position: 'none'
                 },
                 chartArea: {
-                    left: 10,
-                    right: 10,
-                    bottom: 10,
-                    top: 10,
+                    left: 20,
+                    right: 20,
+                    bottom: 20,
+                    top: 20,
                 },
                 width: 600,
                 height: 600
@@ -213,215 +216,354 @@
         <!-- :::::::::::::::::: /header :::::::::::::::::: -->
         <div class="chart-group panel">
             <div class="grid-item top panel">
-                    <div id="barchart"></div>
+                <!-- :::::::::::::::::: gombsor :::::::::::::::::: -->
+                <div class="flex-container panel">
+                        <a href="AUDUSD/AUDUSD.htm">
+                            <div id="gc5" class="gomb-container">
+                                <div id="os5" class="buttonshader"></div>
+                                <div id="hw5" class="buttonsh-hover"></div>
+                                <div class="szimboleum AUDUSD">AUDUSD</div>
+                            </div>
+                        </a>
+                        <a href="AUDCAD/AUDCAD.htm">
+                            <div id="gc6" class="gomb-container">
+                                <div id="os6" class="buttonshader"></div>
+                                <div id="hw6" class="buttonsh-hover"></div>
+                                <div class="szimboleum AUDCAD">AUDCAD</div>
+                            </div>
+                        </a>
+                        <a href="AUDJPY/AUDJPY.htm">
+                            <div id="gc7" class="gomb-container">
+                                <div id="os7" class="buttonshader"></div>
+                                <div id="hw7" class="buttonsh-hover"></div>
+                                <div class="szimboleum AUDJPY">AUDJPY</div>
+                            </div>
+                        </a>
+                        <a href="CADJPY/CADJPY.htm">
+                            <div id="gc8" class="gomb-container">
+                                <div id="os8" class="buttonshader"></div>
+                                <div id="hw8" class="buttonsh-hover"></div>
+                                <div class="szimboleum CADJPY">CADJPY</div>
+                            </div>
+                        </a>
+                        <a href="CHFJPY/CHFJPY.htm">
+                            <div id="gc9" class="gomb-container">
+                                <div id="os9" class="buttonshader"></div>
+                                <div id="hw9" class="buttonsh-hover"></div>
+                                <div class="szimboleum CHFJPY">CHFJPY</div>
+                            </div>
+                        </a>
+                        <a href="EURAUD/EURAUD.htm">
+                            <div id="gc10" class="gomb-container">
+                                <div id="os10" class="buttonshader"></div>
+                                <div id="hw10" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURAUD">EURAUD</div>
+                            </div>
+                        </a>
+                        <a href="EURGBP/EURGBP.htm">
+                            <div id="gc11" class="gomb-container">
+                                <div id="os11" class="buttonshader"></div>
+                                <div id="hw11" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURGBP">EURGBP</div>
+                            </div>
+                        </a>
+                        <a href="EURJPY/EURJPY.htm">
+                            <div id="gc12" class="gomb-container">
+                                <div id="os12" class="buttonshader"></div>
+                                <div id="hw12" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURJPY">EURJPY</div>
+                            </div>
+                        </a>
+                        <a href="EURUSD/EURUSD.htm">
+                            <div id="gc13" class="gomb-container">
+                                <div id="os13" class="buttonshader"></div>
+                                <div id="hw13" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURUSD">EURUSD</div>
+                            </div>
+                        </a>
+                        <a href="GBPAUD/GBPAUD.htm">
+                            <div id="gc14" class="gomb-container">
+                                <div id="os14" class="buttonshader"></div>
+                                <div id="hw14" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPAUD">GBPAUD</div>
+                            </div>
+                        </a>
+                        <a href="GBPCHF/GBPCHF.htm">
+                            <div id="gc15" class="gomb-container">
+                                <div id="os15" class="buttonshader"></div>
+                                <div id="hw15" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPCHF">GBPCHF</div>
+                            </div>
+                        </a>
+                        <a href="GBPJPY/GBPJPY.htm">
+                            <div id="gc16" class="gomb-container">
+                                <div id="os16" class="buttonshader"></div>
+                                <div id="hw16" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPJPY">GBPJPY</div>
+                            </div>
+                        </a>
+                        <a href="GBPUSD/GBPUSD.htm">
+                            <div id="gc17" class="gomb-container">
+                                <div id="os17" class="buttonshader"></div>
+                                <div id="hw17" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPUSD">GBPUSD</div>
+                            </div>
+                        </a>
+                        <a href="GOLD/GOLD.htm">
+                            <div id="gc18" class="gomb-container">
+                                <div id="os18" class="buttonshader"></div>
+                                <div id="hw18" class="buttonsh-hover"></div>
+                                <div class="szimboleum GOLD">GOLD</div>
+                            </div>
+                        </a>
+                        <a href="NZDUSD/NZDUSD.htm">
+                            <div id="gc19" class="gomb-container">
+                                <div id="os19" class="buttonshader"></div>
+                                <div id="hw19" class="buttonsh-hover"></div>
+                                <div class="szimboleum NZDUSD">NZDUSD</div>
+                            </div>
+                        </a>
+                        <a href="USDCAD/USDCAD.htm">
+                            <div id="gc20" class="gomb-container">
+                                <div id="os20" class="buttonshader"></div>
+                                <div id="hw20" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDCAD">USDCAD</div>
+                            </div>
+                        </a>
+                        <a href="USDCHF/USDCHF.htm">
+                            <div id="gc21" class="gomb-container">
+                                <div id="os21" class="buttonshader"></div>
+                                <div id="hw21" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDCHF">USDCHF</div>
+                            </div>
+                        </a>
+                        <a href="USDJPY/USDJPY.htm">
+                            <div id="gc22" class="gomb-container">
+                                <div id="os22" class="buttonshader"></div>
+                                <div id="hw22" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDJPY">USDJPY</div>
+                            </div>
+                        </a>
+                        <a href="USDMXN/USDMXN.htm">
+                            <div id="gc23" class="gomb-container">
+                                <div id="os23" class="buttonshader"></div>
+                                <div id="hw23" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDMXN">USDMXN</div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- :::::::::::::::::: /gombsor :::::::::::::::::: -->
+                <div id="barchart"></div>
+                <!-- :::::::::::::::::: gombsor :::::::::::::::::: -->
                 <div class="flex-container panel">
                     <a href="AUDUSD/AUDUSD.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc5" class="gomb-container">
+                            <div id="os5" class="buttonshader"></div>
+                            <div id="hw5" class="buttonsh-hover"></div>
                             <div class="szimboleum AUDUSD">AUDUSD</div>
                         </div>
                     </a>
                     <a href="AUDCAD/AUDCAD.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc6" class="gomb-container">
+                            <div id="os6" class="buttonshader"></div>
+                            <div id="hw6" class="buttonsh-hover"></div>
                             <div class="szimboleum AUDCAD">AUDCAD</div>
                         </div>
                     </a>
                     <a href="AUDJPY/AUDJPY.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc7" class="gomb-container">
+                            <div id="os7" class="buttonshader"></div>
+                            <div id="hw7" class="buttonsh-hover"></div>
                             <div class="szimboleum AUDJPY">AUDJPY</div>
                         </div>
                     </a>
                     <a href="CADJPY/CADJPY.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc8" class="gomb-container">
+                            <div id="os8" class="buttonshader"></div>
+                            <div id="hw8" class="buttonsh-hover"></div>
                             <div class="szimboleum CADJPY">CADJPY</div>
                         </div>
                     </a>
                     <a href="CHFJPY/CHFJPY.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc9" class="gomb-container">
+                            <div id="os9" class="buttonshader"></div>
+                            <div id="hw9" class="buttonsh-hover"></div>
                             <div class="szimboleum CHFJPY">CHFJPY</div>
                         </div>
                     </a>
                     <a href="EURAUD/EURAUD.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc10" class="gomb-container">
+                            <div id="os10" class="buttonshader"></div>
+                            <div id="hw10" class="buttonsh-hover"></div>
                             <div class="szimboleum EURAUD">EURAUD</div>
                         </div>
                     </a>
                     <a href="EURGBP/EURGBP.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc11" class="gomb-container">
+                            <div id="os11" class="buttonshader"></div>
+                            <div id="hw11" class="buttonsh-hover"></div>
                             <div class="szimboleum EURGBP">EURGBP</div>
                         </div>
                     </a>
                     <a href="EURJPY/EURJPY.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc12" class="gomb-container">
+                            <div id="os12" class="buttonshader"></div>
+                            <div id="hw12" class="buttonsh-hover"></div>
                             <div class="szimboleum EURJPY">EURJPY</div>
                         </div>
                     </a>
                     <a href="EURUSD/EURUSD.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc13" class="gomb-container">
+                            <div id="os13" class="buttonshader"></div>
+                            <div id="hw13" class="buttonsh-hover"></div>
                             <div class="szimboleum EURUSD">EURUSD</div>
                         </div>
                     </a>
                     <a href="GBPAUD/GBPAUD.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc14" class="gomb-container">
+                            <div id="os14" class="buttonshader"></div>
+                            <div id="hw14" class="buttonsh-hover"></div>
                             <div class="szimboleum GBPAUD">GBPAUD</div>
                         </div>
                     </a>
                     <a href="GBPCHF/GBPCHF.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc15" class="gomb-container">
+                            <div id="os15" class="buttonshader"></div>
+                            <div id="hw15" class="buttonsh-hover"></div>
                             <div class="szimboleum GBPCHF">GBPCHF</div>
                         </div>
                     </a>
                     <a href="GBPJPY/GBPJPY.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc16" class="gomb-container">
+                            <div id="os16" class="buttonshader"></div>
+                            <div id="hw16" class="buttonsh-hover"></div>
                             <div class="szimboleum GBPJPY">GBPJPY</div>
                         </div>
                     </a>
                     <a href="GBPUSD/GBPUSD.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc17" class="gomb-container">
+                            <div id="os17" class="buttonshader"></div>
+                            <div id="hw17" class="buttonsh-hover"></div>
                             <div class="szimboleum GBPUSD">GBPUSD</div>
                         </div>
                     </a>
                     <a href="GOLD/GOLD.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc18" class="gomb-container">
+                            <div id="os18" class="buttonshader"></div>
+                            <div id="hw18" class="buttonsh-hover"></div>
                             <div class="szimboleum GOLD">GOLD</div>
                         </div>
                     </a>
                     <a href="NZDUSD/NZDUSD.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc19" class="gomb-container">
+                            <div id="os19" class="buttonshader"></div>
+                            <div id="hw19" class="buttonsh-hover"></div>
                             <div class="szimboleum NZDUSD">NZDUSD</div>
                         </div>
                     </a>
                     <a href="USDCAD/USDCAD.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc20" class="gomb-container">
+                            <div id="os20" class="buttonshader"></div>
+                            <div id="hw20" class="buttonsh-hover"></div>
                             <div class="szimboleum USDCAD">USDCAD</div>
                         </div>
                     </a>
                     <a href="USDCHF/USDCHF.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc21" class="gomb-container">
+                            <div id="os21" class="buttonshader"></div>
+                            <div id="hw21" class="buttonsh-hover"></div>
                             <div class="szimboleum USDCHF">USDCHF</div>
                         </div>
                     </a>
                     <a href="USDJPY/USDJPY.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc22" class="gomb-container">
+                            <div id="os22" class="buttonshader"></div>
+                            <div id="hw22" class="buttonsh-hover"></div>
                             <div class="szimboleum USDJPY">USDJPY</div>
                         </div>
                     </a>
                     <a href="USDMXN/USDMXN.htm">
-                        <div id="gc4" class="gomb-container">
-                            <div id="os4" class="buttonshader"></div>
-                            <div id="hw4" class="buttonsh-hover"></div>
+                        <div id="gc23" class="gomb-container">
+                            <div id="os23" class="buttonshader"></div>
+                            <div id="hw23" class="buttonsh-hover"></div>
                             <div class="szimboleum USDMXN">USDMXN</div>
                         </div>
                     </a>
                 </div>
+                <!-- :::::::::::::::::: /gombsor :::::::::::::::::: -->
             </div>
             <div class="grid-item mid1">
-                    <div id="tfPiechart"></div>
-                </div>
+                <div id="tfPiechart"></div>
+            </div>
             <div class="grid-item mid2">
-                    <div id="symPiechart"></div>
+                <div id="symPiechart"></div>
             </div>
             <div class="grid-item mid3">
-                 <!-- :::::::::::::::::: loosers :::::::::::::::::: -->
-                 <div class="aside-cont panel">
-                        <div class="looser-layer"></div>
-                        <div class="left-sh"> </div>
-                        <div class="right-sh"> </div>
-                        <div class="top-sh"> </div>
-                        <div class="bottom-sh"> </div>
-                        <h2 class="container-title">
-                            Top 4 vesztes
-                            <span class="small-light">(az elmúlt 8 hét)</span>
-                        </h2>
-                        <!-- top1 -->
-                        <a href="#">
-                            <div id="gc1" class="gomb-container">
-                                <div id="os1" class="buttonshader"></div>
-                                <div id="hw1" class="buttonsh-hover"></div>
-                                <div class="gomb-grid">
-                                    <div class="gomb-item symb EURUSD">EURUSD</div>
-                                    <div class="gomb-item res looser">53 db</div>
-                                    <div class="gomb-item res looser">$ 25.19</div>
-                                    <div class="gomb-item res looser">(2.4 %)</div>
-                                </div>
+                <!-- :::::::::::::::::: loosers :::::::::::::::::: -->
+                <div class="aside-cont panel">
+                    <div class="looser-layer"></div>
+                    <div class="left-sh"> </div>
+                    <div class="right-sh"> </div>
+                    <div class="top-sh"> </div>
+                    <div class="bottom-sh"> </div>
+                    <h2 class="container-title">
+                        Top 4 vesztes
+                        <span class="small-light">(az elmúlt 8 hét)</span>
+                    </h2>
+                    <!-- top1 -->
+                    <a href="#">
+                        <div id="gc1" class="gomb-container">
+                            <div id="os1" class="buttonshader"></div>
+                            <div id="hw1" class="buttonsh-hover"></div>
+                            <div class="gomb-grid">
+                                <div class="gomb-item symb EURUSD">EURUSD</div>
+                                <div class="gomb-item res looser">53 db</div>
+                                <div class="gomb-item res looser">$ 25.19</div>
+                                <div class="gomb-item res looser">(2.4 %)</div>
                             </div>
-                        </a>
-                        <!-- top2 -->
-                        <a href="#">
-                            <div id="gc2" class="gomb-container">
-                                <div id="os2" class="buttonshader"></div>
-                                <div id="hw2" class="buttonsh-hover"></div>
-                                <div class="gomb-grid">
-                                    <div class="gomb-item symb EURUSD">EURUSD</div>
-                                    <div class="gomb-item res looser">53 db</div>
-                                    <div class="gomb-item res looser">$ 25.19</div>
-                                    <div class="gomb-item res looser">(2.4 %)</div>
-                                </div>
+                        </div>
+                    </a>
+                    <!-- top2 -->
+                    <a href="#">
+                        <div id="gc2" class="gomb-container">
+                            <div id="os2" class="buttonshader"></div>
+                            <div id="hw2" class="buttonsh-hover"></div>
+                            <div class="gomb-grid">
+                                <div class="gomb-item symb EURUSD">EURUSD</div>
+                                <div class="gomb-item res looser">53 db</div>
+                                <div class="gomb-item res looser">$ 25.19</div>
+                                <div class="gomb-item res looser">(2.4 %)</div>
                             </div>
-                        </a>
-                        <!-- top3 -->
-                        <a href="#">
-                            <div id="gc3" class="gomb-container">
-                                <div id="os3" class="buttonshader"></div>
-                                <div id="hw3" class="buttonsh-hover"></div>
-                                <div class="gomb-grid">
-                                    <div class="gomb-item symb EURUSD">EURUSD</div>
-                                    <div class="gomb-item res looser">53 db</div>
-                                    <div class="gomb-item res looser">$ 25.19</div>
-                                    <div class="gomb-item res looser">(2.4 %)</div>
-                                </div>
+                        </div>
+                    </a>
+                    <!-- top3 -->
+                    <a href="#">
+                        <div id="gc3" class="gomb-container">
+                            <div id="os3" class="buttonshader"></div>
+                            <div id="hw3" class="buttonsh-hover"></div>
+                            <div class="gomb-grid">
+                                <div class="gomb-item symb EURUSD">EURUSD</div>
+                                <div class="gomb-item res looser">53 db</div>
+                                <div class="gomb-item res looser">$ 25.19</div>
+                                <div class="gomb-item res looser">(2.4 %)</div>
                             </div>
-                        </a>
-                        <!-- top4 -->
-                        <a href="#">
-                            <div id="gc4" class="gomb-container">
-                                <div id="os4" class="buttonshader"></div>
-                                <div id="hw4" class="buttonsh-hover"></div>
-                                <div class="gomb-grid">
-                                    <div class="gomb-item symb EURUSD">EURUSD</div>
-                                    <div class="gomb-item res looser">53 db</div>
-                                    <div class="gomb-item res looser">$ 25.19</div>
-                                    <div class="gomb-item res looser">(2.4 %)</div>
-                                </div>
+                        </div>
+                    </a>
+                    <!-- top4 -->
+                    <a href="#">
+                        <div id="gc4" class="gomb-container">
+                            <div id="os4" class="buttonshader"></div>
+                            <div id="hw4" class="buttonsh-hover"></div>
+                            <div class="gomb-grid">
+                                <div class="gomb-item symb EURUSD">EURUSD</div>
+                                <div class="gomb-item res looser">53 db</div>
+                                <div class="gomb-item res looser">$ 25.19</div>
+                                <div class="gomb-item res looser">(2.4 %)</div>
                             </div>
-                        </a>
-                    </div>
-                    <!-- :::::::::::::::::: /loosers :::::::::::::::::: -->
+                        </div>
+                    </a>
+                </div>
+                <!-- :::::::::::::::::: /loosers :::::::::::::::::: -->
                 <!-- :::::::::::::::::: winners :::::::::::::::::: -->
                 <div class="aside-cont panel">
                     <div class="winner-layer"></div>
@@ -488,30 +630,283 @@
                 </div>
                 <!-- :::::::::::::::::: /winners :::::::::::::::::: -->
             </div>
-            
+
             <div class="grid-item bottom">
+                <!-- :::::::::::::::::: gombsor :::::::::::::::::: -->
+                <div class="flex-container panel">
+                        <a href="AUDUSD/AUDUSD.htm">
+                            <div id="gc5" class="gomb-container">
+                                <div id="os5" class="buttonshader"></div>
+                                <div id="hw5" class="buttonsh-hover"></div>
+                                <div class="szimboleum AUDUSD">AUDUSD</div>
+                            </div>
+                        </a>
+                        <a href="AUDCAD/AUDCAD.htm">
+                            <div id="gc6" class="gomb-container">
+                                <div id="os6" class="buttonshader"></div>
+                                <div id="hw6" class="buttonsh-hover"></div>
+                                <div class="szimboleum AUDCAD">AUDCAD</div>
+                            </div>
+                        </a>
+                        <a href="AUDJPY/AUDJPY.htm">
+                            <div id="gc7" class="gomb-container">
+                                <div id="os7" class="buttonshader"></div>
+                                <div id="hw7" class="buttonsh-hover"></div>
+                                <div class="szimboleum AUDJPY">AUDJPY</div>
+                            </div>
+                        </a>
+                        <a href="CADJPY/CADJPY.htm">
+                            <div id="gc8" class="gomb-container">
+                                <div id="os8" class="buttonshader"></div>
+                                <div id="hw8" class="buttonsh-hover"></div>
+                                <div class="szimboleum CADJPY">CADJPY</div>
+                            </div>
+                        </a>
+                        <a href="CHFJPY/CHFJPY.htm">
+                            <div id="gc9" class="gomb-container">
+                                <div id="os9" class="buttonshader"></div>
+                                <div id="hw9" class="buttonsh-hover"></div>
+                                <div class="szimboleum CHFJPY">CHFJPY</div>
+                            </div>
+                        </a>
+                        <a href="EURAUD/EURAUD.htm">
+                            <div id="gc10" class="gomb-container">
+                                <div id="os10" class="buttonshader"></div>
+                                <div id="hw10" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURAUD">EURAUD</div>
+                            </div>
+                        </a>
+                        <a href="EURGBP/EURGBP.htm">
+                            <div id="gc11" class="gomb-container">
+                                <div id="os11" class="buttonshader"></div>
+                                <div id="hw11" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURGBP">EURGBP</div>
+                            </div>
+                        </a>
+                        <a href="EURJPY/EURJPY.htm">
+                            <div id="gc12" class="gomb-container">
+                                <div id="os12" class="buttonshader"></div>
+                                <div id="hw12" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURJPY">EURJPY</div>
+                            </div>
+                        </a>
+                        <a href="EURUSD/EURUSD.htm">
+                            <div id="gc13" class="gomb-container">
+                                <div id="os13" class="buttonshader"></div>
+                                <div id="hw13" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURUSD">EURUSD</div>
+                            </div>
+                        </a>
+                        <a href="GBPAUD/GBPAUD.htm">
+                            <div id="gc14" class="gomb-container">
+                                <div id="os14" class="buttonshader"></div>
+                                <div id="hw14" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPAUD">GBPAUD</div>
+                            </div>
+                        </a>
+                        <a href="GBPCHF/GBPCHF.htm">
+                            <div id="gc15" class="gomb-container">
+                                <div id="os15" class="buttonshader"></div>
+                                <div id="hw15" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPCHF">GBPCHF</div>
+                            </div>
+                        </a>
+                        <a href="GBPJPY/GBPJPY.htm">
+                            <div id="gc16" class="gomb-container">
+                                <div id="os16" class="buttonshader"></div>
+                                <div id="hw16" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPJPY">GBPJPY</div>
+                            </div>
+                        </a>
+                        <a href="GBPUSD/GBPUSD.htm">
+                            <div id="gc17" class="gomb-container">
+                                <div id="os17" class="buttonshader"></div>
+                                <div id="hw17" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPUSD">GBPUSD</div>
+                            </div>
+                        </a>
+                        <a href="GOLD/GOLD.htm">
+                            <div id="gc18" class="gomb-container">
+                                <div id="os18" class="buttonshader"></div>
+                                <div id="hw18" class="buttonsh-hover"></div>
+                                <div class="szimboleum GOLD">GOLD</div>
+                            </div>
+                        </a>
+                        <a href="NZDUSD/NZDUSD.htm">
+                            <div id="gc19" class="gomb-container">
+                                <div id="os19" class="buttonshader"></div>
+                                <div id="hw19" class="buttonsh-hover"></div>
+                                <div class="szimboleum NZDUSD">NZDUSD</div>
+                            </div>
+                        </a>
+                        <a href="USDCAD/USDCAD.htm">
+                            <div id="gc20" class="gomb-container">
+                                <div id="os20" class="buttonshader"></div>
+                                <div id="hw20" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDCAD">USDCAD</div>
+                            </div>
+                        </a>
+                        <a href="USDCHF/USDCHF.htm">
+                            <div id="gc21" class="gomb-container">
+                                <div id="os21" class="buttonshader"></div>
+                                <div id="hw21" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDCHF">USDCHF</div>
+                            </div>
+                        </a>
+                        <a href="USDJPY/USDJPY.htm">
+                            <div id="gc22" class="gomb-container">
+                                <div id="os22" class="buttonshader"></div>
+                                <div id="hw22" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDJPY">USDJPY</div>
+                            </div>
+                        </a>
+                        <a href="USDMXN/USDMXN.htm">
+                            <div id="gc23" class="gomb-container">
+                                <div id="os23" class="buttonshader"></div>
+                                <div id="hw23" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDMXN">USDMXN</div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- :::::::::::::::::: /gombsor :::::::::::::::::: -->
                 <div id="linechart"></div>
-                <div class="flex-container">
-                    <a class="instr-button AUDUSD" href="AUDUSD/AUDUSD.htm">AUDUSD</a>
-                    <a class="instr-button AUDCAD" href="AUDCAD/AUDCAD.htm">AUDCAD</a>
-                    <a class="instr-button AUDJPY" href="AUDJPY/AUDJPY.htm">AUDJPY</a>
-                    <a class="instr-button CADJPY" href="CADJPY/CADJPY.htm">CADJPY</a>
-                    <a class="instr-button CHFJPY" href="CHFJPY/CHFJPY.htm">CHFJPY</a>
-                    <a class="instr-button EURAUD" href="EURAUD/EURAUD.htm">EURAUD</a>
-                    <a class="instr-button EURGBP" href="EURGBP/EURGBP.htm">EURGBP</a>
-                    <a class="instr-button EURJPY" href="EURJPY/EURJPY.htm">EURJPY</a>
-                    <a class="instr-button EURUSD" href="EURUSD/EURUSD.htm">EURUSD</a>
-                    <a class="instr-button GBPAUD" href="GBPAUD/GBPAUD.htm">GBPAUD</a>
-                    <a class="instr-button GBPCHF" href="GBPCHF/GBPCHF.htm">GBPCHF</a>
-                    <a class="instr-button GBPJPY" href="GBPJPY/GBPJPY.htm">GBPJPY</a>
-                    <a class="instr-button GBPUSD" href="GBPUSD/GBPUSD.htm">GBPUSD</a>
-                    <a class="instr-button GOLD" href="GOLD/GOLD.htm">GOLD</a>
-                    <a class="instr-button NZDUSD" href="NZDUSD/NZDUSD.htm">NZDUSD</a>
-                    <a class="instr-button USDCAD" href="USDCAD/USDCAD.htm">USDCAD</a>
-                    <a class="instr-button USDCHF" href="USDCHF/USDCHF.htm">USDCHF</a>
-                    <a class="instr-button USDJPY" href="USDJPY/USDJPY.htm">USDJPY</a>
-                    <a class="instr-button USDMXN" href="USDMXN/USDMXN.htm">USDMXN</a>
-                </div>
+                <!-- :::::::::::::::::: gombsor :::::::::::::::::: -->
+                <div class="flex-container panel">
+                        <a href="AUDUSD/AUDUSD.htm">
+                            <div id="gc5" class="gomb-container">
+                                <div id="os5" class="buttonshader"></div>
+                                <div id="hw5" class="buttonsh-hover"></div>
+                                <div class="szimboleum AUDUSD">AUDUSD</div>
+                            </div>
+                        </a>
+                        <a href="AUDCAD/AUDCAD.htm">
+                            <div id="gc6" class="gomb-container">
+                                <div id="os6" class="buttonshader"></div>
+                                <div id="hw6" class="buttonsh-hover"></div>
+                                <div class="szimboleum AUDCAD">AUDCAD</div>
+                            </div>
+                        </a>
+                        <a href="AUDJPY/AUDJPY.htm">
+                            <div id="gc7" class="gomb-container">
+                                <div id="os7" class="buttonshader"></div>
+                                <div id="hw7" class="buttonsh-hover"></div>
+                                <div class="szimboleum AUDJPY">AUDJPY</div>
+                            </div>
+                        </a>
+                        <a href="CADJPY/CADJPY.htm">
+                            <div id="gc8" class="gomb-container">
+                                <div id="os8" class="buttonshader"></div>
+                                <div id="hw8" class="buttonsh-hover"></div>
+                                <div class="szimboleum CADJPY">CADJPY</div>
+                            </div>
+                        </a>
+                        <a href="CHFJPY/CHFJPY.htm">
+                            <div id="gc9" class="gomb-container">
+                                <div id="os9" class="buttonshader"></div>
+                                <div id="hw9" class="buttonsh-hover"></div>
+                                <div class="szimboleum CHFJPY">CHFJPY</div>
+                            </div>
+                        </a>
+                        <a href="EURAUD/EURAUD.htm">
+                            <div id="gc10" class="gomb-container">
+                                <div id="os10" class="buttonshader"></div>
+                                <div id="hw10" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURAUD">EURAUD</div>
+                            </div>
+                        </a>
+                        <a href="EURGBP/EURGBP.htm">
+                            <div id="gc11" class="gomb-container">
+                                <div id="os11" class="buttonshader"></div>
+                                <div id="hw11" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURGBP">EURGBP</div>
+                            </div>
+                        </a>
+                        <a href="EURJPY/EURJPY.htm">
+                            <div id="gc12" class="gomb-container">
+                                <div id="os12" class="buttonshader"></div>
+                                <div id="hw12" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURJPY">EURJPY</div>
+                            </div>
+                        </a>
+                        <a href="EURUSD/EURUSD.htm">
+                            <div id="gc13" class="gomb-container">
+                                <div id="os13" class="buttonshader"></div>
+                                <div id="hw13" class="buttonsh-hover"></div>
+                                <div class="szimboleum EURUSD">EURUSD</div>
+                            </div>
+                        </a>
+                        <a href="GBPAUD/GBPAUD.htm">
+                            <div id="gc14" class="gomb-container">
+                                <div id="os14" class="buttonshader"></div>
+                                <div id="hw14" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPAUD">GBPAUD</div>
+                            </div>
+                        </a>
+                        <a href="GBPCHF/GBPCHF.htm">
+                            <div id="gc15" class="gomb-container">
+                                <div id="os15" class="buttonshader"></div>
+                                <div id="hw15" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPCHF">GBPCHF</div>
+                            </div>
+                        </a>
+                        <a href="GBPJPY/GBPJPY.htm">
+                            <div id="gc16" class="gomb-container">
+                                <div id="os16" class="buttonshader"></div>
+                                <div id="hw16" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPJPY">GBPJPY</div>
+                            </div>
+                        </a>
+                        <a href="GBPUSD/GBPUSD.htm">
+                            <div id="gc17" class="gomb-container">
+                                <div id="os17" class="buttonshader"></div>
+                                <div id="hw17" class="buttonsh-hover"></div>
+                                <div class="szimboleum GBPUSD">GBPUSD</div>
+                            </div>
+                        </a>
+                        <a href="GOLD/GOLD.htm">
+                            <div id="gc18" class="gomb-container">
+                                <div id="os18" class="buttonshader"></div>
+                                <div id="hw18" class="buttonsh-hover"></div>
+                                <div class="szimboleum GOLD">GOLD</div>
+                            </div>
+                        </a>
+                        <a href="NZDUSD/NZDUSD.htm">
+                            <div id="gc19" class="gomb-container">
+                                <div id="os19" class="buttonshader"></div>
+                                <div id="hw19" class="buttonsh-hover"></div>
+                                <div class="szimboleum NZDUSD">NZDUSD</div>
+                            </div>
+                        </a>
+                        <a href="USDCAD/USDCAD.htm">
+                            <div id="gc20" class="gomb-container">
+                                <div id="os20" class="buttonshader"></div>
+                                <div id="hw20" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDCAD">USDCAD</div>
+                            </div>
+                        </a>
+                        <a href="USDCHF/USDCHF.htm">
+                            <div id="gc21" class="gomb-container">
+                                <div id="os21" class="buttonshader"></div>
+                                <div id="hw21" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDCHF">USDCHF</div>
+                            </div>
+                        </a>
+                        <a href="USDJPY/USDJPY.htm">
+                            <div id="gc22" class="gomb-container">
+                                <div id="os22" class="buttonshader"></div>
+                                <div id="hw22" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDJPY">USDJPY</div>
+                            </div>
+                        </a>
+                        <a href="USDMXN/USDMXN.htm">
+                            <div id="gc23" class="gomb-container">
+                                <div id="os23" class="buttonshader"></div>
+                                <div id="hw23" class="buttonsh-hover"></div>
+                                <div class="szimboleum USDMXN">USDMXN</div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- :::::::::::::::::: /gombsor :::::::::::::::::: -->
 
             </div>
 

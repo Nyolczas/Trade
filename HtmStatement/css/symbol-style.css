@@ -39,7 +39,7 @@
     padding: 10px;
 }
 
-.symb{
+.gomb-grid{
     font-size: 1.8rem;
 }
 
@@ -49,8 +49,12 @@
     height: 100%;
 }
 
-#barchart, #linechart{
-    height: 80vh;
+#barchart{
+    height: calc(100vh - 250px);
+}
+
+#linechart{
+    height: calc(100vh - 220px);
 }
 
 
