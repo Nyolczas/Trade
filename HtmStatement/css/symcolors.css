@@ -31,6 +31,17 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.AUDJPY:hover{
+    background : -moz-linear-gradient(0% 50% 0deg,rgba(5, 88, 42, 1) 0%,rgba(14, 87, 41, 1) 15.3%,rgba(40, 84, 40, 1) 40.73%,rgba(81, 80, 37, 1) 72.95%,rgba(120, 76, 35, 1) 99.46%);
+    background : -webkit-linear-gradient(0deg, rgba(5, 88, 42, 1) 0%, rgba(14, 87, 41, 1) 15.3%, rgba(40, 84, 40, 1) 40.73%, rgba(81, 80, 37, 1) 72.95%, rgba(120, 76, 35, 1) 99.46%);
+    background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(5, 88, 42, 1) ),color-stop(0.153,rgba(14, 87, 41, 1) ),color-stop(0.4073,rgba(40, 84, 40, 1) ),color-stop(0.7295,rgba(81, 80, 37, 1) ),color-stop(0.9946,rgba(120, 76, 35, 1) ));
+    background : -o-linear-gradient(0deg, rgba(5, 88, 42, 1) 0%, rgba(14, 87, 41, 1) 15.3%, rgba(40, 84, 40, 1) 40.73%, rgba(81, 80, 37, 1) 72.95%, rgba(120, 76, 35, 1) 99.46%);
+    background : -ms-linear-gradient(0deg, rgba(5, 88, 42, 1) 0%, rgba(14, 87, 41, 1) 15.3%, rgba(40, 84, 40, 1) 40.73%, rgba(81, 80, 37, 1) 72.95%, rgba(120, 76, 35, 1) 99.46%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#05582A', endColorstr='#784C23' ,GradientType=0)";
+    background : linear-gradient(90deg, rgba(5, 88, 42, 1) 0%, rgba(14, 87, 41, 1) 15.3%, rgba(40, 84, 40, 1) 40.73%, rgba(81, 80, 37, 1) 72.95%, rgba(120, 76, 35, 1) 99.46%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05582A',endColorstr='#784C23' , GradientType=1);
+}
+
 .AUDUSD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
@@ -43,7 +54,14 @@
 }
 
 .AUDUSD:hover{
-
+    background : -moz-linear-gradient(0% 50% 0deg,rgba(5, 88, 42, 1) 0%,rgba(14, 81, 39, 1) 14.99%,rgba(40, 63, 30, 1) 39.92%,rgba(81, 34, 16, 1) 71.5%,rgba(124, 3, 1, 1) 100%);
+    background : -webkit-linear-gradient(0deg, rgba(5, 88, 42, 1) 0%, rgba(14, 81, 39, 1) 14.99%, rgba(40, 63, 30, 1) 39.92%, rgba(81, 34, 16, 1) 71.5%, rgba(124, 3, 1, 1) 100%);
+    background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(5, 88, 42, 1) ),color-stop(0.1499,rgba(14, 81, 39, 1) ),color-stop(0.3992,rgba(40, 63, 30, 1) ),color-stop(0.715,rgba(81, 34, 16, 1) ),color-stop(1,rgba(124, 3, 1, 1) ));
+    background : -o-linear-gradient(0deg, rgba(5, 88, 42, 1) 0%, rgba(14, 81, 39, 1) 14.99%, rgba(40, 63, 30, 1) 39.92%, rgba(81, 34, 16, 1) 71.5%, rgba(124, 3, 1, 1) 100%);
+    background : -ms-linear-gradient(0deg, rgba(5, 88, 42, 1) 0%, rgba(14, 81, 39, 1) 14.99%, rgba(40, 63, 30, 1) 39.92%, rgba(81, 34, 16, 1) 71.5%, rgba(124, 3, 1, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#05582A', endColorstr='#7C0301' ,GradientType=0)";
+    background : linear-gradient(90deg, rgba(5, 88, 42, 1) 0%, rgba(14, 81, 39, 1) 14.99%, rgba(40, 63, 30, 1) 39.92%, rgba(81, 34, 16, 1) 71.5%, rgba(124, 3, 1, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05582A',endColorstr='#7C0301' , GradientType=1);
 }
 
 .CADJPY {
@@ -57,6 +75,17 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.CADJPY:hover{
+    background : -moz-linear-gradient(0% 50% 0deg,rgba(109, 76, 75, 1) 0%,rgba(123, 75, 36, 1) 100%);
+    background : -webkit-linear-gradient(0deg, rgba(109, 76, 75, 1) 0%, rgba(123, 75, 36, 1) 100%);
+    background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(109, 76, 75, 1) ),color-stop(1,rgba(123, 75, 36, 1) ));
+    background : -o-linear-gradient(0deg, rgba(109, 76, 75, 1) 0%, rgba(123, 75, 36, 1) 100%);
+    background : -ms-linear-gradient(0deg, rgba(109, 76, 75, 1) 0%, rgba(123, 75, 36, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#6D4C4B', endColorstr='#7B4B24' ,GradientType=0)";
+    background : linear-gradient(90deg, rgba(109, 76, 75, 1) 0%, rgba(123, 75, 36, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6D4C4B',endColorstr='#7B4B24' , GradientType=1);
+}
+
 .CHFJPY {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
@@ -66,6 +95,10 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
     background: linear-gradient(90deg, rgba(112, 48, 160, 1) 0%, rgba(247, 150, 70, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+}
+
+.CHFJPY:hover{
+
 }
 
 .EURAUD {
@@ -79,6 +112,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.EURAUD:hover{
+
+}
+
 .EURGBP {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 176, 240, 1) 0%, rgba(0, 32, 96, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 176, 240, 1) 0%, rgba(0, 32, 96, 1) 100%);
@@ -88,6 +125,10 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
     background: linear-gradient(90deg, rgba(0, 176, 240, 1) 0%, rgba(0, 32, 96, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+}
+
+.EURGBP:hover{
+
 }
 
 .EURJPY {
@@ -101,6 +142,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.EURJPY:hover{
+
+}
+
 .EURUSD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 176, 240, 1) 0%, rgba(255, 0, 0, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 176, 240, 1) 0%, rgba(255, 0, 0, 1) 100%);
@@ -110,6 +155,10 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
     background: linear-gradient(90deg, rgba(0, 176, 240, 1) 0%, rgba(255, 0, 0, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+}
+
+.EURUSD:hover{
+
 }
 
 .GBPAUD {
@@ -123,6 +172,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.GBPAUD:hover{
+
+}
+
 .GBPCHF {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 32, 96, 1) 0%, rgba(112, 48, 160, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 32, 96, 1) 0%, rgba(112, 48, 160, 1) 100%);
@@ -132,6 +185,10 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
     background: linear-gradient(90deg, rgba(0, 32, 96, 1) 0%, rgba(112, 48, 160, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+}
+
+.GBPCHF:hover{
+
 }
 
 .GBPJPY {
@@ -145,6 +202,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.GBPJPY:hover{
+
+}
+
 .GBPUSD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 32, 96, 1) 0%, rgba(255, 0, 0, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 32, 96, 1) 0%, rgba(255, 0, 0, 1) 100%);
@@ -154,6 +215,10 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
     background: linear-gradient(90deg, rgba(0, 32, 96, 1) 0%, rgba(255, 0, 0, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+}
+
+.GBPUSD:hover{
+
 }
 
 .GOLD {
@@ -168,6 +233,10 @@
     color: rgb(192, 0, 0);
 }
 
+.GOLD:hover{
+
+}
+
 .NZDUSD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(146, 208, 80, 1) 0%, rgba(255, 0, 0, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(146, 208, 80, 1) 0%, rgba(255, 0, 0, 1) 100%);
@@ -179,6 +248,11 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.NZDUSD:hover{
+
+}
+
+
 .USDCAD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(255, 0, 0, 1) 0%, rgba(217, 150, 148, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(217, 150, 148, 1) 100%);
@@ -188,6 +262,10 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
     background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(217, 150, 148, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+}
+
+.USDCAD:hover{
+
 }
 
 .USDCHF {
@@ -201,6 +279,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.USDCHF:hover{
+
+}
+
 .USDJPY {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(255, 0, 0, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(247, 150, 70, 1) 100%);
@@ -212,6 +294,10 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.USDJPY:hover{
+
+}
+
 .USDMXN {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(255, 0, 0, 1) 0%, rgba(149, 55, 53, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(149, 55, 53, 1) 100%);
@@ -221,6 +307,10 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
     background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(149, 55, 53, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+}
+
+.USDMXN:hover{
+
 }
 
 .ADX {
