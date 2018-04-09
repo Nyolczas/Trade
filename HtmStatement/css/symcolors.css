@@ -1,14 +1,3 @@
-.AUDUSD {
-    background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
-    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 175, 79, 1)), color-stop(1, rgba(237, 32, 36, 1)));
-    background: -o-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
-    background: -ms-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
-    background: linear-gradient(90deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
-}
-
 .AUDCAD {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(217, 150, 148, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(217, 150, 148, 1) 100%);
@@ -20,6 +9,17 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
 }
 
+.AUDCAD:hover{
+    background : -moz-linear-gradient(0% 50% 0deg,rgba(5, 88, 42, 1) 0%,rgba(14, 87, 45, 1) 17.07%,rgba(40, 84, 53, 1) 45.45%,rgba(81, 79, 66, 1) 81.43%,rgba(105, 76, 74, 1) 100%);
+  background : -webkit-linear-gradient(0deg, rgba(5, 88, 42, 1) 0%, rgba(14, 87, 45, 1) 17.07%, rgba(40, 84, 53, 1) 45.45%, rgba(81, 79, 66, 1) 81.43%, rgba(105, 76, 74, 1) 100%);
+  background : -webkit-gradient(linear,0% 50% ,100% 50% ,color-stop(0,rgba(5, 88, 42, 1) ),color-stop(0.1707,rgba(14, 87, 45, 1) ),color-stop(0.4545,rgba(40, 84, 53, 1) ),color-stop(0.8143,rgba(81, 79, 66, 1) ),color-stop(1,rgba(105, 76, 74, 1) ));
+  background : -o-linear-gradient(0deg, rgba(5, 88, 42, 1) 0%, rgba(14, 87, 45, 1) 17.07%, rgba(40, 84, 53, 1) 45.45%, rgba(81, 79, 66, 1) 81.43%, rgba(105, 76, 74, 1) 100%);
+  background : -ms-linear-gradient(0deg, rgba(5, 88, 42, 1) 0%, rgba(14, 87, 45, 1) 17.07%, rgba(40, 84, 53, 1) 45.45%, rgba(81, 79, 66, 1) 81.43%, rgba(105, 76, 74, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#05582A', endColorstr='#694C4A' ,GradientType=0)";
+  background : linear-gradient(90deg, rgba(5, 88, 42, 1) 0%, rgba(14, 87, 45, 1) 17.07%, rgba(40, 84, 53, 1) 45.45%, rgba(81, 79, 66, 1) 81.43%, rgba(105, 76, 74, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#05582A',endColorstr='#694C4A' , GradientType=1);
+}
+
 .AUDJPY {
     background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(247, 150, 70, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(247, 150, 70, 1) 100%);
@@ -29,6 +29,21 @@
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
     background: linear-gradient(90deg, rgba(0, 175, 79, 1) 0%, rgba(247, 150, 70, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+}
+
+.AUDUSD {
+    background: -moz-linear-gradient(0% 50% 0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
+    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0, rgba(0, 175, 79, 1)), color-stop(1, rgba(237, 32, 36, 1)));
+    background: -o-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
+    background: -ms-linear-gradient(0deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024' ,GradientType=0)";
+    background: linear-gradient(90deg, rgba(0, 175, 79, 1) 0%, rgba(237, 32, 36, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00AF4F', endColorstr='#ED2024', GradientType=1);
+}
+
+.AUDUSD:hover{
+
 }
 
 .CADJPY {
