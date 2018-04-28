@@ -3,6 +3,7 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class csvFileRead {
+    public float[] hozam;
     public void csvReadTest(){
         try {
             List<String> lines = Files.readAllLines(Paths.get("AUDUSD_M5_Zoom.csv"));
@@ -24,7 +25,6 @@ public class csvFileRead {
 
 
             // a profitok hozzáadása a hozam tömbhöz
-            float[] hozam = new float[db];
             float temphozam = 0;
 
             for(int i = 1; i < db; i++){
