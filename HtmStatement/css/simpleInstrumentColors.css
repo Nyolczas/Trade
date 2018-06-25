@@ -1,94 +1,75 @@
-.AUDUSD
-        {
-         background-color:#5D753E;
-        }
+.AUDUSD {
+    background-color: rgb(93, 117, 62);
+}
 
-      .AUDCAD
-        {
-         background-color:#67976D;
-        }
+.AUDCAD {
+    background-color: rgb(103, 151, 109);
+}
 
-      .AUDJPY
-        {
-         background-color:#939F4A;
-        }
+.AUDJPY {
+    background-color: rgb(147, 159, 74);
+}
 
-      .CADJPY
-        {
-         background-color:#E1926A;
-        }
+.CADJPY {
+    background-color: rgb(225, 146, 106);
+}
 
-      .CHFJPY
-        {
-         background-color:#B1626F;
-        }
+.CHFJPY {
+    background-color: rgb(177, 98, 111);
+}
 
-      .EURAUD
-        {
-         background-color:#00AB94;
-        }
+.EURAUD {
+    background-color: rgb(0, 171, 148);
+}
 
-      .EURGBP
-        {
-         background-color:#00619F;
-        }
+.EURGBP {
+    background-color: rgb(0, 97, 159);
+}
 
-      .EURJPY
-        {
-         background-color:#AF9C77;
-        }
+.EURJPY {
+    background-color: rgb(175, 156, 119);
+}
 
-      .EURUSD
-        {
-         background-color:#894C69;
-        }
+.EURUSD {
+    background-color: rgb(137, 76, 105);
+}
 
-      .GBPAUD
-        {
-         background-color:#007550;
-        }
+.GBPAUD {
+    background-color: rgb(0, 117, 80);
+}
 
-      .GBPCHF
-        {
-         background-color:#3D2981;
-        }
+.GBPCHF {
+    background-color: rgb(61, 41, 129);
+}
 
-      .GBPJPY
-        {
-         background-color:#7B5A52;
-        }
+.GBPJPY {
+    background-color: rgb(123, 90, 82);
+}
 
-      .GBPUSD
-        {
-         background-color:#8B0E2A;
-        }
+.GBPUSD {
+    background-color: rgb(139, 14, 42);
+}
 
-      .GOLD
-        {
-         background-color:#F89A19;
-        }
+.GOLD {
+    background-color: rgb(248, 154, 25);
+}
 
-      .NZDUSD
-        {
-         background-color:#C76126;
-        }
+.NZDUSD {
+    background-color: rgb(199, 97, 38);
+}
 
-      .USDCAD
-        {
-         background-color:#E06665;
-        }
+.USDCAD {
+    background-color: rgb(223, 102, 102);
+}
 
-      .USDCHF
-        {
-         background-color:#A21E65;
-        }
+.USDCHF {
+    background-color: rgb(162, 30, 101);
+}
 
-      .USDJPY
-        {
-         background-color:#F65026;
-        }
+.USDJPY {
+    background-color: rgb(246, 80, 38);
+}
 
-      .USDMXN
-        {
-         background-color:#9F1D21;
-        }
+.USDMXN {
+    background-color: #9F1D21;
+}
