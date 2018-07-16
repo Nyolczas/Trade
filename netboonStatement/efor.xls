@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:exslt="http://exslt.org/common" xmlns:set="http://exslt.org/sets" xmlns:x="urn:schemas-microsoft-com:office:excel">
+<head>
+<title>Random Netboon v1.3 (ügyfélszám: 10026)</title>
+<META HTTP-EQUIV="Content-Type" CONTENT="application/vnd.ms-excel" content="text/html; charset=utf-8">
+</head>
+<body>
+<div class="light_section_heading">Értékpapír-forgalmi napló</div>
+<table cellpadding="0" cellspacing="2" width="100%">
+<tr style="text-align: center">
+<td class="data_table_header" style="width: 70px">Dátum</td>
+<td class="data_table_header">Mennyiség</td>
+<td class="data_table_header">Tranzakció megnevezése</td>
+<td class="data_table_header">Árfolyam</td>
+<td class="data_table_header">Érték</td>
+<td class="data_table_header">Jutalék</td>
+<td class="data_table_header">Kölcs. díj/kamat</td>
+<td class="data_table_header">Megjegyzés</td>
+</tr>
+<tr class="data_table_row1"><td class="data_table_cell" colspan="8"><b>Global X Lithium</b></td></tr>
+<tr class="data_table_row1">
+<td class="data_table_cell" style="text-align: center"><nobr>2018.05.17.</nobr></td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\\ \0022db\0022';" x:num="3"><nobr><nobr>3 db</nobr></nobr></td>
+<td class="data_table_cell">4712438 számú vételi szerződés</td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';" x:num="34.970000"><nobr>34.97 USD</nobr></td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';" x:num="-104.910000"><nobr>-104.91 USD</nobr></td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';" x:num="-2.000000"><nobr>-2 USD</nobr></td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';" x:num="0.000000"><nobr>0 USD</nobr></td>
+<td class="data_table_cell"></td>
+</tr>
+<tr class="data_table_row1">
+<td colspan="2" class="data_table_cell" align="right"><table cellpadding="0" cellspacing="0" style="text-align: right; font-weight: bold">
+<tr>
+<td class="data_table_cell_no_padding">Nyitó:</td>
+<td class="data_table_cell_no_padding" x:num="1" style="text-align: right;mso-number-format:'\#0\\ \0022db\0022';"><nobr><nobr>1 db</nobr></nobr></td>
+</tr>
+<tr>
+<td class="data_table_cell_no_padding">Nettó:</td>
+<td class="data_table_cell_no_padding" x:num="3" style="text-align: right;mso-number-format:'\#0\\ \0022db\0022';"><nobr><nobr>3 db</nobr></nobr></td>
+</tr>
+<tr>
+<td class="data_table_cell_no_padding">Összesen:</td>
+<td class="data_table_cell_no_padding" x:num="4" style="text-align: right;mso-number-format:'\#0\\ \0022db\0022';"><nobr><nobr>4 db</nobr></nobr></td>
+</tr>
+</table></td>
+<td colspan="5" class="data_table_cell" align="right"><table cellpadding="0" cellspacing="0" style="text-align: right; font-weight: bold">
+<tr>
+<td class="data_table_cell_no_padding">Nettó forgalom:</td>
+<td class="data_table_cell_no_padding" x:num="-104.91" style="text-align:right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';"><nobr><nobr>-104.91 USD</nobr></nobr></td>
+</tr>
+<tr>
+<td class="data_table_cell_no_padding">Jutalék összesen:</td>
+<td class="data_table_cell_no_padding" x:num="-2" style="text-align:right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';"><nobr><nobr>-2 USD</nobr></nobr></td>
+</tr>
+<tr>
+<td class="data_table_cell_no_padding">Kölcsönzési díj/Kamat összesen:</td>
+<td class="data_table_cell_no_padding" x:num="0" style="text-align:right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';"><nobr><nobr>0 USD</nobr></nobr></td>
+</tr>
+</table></td>
+<td colspan="1"></td>
+</tr>
+<tr class="data_table_row1"><td class="data_table_cell" colspan="8"><b>VS 3x Short Gold ETN</b></td></tr>
+<tr class="data_table_row1">
+<td class="data_table_cell" style="text-align: center"><nobr>2018.05.17.</nobr></td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\\ \0022db\0022';" x:num="-3"><nobr><nobr>-3 db</nobr></nobr></td>
+<td class="data_table_cell">4712437 számú eladási szerződés</td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';" x:num="45.170000"><nobr>45.17 USD</nobr></td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';" x:num="135.510000"><nobr>135.51 USD</nobr></td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';" x:num="-2.000000"><nobr>-2 USD</nobr></td>
+<td class="data_table_cell" style="text-align: right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';" x:num="0.000000"><nobr>0 USD</nobr></td>
+<td class="data_table_cell"></td>
+</tr>
+<tr class="data_table_row0">
+<td colspan="2" class="data_table_cell" align="right"><table cellpadding="0" cellspacing="0" style="text-align: right; font-weight: bold">
+<tr>
+<td class="data_table_cell_no_padding">Nyitó:</td>
+<td class="data_table_cell_no_padding" x:num="3" style="text-align: right;mso-number-format:'\#0\\ \0022db\0022';"><nobr><nobr>3 db</nobr></nobr></td>
+</tr>
+<tr>
+<td class="data_table_cell_no_padding">Nettó:</td>
+<td class="data_table_cell_no_padding" x:num="-3" style="text-align: right;mso-number-format:'\#0\\ \0022db\0022';"><nobr><nobr>-3 db</nobr></nobr></td>
+</tr>
+<tr>
+<td class="data_table_cell_no_padding">Összesen:</td>
+<td class="data_table_cell_no_padding" x:num="0" style="text-align: right;mso-number-format:'\#0\\ \0022db\0022';"><nobr><nobr>0 db</nobr></nobr></td>
+</tr>
+</table></td>
+<td colspan="5" class="data_table_cell" align="right"><table cellpadding="0" cellspacing="0" style="text-align: right; font-weight: bold">
+<tr>
+<td class="data_table_cell_no_padding">Nettó forgalom:</td>
+<td class="data_table_cell_no_padding" x:num="135.51" style="text-align:right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';"><nobr><nobr>135.51 USD</nobr></nobr></td>
+</tr>
+<tr>
+<td class="data_table_cell_no_padding">Jutalék összesen:</td>
+<td class="data_table_cell_no_padding" x:num="-2" style="text-align:right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';"><nobr><nobr>-2 USD</nobr></nobr></td>
+</tr>
+<tr>
+<td class="data_table_cell_no_padding">Kölcsönzési díj/Kamat összesen:</td>
+<td class="data_table_cell_no_padding" x:num="0" style="text-align:right;mso-number-format:'\#0\.0\#\\ \0022USD\0022';"><nobr><nobr>0 USD</nobr></nobr></td>
+</tr>
+</table></td>
+<td colspan="1"></td>
+</tr>
+</table>
+</body>
+</html>
