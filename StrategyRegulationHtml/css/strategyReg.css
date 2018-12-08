@@ -1,22 +1,24 @@
 :root {
     --dark-color:  rgb(6, 50, 100);
+    --high-color: rgb(155, 0, 0);
+    --light-color: rgb(255, 251, 240);
 }
 
 body {
-    background-color: rgb(255, 251, 240);
+    background-color: var(--light-color);
     color:  var(--dark-color);
 }
 
 .header {
     background-color:  var(--dark-color);
-    color: rgba(255, 251, 240, 0.904);
+    color:var(--light-color);
     padding: 5px;
 }
 
-.content{
+.content, .my-block {
     padding: 15px;
 }
 
-.my-block{
-    padding: 15px;
+.high{
+    color: var(--high-color);
 }
