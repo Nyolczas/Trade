@@ -1,0 +1,22 @@
+:root {
+    --dark-color:  rgb(6, 50, 100);
+}
+
+body {
+    background-color: rgb(255, 251, 240);
+    color:  var(--dark-color);
+}
+
+.header {
+    background-color:  var(--dark-color);
+    color: rgba(255, 251, 240, 0.904);
+    padding: 5px;
+}
+
+.content{
+    padding: 15px;
+}
+
+.my-block{
+    padding: 15px;
+}
