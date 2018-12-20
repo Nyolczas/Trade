@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+@*<h3>@ViewBag.Message</h3>*@
+
+
+@{
+    var dataFile = Server.MapPath("~/App_Data/manual_tick.csv");
+    Array userData = File.ReadAllLines(dataFile);
+}
+
+<h1>Reading Data from a File</h1>
+
+<table border="1" width="100%">
+    @foreach (string dataLine in userData)
+    {
+    <tr>
+        @foreach (string dataItem in dataLine.Split(';'))
+        {
+        <td>@dataItem&nbsp;</td>
+        }
+    </tr>
+    }
+</table> 
