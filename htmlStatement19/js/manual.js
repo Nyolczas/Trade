@@ -1,9 +1,13 @@
 //---------------------- oldal betöltése
-//--- mai dátum beállítása
+init();
 
-window.onload = function () {
+//setTableData(0, manuTrades.length);
+//
+
+function init() {
+  document.getElementById("datefrom").value = "2018-10-20";
+
   document.getElementById("dateto").value = formatDate(new Date());
-  setTableData();
 }
 
 //--- dátum formátum
@@ -19,14 +23,44 @@ function formatDate(date) {
   return [year, month, day].join('-');
 }
 
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds) {
+      break;
+    }
+  }
+}
+
 //---------------------- táblázat szűrése
 
-function filter() {
+document.querySelector('.filter').addEventListener('click',function filter() {
 
   //--- kezdő dátum megkeresése
+  dateFrom = new Date(document.getElementById("datefrom").value);
+  dateTo = new Date(document.getElementById("dateto").value);
+
+  var start = searchCounter(dateFrom);
+  var end = searchCounter(dateTo);
+
+  //alert("start: "+ start + ", end: " + end);
+  setTableData(start, end);
+
+});
+
+searchCounter = function (date) {
+  for (var i = 0; i < manuTrades.length; i++) {
+    if (manuTrades[i].CloseTime.getTime() >= date) {
+
+      break;
+    }
+  }
+  console.log(i);
+  return i;
 }
+
 //---------------------- táblázat összeállítása
-function setTableData() {
+function setTableData(start, end) {
   var tabbleData = {
     top: '<div style="overflow-x:auto;"></div>\
   <table class="table table-sm">',
@@ -48,39 +82,51 @@ function setTableData() {
   <th>%</th>\
   <th>Comment</th>\
   </tr>',
-    rows: rowFill(),
+    rows: rowFill(start, end),
     butt: '</table>\
   </div>'
   }
 
-  function rowFill() {
-    var res = "";
-    for (var i = 0; i < manuTrades.length; i++) {
-      res += '<tr>\
-      <td>' + manuTrades[i].Ticket + '</td>\
-      <td>' + manuTrades[i].OpenTime + '</td>\
-      <td>' + manuTrades[i].Type + '</td>\
-      <td>' + manuTrades[i].Size + '</td>\
-      <td>' + manuTrades[i].Item + '</td>\
-      <td>' + manuTrades[i].OpenPrice + '</td>\
-      <td>' + manuTrades[i].SL + '</td>\
-      <td>' + manuTrades[i].TP + '</td>\
-      <td>' + manuTrades[i].CloseTime + '</td>\
-      <td>' + manuTrades[i].ClosePrice + '</td>\
-      <td>' + manuTrades[i].Comission + '</td>\
-      <td>' + manuTrades[i].Swap + '</td>\
-      <td>' + manuTrades[i].Profit + '</td>\
-      <td>' + manuTrades[i].NetProfit + '</td>\
-      <td>' + manuTrades[i].PercProfit + '%</td>\
-      <td>' + manuTrades[i].Comment + '</td>\
-    </tr>';
-    }
-    return (res);
-  }
-
-
   //---------------------- kiírás
   document.getElementById("table").innerHTML = tabbleData.top +
     tabbleData.head + tabbleData.rows + tabbleData.butt;
-    
+
+  document.getElementById("datefrom").value = formatDate(manuTrades[start].CloseTime);
+  document.getElementById("dateto").value = formatDate(manuTrades[end-1].CloseTime);
+  
+}
+
+function rowFill(start, end) {
+  var res = "";
+  for (var i = start; i < end; i++) {
+    var opt = dateConvertBjuti(manuTrades[i].OpenTime);
+    var clt = dateConvertBjuti(manuTrades[i].CloseTime);
+    res += '<tr>\
+    <td>' + manuTrades[i].Ticket + '</td>\
+    <td>' + opt + '</td>\
+    <td>' + manuTrades[i].Type + '</td>\
+    <td>' + manuTrades[i].Size + '</td>\
+    <td>' + manuTrades[i].Item + '</td>\
+    <td>' + manuTrades[i].OpenPrice + '</td>\
+    <td>' + manuTrades[i].SL + '</td>\
+    <td>' + manuTrades[i].TP + '</td>\
+    <td>' + clt + '</td>\
+    <td>' + manuTrades[i].ClosePrice + '</td>\
+    <td>' + manuTrades[i].Comission + '</td>\
+    <td>' + manuTrades[i].Swap + '</td>\
+    <td>' + manuTrades[i].Profit + '</td>\
+    <td>' + manuTrades[i].NetProfit + '</td>\
+    <td>' + manuTrades[i].PercProfit + '%</td>\
+    <td>' + manuTrades[i].Comment + '</td>\
+  </tr>';
+  }
+  return (res);
+}
+
+function dateConvertBjuti(date) {
+  var d = new Date(date);
+  var res = d.toISOString();
+  res = res.replace("T", " ");
+  res = res.replace(".000Z", " ");
+  return res;
 }
