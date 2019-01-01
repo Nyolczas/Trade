@@ -1,9 +1,12 @@
 //---------------------- oldal betöltése
+//--- mai dátum beállítása
+
 window.onload = function () {
   document.getElementById("dateto").value = formatDate(new Date());
   setTableData();
 }
 
+//--- dátum formátum
 function formatDate(date) {
   var d = new Date(date),
     month = '' + (d.getMonth() + 1),
@@ -17,15 +20,11 @@ function formatDate(date) {
 }
 
 //---------------------- táblázat szűrése
-var fromDate;
 
 function filter() {
 
-  fromDate = new Date(document.getElementById("datefrom").value) ;
-  alert(fromDate)
-
+  //--- kezdő dátum megkeresése
 }
-
 //---------------------- táblázat összeállítása
 function setTableData() {
   var tabbleData = {
@@ -83,4 +82,5 @@ function setTableData() {
   //---------------------- kiírás
   document.getElementById("table").innerHTML = tabbleData.top +
     tabbleData.head + tabbleData.rows + tabbleData.butt;
+    
 }
