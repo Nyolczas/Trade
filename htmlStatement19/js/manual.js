@@ -81,8 +81,8 @@ function setTableData(start, end) {
   document.getElementById("table").innerHTML = tabbleData.top +
     tabbleData.head + tabbleData.rows + tabbleData.butt;
 
-  document.getElementById("datefrom").value = formatDate(manuTrades[start].CloseTime);
-  document.getElementById("dateto").value = formatDate(manuTrades[end-1].CloseTime);
+  //document.getElementById("datefrom").value = formatDate(manuTrades[start].CloseTime);
+  //document.getElementById("dateto").value = formatDate(manuTrades[end-1].CloseTime);
   
 }
 
