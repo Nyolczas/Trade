@@ -1,12 +1,11 @@
 //---------------------- oldal betöltése
 init();
 
-//setTableData(0, manuTrades.length);
-//
+setTableData(0, manuTrades.length);
+
 
 function init() {
   document.getElementById("datefrom").value = "2018-10-20";
-
   document.getElementById("dateto").value = formatDate(new Date());
 }
 
@@ -23,22 +22,13 @@ function formatDate(date) {
   return [year, month, day].join('-');
 }
 
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds) {
-      break;
-    }
-  }
-}
-
 //---------------------- táblázat szűrése
 
 document.querySelector('.filter').addEventListener('click',function filter() {
 
   //--- kezdő dátum megkeresése
-  dateFrom = new Date(document.getElementById("datefrom").value);
-  dateTo = new Date(document.getElementById("dateto").value);
+  var dateFrom = new Date(document.getElementById("datefrom").value);
+  var dateTo = new Date(document.getElementById("dateto").value);
 
   var start = searchCounter(dateFrom);
   var end = searchCounter(dateTo);
