@@ -4,6 +4,7 @@ init();
 setTableData(0, manuTrades.length);
 
 
+
 function init() {
   document.getElementById("datefrom").value = "2018-10-20";
   document.getElementById("dateto").value = formatDate(new Date());
@@ -24,7 +25,7 @@ function formatDate(date) {
 
 //---------------------- táblázat szűrése
 
-document.querySelector('.filter').addEventListener('click',function filter() {
+document.querySelector('.filter').addEventListener('click', function filter() {
 
   //--- kezdő dátum megkeresése
   var dateFrom = new Date(document.getElementById("datefrom").value);
@@ -45,7 +46,6 @@ searchCounter = function (date) {
       break;
     }
   }
-  console.log(i);
   return i;
 }
 
@@ -80,15 +80,25 @@ function setTableData(start, end) {
   //---------------------- kiírás
   document.getElementById("table").innerHTML = tabbleData.top +
     tabbleData.head + tabbleData.rows + tabbleData.butt;
-
-  //document.getElementById("datefrom").value = formatDate(manuTrades[start].CloseTime);
-  //document.getElementById("dateto").value = formatDate(manuTrades[end-1].CloseTime);
-  
 }
 
 function rowFill(start, end) {
+
   var res = "";
+  var symbols = [];
+  var x = document.getElementById("instrumentSelector");
+  for(var i = x.length; i > 0; i--){
+    x.remove(i);
+    }
   for (var i = start; i < end; i++) {
+    //--- select option hozzáadása a szimbólum szűréshez
+    if (!symbols.includes(manuTrades[i].Item)) {
+      symbols.push(manuTrades[i].Item);
+      var option = document.createElement("option");
+      option.text = manuTrades[i].Item;
+      x.add(option);
+    }
+    //--- táblázat sorok feltöltése
     var opt = dateConvertBjuti(manuTrades[i].OpenTime);
     var clt = dateConvertBjuti(manuTrades[i].CloseTime);
     res += '<tr>\
@@ -110,6 +120,9 @@ function rowFill(start, end) {
     <td>' + manuTrades[i].Comment + '</td>\
   </tr>';
   }
+  
+
+  //--- táblázat sorok visszaküldése
   return (res);
 }
 
