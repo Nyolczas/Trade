@@ -59,6 +59,8 @@ function setTableData(start, end, sym) {
   <th>Net Profit</th>\
   <th>%</th>\
   <th>Comment</th>\
+  <th>Hozam</th>\
+  <th>%Hozam</th>\
   </tr>',
     rows: rowFill(start, end, sym),
     butt: '</table>\
@@ -74,6 +76,8 @@ function rowFill(start, end, sym = "összes") {
 
   var res = "";
   var symbols = [];
+  var tempHozam = 0;
+  var tempPercHozam = 0;
   var x = document.getElementById("instrumentSelector");
   for (var i = x.length; i > 0; i--) {
     x.remove(i);
@@ -95,6 +99,8 @@ function rowFill(start, end, sym = "összes") {
     if (sym == "összes" || manuTrades[i].Item == sym) {
       var opt = dateConvertBjuti(manuTrades[i].OpenTime);
       var clt = dateConvertBjuti(manuTrades[i].CloseTime);
+      tempHozam += manuTrades[i].NetProfit;
+      tempPercHozam += manuTrades[i].PercProfit;
       res += '<tr>\
       <td>' + manuTrades[i].Ticket + '</td>\
       <td>' + opt + '</td>\
@@ -112,6 +118,8 @@ function rowFill(start, end, sym = "összes") {
       <td>' + manuTrades[i].NetProfit + '</td>\
       <td>' + manuTrades[i].PercProfit + '%</td>\
       <td>' + manuTrades[i].Comment + '</td>\
+      <td>' + Math.round(tempHozam * 100)/100 + '</td>\
+      <td>' + Math.round(tempPercHozam * 10)/10 + '%</td>\
     </tr>';
     }
   }
