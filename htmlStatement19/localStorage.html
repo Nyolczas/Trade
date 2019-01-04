@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <input type="text" id="myText" value="Some text...">
+    <button onclick="myFunction()">Save Text</button>
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("demo").innerHTML = localStorage.getItem("dataKey");
+        function myFunction() {
+            var x = document.getElementById("myText").value;
+            //document.getElementById("demo").innerHTML = x;
+            // Check browser support
+            if (typeof (Storage) !== "undefined") {
+                // Store
+                localStorage.setItem("dataKey", x);
+                // Retrieve
+                document.getElementById("demo").innerHTML = localStorage.getItem("dataKey");
+            } else {
+                document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+            }
+        }
+    </script>
+</body>
+
+</html>
