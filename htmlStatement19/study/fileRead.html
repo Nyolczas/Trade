@@ -13,7 +13,8 @@
         <button onclick="">Read Text</button>
         
     <script>
-        //readTextFile('C:/Users/User/Documents/GitHub/Trade/htmlStatement19/study/teszt.txt');
+        var env = process.env['USERPROFILE'];
+        readTextFile(`${env}/Documents/GitHub/Trade/htmlStatement19/study/teszt.txt`);
         function readTextFile(file) {
             var rawFile = new XMLHttpRequest();
             rawFile.open("GET", file, false);

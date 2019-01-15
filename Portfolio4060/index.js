@@ -28,25 +28,25 @@ function drawChart() {
 }
 var date = ['2018.12.31', '2019.01.31'];
 var kp = {
-    Huf: [],
-    Eur: [],
-    Usd: [],
-    Sum: []
+    Huf: [4570, 13354],
+    Eur: [4317, 4317],
+    Usd: [1118, 1634],
+    Sum: [10005, 19306]
 }
 var portfolio = [
-    {name: 'ETFBUXOTP', value: [305350, 316775]},
-    {name:'DAXEX', value:[]},
-    {name:'iShrUSTBond20', value:[]},
-    {name:'iShrUSTBond7-10', value:[]},
-    {name:'NDEX', value:[]},
-    {name:'EBRCHTL05', value:[]},
-    {name:'SXR8', value:[]}
+    {name: 'ETFBUXOTP', type: 'stock', value: [305350, 316775]},
+    {name:'DAXEX', type: 'stock', value:[285850, 300300]},
+    {name:'iShrUSTBond20', type: 'bond', value:[80747, 78077]},
+    {name:'iShrUSTBond7-10', type: 'bond', value:[764758, 752063]},
+    {name:'NDEX', type: 'stock', value:[287680, 288000]},
+    {name:'EBRCHTL05', type: 'stock', value:[41376, 48456]},
+    {name:'SXR8', type: 'stock', value:[275440, 284400]}
 ];
 
 //var newName = "e";
 //portfolio[newName] = [];
 
-console.log(portfolio);
+console.log(portfolio[0].name);
 
 portfolio.sort(function(a,b){
     var nameA = a.name.toUpperCase();
@@ -60,4 +60,4 @@ portfolio.sort(function(a,b){
     return 0;
 });
 
-console.log(portfolio);
+console.log(portfolio[0].name);
