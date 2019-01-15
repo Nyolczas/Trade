@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio 40 - 60</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Dátum', 'kp HUF', 'kp €', 'kp $', 'ETFBUXOTP', 'DAXEX', 'iShrUSTBond20', 'iShrUSTBond7-10','NDEX', 'EBRCHTL05', 'SXR8'],
+          ['2018.12.31',  4570,	4317,	1118,	305350,	285850,	80747,	764758,	287680,	41376,	275440],
+          ['2019.01.31',  13354,	4317,	1634,	316775,	300300,	78077,	752063,	288000,	48456,	284400]
+
+        ]);
+
+        var options = {
+          title: 'Részletes Portfólió Összetétel',
+          //hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          //vAxis: {minValue: 0},
+          isStacked: true,
+          //height: 300,
+          legend: {position: 'top', maxLines: 3}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <div id="chart_div" style="width: 100%; height: 100vh;"></div>
+</body>
+</html>
