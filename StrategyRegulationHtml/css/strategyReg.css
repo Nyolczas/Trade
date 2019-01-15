@@ -1,24 +1,41 @@
 :root {
-    --dark-color:  rgb(6, 50, 100);
-    --high-color: rgb(155, 0, 0);
-    --light-color: rgb(255, 251, 240);
+    --dark-color: rgb(6, 50, 100);
+    --high-color: rgb(28, 77, 0);
+    --light-color: rgb(255, 254, 253);
 }
+
+
 
 body {
     background-color: var(--light-color);
-    color:  var(--dark-color);
+    color: var(--dark-color);
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .header {
-    background-color:  var(--dark-color);
-    color:var(--light-color);
+    background-color: var(--dark-color);
+    color: var(--light-color);
     padding: 5px;
 }
 
-.content, .my-block {
+.content,
+.my-block {
     padding: 15px;
 }
 
-.high{
+.high {
     color: var(--high-color);
+    font-weight: 600;
+}
+
+h3 {
+    font-family: myriad-pro, sans-serif;
+    font-style: italic;
+    font-weight: 300;
+}
+
+h1 {
+    font-weight: 600;
 }
