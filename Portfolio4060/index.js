@@ -35,7 +35,12 @@ var kp = {
 }
 var portfolio = [
     {name: 'ETFBUXOTP', value: [305350, 316775]},
-    {name:'', value:[]}
+    {name:'DAXEX', value:[]},
+    {name:'iShrUSTBond20', value:[]},
+    {name:'iShrUSTBond7-10', value:[]},
+    {name:'NDEX', value:[]},
+    {name:'EBRCHTL05', value:[]},
+    {name:'SXR8', value:[]}
 ];
 
 //var newName = "e";
