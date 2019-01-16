@@ -1,0 +1,10 @@
+---
+title: teszt
+location: 
+date: 2019-01-16
+senses: Touch
+tags: 
+- 
+---
+
+valami

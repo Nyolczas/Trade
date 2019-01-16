@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>New Post</title>
+  
+  
+  <script type="text/javascript">
+    
+    function saveFormAsTextFile()
+        // Based on https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
+        {
+        var textToSave = 'TEXTteszt';
+          
+        var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+        var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+        var fileNameToSaveAs = 'teszt2.txt';   
+         
+        var downloadLink = document.createElement("a");
+        downloadLink.download = fileNameToSaveAs;
+        downloadLink.innerHTML = "Download File";
+        downloadLink.href = textToSaveAsURL;
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+
+        downloadLink.click();
+        }
+
+    function destroyClickedElement(event)
+        {
+        document.body.removeChild(event.target);
+        }
+
+
+  </script>
+</head>
+
+<body>
+  <div id="page">
+    
+    
+    
+    <button onclick="saveFormAsTextFile()">
+      Save to File
+    </button>
+    
+  </div>
+</body>
+</html>
