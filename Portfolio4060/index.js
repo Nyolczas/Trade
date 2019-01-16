@@ -1,3 +1,23 @@
+//===================================================================================================================
+//--- PORTFOLIO CONTROLLER
+var portfolioController = (function() {
+
+})();
+
+//===================================================================================================================
+//--- UI CONTROLLER
+var UIController = (function() {
+
+})();
+
+//===================================================================================================================
+//--- GLOBAL APP CONTROLLER
+var portfolioController = (function(portfCtrl, UICtrl) {
+
+})(portfolioController, UIController);
+
+
+
 google.charts.load('current', {
     'packages': ['corechart']
 });
