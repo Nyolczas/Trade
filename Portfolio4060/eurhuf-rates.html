@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+        }
+         .currencyLabel {
+            text-align: center;
+            font-weight: 900;
+        }
+
+        .currency{
+            font-size: 1.6rem;
+        }
+
+        .center {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="currencyLabel">EUR/HUF</div>
+        <div class="currency" id="eurhuf"></div>
+    </div>
+
+    <script>
+        fetch('http://data.fixer.io/api/latest?access_key=8a63633d44ae52094e8cbff0813fb930')
+            .then(result => {
+                //console.log(result);
+                return result.json();
+            })
+            .then(data => {
+                //console.log(data.rates.HUF)
+                document.getElementById("eurhuf").innerHTML = parseFloat(data.rates.HUF).toFixed(2);
+            })
+            .catch(error => console.log(error));
+    </script>
+</body>
+
+</html>
