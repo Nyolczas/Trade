@@ -16,36 +16,6 @@ var portfolioController = (function(portfCtrl, UICtrl) {
 
 })(portfolioController, UIController);
 
-
-
-google.charts.load('current', {
-    'packages': ['corechart']
-});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-        ['Dátum', 'kp HUF', 'kp €', 'kp $', 'ETFBUXOTP', 'DAXEX', 'iShrUSTBond20', 'iShrUSTBond7-10', 'NDEX', 'EBRCHTL05', 'SXR8'],
-        ['2018.12.31', 4570, 4317, 1118, 305350, 285850, 80747, 764758, 287680, 41376, 275440],
-        ['2019.01.31', 13354, 4317, 1634, 316775, 300300, 78077, 752063, 288000, 48456, 284400]
-
-    ]);
-
-    var options = {
-        title: 'Részletes Portfólió Összetétel',
-        //hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-        //vAxis: {minValue: 0},
-        isStacked: true,
-        //height: 300,
-        legend: {
-            position: 'top',
-            maxLines: 3
-        }
-    };
-
-    var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-}
 var date = ['2018.12.31', '2019.01.31'];
 var kp = {
     Huf: [4570, 13354],
@@ -63,10 +33,6 @@ var portfolio = [
     {name:'SXR8', type: 'stock', value:[275440, 284400]}
 ];
 
-//var newName = "e";
-//portfolio[newName] = [];
-
-console.log(portfolio[0].name);
 
 portfolio.sort(function(a,b){
     var nameA = a.name.toUpperCase();
@@ -80,4 +46,50 @@ portfolio.sort(function(a,b){
     return 0;
 });
 
-console.log(portfolio[0].name);
+var portfHead=[];
+portfHead.push('Dátum');
+for(i=0; i<portfolio.length; i++) {
+    portfHead.push(portfolio[i].name);
+}
+
+var portfBody=[];
+for (i=0 ; i<date.length; i++) {
+    var portfRow = [];
+    portfRow.push(date[i]);
+    for (j=0; j<portfolio.length; j++) {
+        portfRow.push(portfolio[j].value[i]);
+    }
+    portfBody.push(portfRow);
+}
+
+console.log(portfBody);
+
+
+// --- area chart ---
+google.charts.load('current', {
+    'packages': ['corechart']
+});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+        portfHead,
+        portfBody[0],
+        portfBody[1]
+    ]);
+
+    var options = {
+        title: 'Részletes Portfólió Összetétel',
+        //hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+        //vAxis: {minValue: 0},
+        isStacked: true,
+        //height: 300,
+        legend: {
+            position: 'top',
+            maxLines: 3
+        }
+    };
+
+    var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+}
