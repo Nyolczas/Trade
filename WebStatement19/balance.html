@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <title>Balance</title>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="balance"></canvas>
+        <canvas id="monthly"></canvas>
+    </div>
+
+    <script>
+        let balanceChart = document.getElementById('balance').getContext('2d');
+
+        let chart = new Chart(balanceChart, {
+            type: 'line',
+            data: {
+                labels: ['2019.05.02', '2019.05.03', '2019.05.04', '2019.05.05', '2019.05.06', '2019.05.07', '2019.05.08', '8', '9', '10'],
+                datasets: [{
+                    label: 'balance',
+                    data: [25, 28, 36, 42, 38, 37, 39, 46, 49, 52],
+                    backgroundColor: 'rgba(128,128,128,0.3)'
+                    },{
+                        label: 'manual',
+                        data: [10, 30, 15, -30, 5, 7, 9, 16, 20, 25],
+                        backgroundColor: 'rgba(128,128,128,0)',
+                        borderColor: 'rgb(237,28,36)',
+                        borderWidth: '2'
+                    },{
+                        label: 'robot',
+                        data: [5, -2, 27, 68, 38, 32, 30, 30, 29, 27],
+                        backgroundColor: 'rgba(128,128,128,0)',
+                        borderColor: 'rgb(0,139,206)',
+                        borderWidth: '2'
+                    },{
+                        label: 'osztalék',
+                        data: [0.1, 0.2, 0.5, 0.7, 1.1, 1.4, 1.3, 1.7, 2.2, 2.4],
+                        backgroundColor: 'rgba(128,128,128,0)',
+                        borderColor: 'rgb(208,105,169)',
+                        borderWidth: '2'
+                    }]
+            },
+            options: {
+                title:{
+                    display: true,
+                    text: 'Admiral 27019217 Egyenleg',
+                    fontSize: 18
+                },
+                legend:{
+                    position:'right'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
