@@ -48,8 +48,29 @@ function processDepo() {
             if($first) {
                 $first=false;
             } else {
-                //echo  substr($data[0], 0, -5).'<br>';
-                $tempDate =  substr($data[0], 0, -5);
+                if($tempDate == substr($data[0], 0, -5)) {
+                    //echo  substr($data[0], 0, -5).'<br>';
+                    //echo  $data[1].'<br>';
+                    //echo  substr($data[2], 0, 3).'<br>';
+                    if(substr($data[2], 0, 3) == 'Tra' || substr($data[2], 0, 3) == 'Dep') {
+                        $tempDepo += $data[1];  
+                    } else if (substr($data[2], 0, 3) == 'Fee') {
+                        $tempFee += $data[1];
+                    } else if (substr($data[2], 0, 3) == 'Adj') {
+                        $tempDiv += $data[1];
+                    }
+                } else {
+                    array_push($depoArr,[$tempDate, $tempDepo, $tempFee, $tempDiv]);
+                    $tempDate =  substr($data[0], 0, -5);
+                    
+                    if(substr($data[2], 0, 3) == 'Tra' || substr($data[2], 0, 3) == 'Dep') {
+                        $tempDepo += $data[1];  
+                    } else if (substr($data[2], 0, 3) == 'Fee') {
+                        $tempFee += $data[1];
+                    } else if (substr($data[2], 0, 3) == 'Adj') {
+                        $tempDiv += $data[1];
+                    }
+                }
             }
        }
          fclose($handle);
