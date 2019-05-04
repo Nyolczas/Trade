@@ -24,7 +24,7 @@ function tableToHtml($file) {
      }
 }
 
-//tableToHtml('mt4data/depoHistory.csv');
+tableToHtml('mt4data/FullHistory_27019217.csv');
 
 function processDepo() {
     $depoArr = [];
@@ -58,4 +58,4 @@ function processDepo() {
      var_dump($depoArr);
 }
 
-processDepo();
+//processDepo();
