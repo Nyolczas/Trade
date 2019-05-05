@@ -38,6 +38,7 @@
     </div>
 
     <script>
+        
         let balanceChart = document.getElementById('balance').getContext('2d');
         
         let chart = new Chart(balanceChart, {
@@ -90,6 +91,9 @@
                 elements: {
                     line: {
                         tension: 0 // disables bezier curves
+                    },
+                    point:{
+                        radius: 2
                     }
                 },
                 title: {
@@ -98,7 +102,8 @@
                     fontSize: 18
                 },
                 legend: {
-                    position: 'right'
+                    position: 'right',
+                    display: false
                 },
                 tooltips: {
                     
@@ -123,10 +128,44 @@
                                     return  thousands_separators(value);
                                 }
                             }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                fontSize: 8
+                            }
                         }]
                     }
                 }
            
+        })
+
+        let monthlyChart = document.getElementById('monthly').getContext('2d');
+
+        let barChart = new Chart(monthlyChart, {
+            type: 'bar',
+            data: {
+                labels: ['március', 'április', 'május' ],
+                datasets: [
+                    {
+                        label: 'profit',
+                        backgroundColor: 'rgba(30,90,0,0.3)',
+                        data: [-25000, 46800, 262000]
+                    },
+                    {
+                        label: 'manuál profit',
+                        backgroundColor: 'rgba(237,28,36,0.3)',
+                        data: [-25000, 48000, 250000]
+                    },
+                    {
+                        label: 'robot profit',
+                        backgroundColor: 'rgba(0,139,206,0.3)',
+                        data: [0, -1200, 12000]
+                    }
+                ]
+            },
+            options: {
+
+            }
         })
 
         function thousands_separators(num)
