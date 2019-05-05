@@ -49,12 +49,23 @@
                     data: [ <?php echo implode(", ", $balance); ?> ],
                     backgroundColor: 'rgba(128,128,128,0.3)'
                 }, {
+                    label: 'hozam',
+                    data: [ <?php echo implode(", ", $hozam); ?> ],
+                    backgroundColor: 'rgba(30,90,0,0.3)',
+                    borderColor: 'rgb(30,90,0)',
+                    borderWidth: '2' 
+                }, {
+                    label: 'költség',
+                    data: [ <?php echo implode(", ", $fee); ?> ],
+                    backgroundColor: 'rgba(128,128,128,0)',
+                    borderColor: 'rgb(80,40,0)',
+                    borderWidth: '2'
+                }, {
                     label: 'fulldepó',
                     data: [ <?php echo implode(", ", $fullDepo); ?> ],
                     backgroundColor: 'rgba(128,128,128,0)',
-                    borderColor: 'rgb(0,10,40)',
-                    borderWidth: '2',
-                    bezierCurve : false
+                    borderColor: 'rgb(0,0,0)',
+                    borderWidth: '1'
                 }, {
                     label: 'manual',
                     data: [ <?php echo implode(", ", $manual); ?> ],
@@ -89,9 +100,41 @@
                 legend: {
                     position: 'right'
                 },
-                
+                tooltips: {
+                    
+                    callbacks: {
+                label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                    if (label) {
+                        label += ': ';
+                    }
+                    label += thousands_separators(Math.round(tooltipItem.yLabel));
+                    return label;
+                }
             }
+                   
+                },
+                scales: {
+                        yAxes: [{
+                            ticks: {
+                                // thousand Separator
+                                callback: function(value, index, values) {
+                                    return  thousands_separators(value);
+                                }
+                            }
+                        }]
+                    }
+                }
+           
         })
+
+        function thousands_separators(num)
+            {
+                var num_parts = num.toString().split(".");
+                num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                return num_parts.join(".");
+            }
     </script>
 </body>
 
