@@ -146,7 +146,7 @@ function processHistory($file)
     //var_dump($historyArray);
 }
 
-processHistory('mt4data/FullHistory_27019217.csv');
+processHistory('mt4data/FullHistory_19061180.csv');
 //echo substr($historyArray[1][1],0,10);
 dayRange(substr($historyArray[1][1], 0, 10));
 filterHistoryForDay();

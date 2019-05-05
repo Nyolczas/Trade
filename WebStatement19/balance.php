@@ -31,7 +31,7 @@
         }
 
         //echo ($startDay);
-            include 'processHistory.php';
+            include 'includes/processHistory.php';
             extract($dailyHistory);
             //echo implode( ", ", $date );
         ?>
