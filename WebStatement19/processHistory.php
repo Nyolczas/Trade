@@ -3,99 +3,104 @@ $dayArr = [];
 $historyArray = [];
 
 //napi adatok a balance charthoz
-$fullDepo = [];
-$balance = [];
-$manual = [];
-$robot = [];
-$fee = [];
-$dividend = [];
+$dayFilteredHistory = [];
+$dailyHistory = [];
 //-------------------------------------------------------------------------------------
-// adatok feltöltése a balance charthoz
-function processBalanceChart()
+// napra szűrt adatok kiegészítése a teljes range-ben szereplő napokra
+function dailyHistoryAggregator()
 {
-    global $fullDepo;
-    global $balance;
-    global $manual;
-    global $robot;
-    global $fee;
-    global $dividend;
-
-    $tempDepo = 0;
-    $tempBalance = 0;
-    $tempManual = 0;
-    $tempRobot = 0;
-    $tempFee = 0;
-    $tempDiv = 0;
-
     global $dayArr;
-    global $historyArray;
+    global $dayFilteredHistory;
+    global $dailyHistory;
+    global $startDay;
 
-    $histCnt = 0;
-    $histDay = substr($historyArray[1][8], 0, 10);
-    $first = true;
+    // $dailyHistory['date'][0] = '"'.str_replace("-",".",$startDay).'"';
+    // $dailyHistory['fullDepo'][0] = 0;
+    // $dailyHistory['fee'][0] = 0;
+    // $dailyHistory['dividend'][0] = 0;
+    // $dailyHistory['balance'][0] = 0;
+    // $dailyHistory['manual'][0] = 0;
+    // $dailyHistory['robot'][0] = 0;
+    // $dailyHistory['hozam'][0] = 0;
 
-    for ($day = 0; $day < count($dayArr); $day++) {
-        global $tempDepo;
-        global $tempBalance;
-        global $tempManual;
-        global $tempRobot;
-        global $tempFee;
-        global $tempDiv;
-
-        if (substr($historyArray[$histCnt][8], 0, 10) > $dayArr[$day]) {
-            if ($first) {
-                array_push($fullDepo, 0);
-                array_push($balance, 0);
-                array_push($manual, 0);
-                array_push($robot, 0);
-                array_push($fee, 0);
-                array_push($dividend, 0);
-
-                $first = false;
-            } else {
-                while (substr($historyArray[$histCnt][8], 0, 10) != $dayArr[$day]) {
-                    array_push($fullDepo, $tempDepo);
-                    array_push($balance, $tempBalance);
-                    array_push($manual, $tempManual);
-                    array_push($robot, $tempRobot);
-                    array_push($fee, $tempFee);
-                    array_push($dividend, $tempDiv);
-                    $histCnt++;
-                }
-                $profit = $historyArray[$histCnt][10] + $historyArray[$histCnt][11] + $historyArray[$histCnt][12];
-                $tempBalance += $profit;
-                if ($historyArray[$histCnt][0] == "Depo") {
-                    $tempDepo += $profit;
-                } elseif ($historyArray[$histCnt][0] == "Fee") {
-                    $tempFee += $profit;
-                } elseif ($historyArray[$histCnt][0] == "Adj") {
-                    $tempDiv += $profit;
-                } elseif ($historyArray[$histCnt][0] == "manual") {
-                    $tempManual += $profit;
-                } else {
-                    $tempRobot += $profit;
-                }
-                $histCnt++;
-            }
-        } else {
-            while (substr($historyArray[$histCnt][8], 0, 10) < $dayArr[$day + 1]) {
-                $profit = $historyArray[$histCnt][10] + $historyArray[$histCnt][11] + $historyArray[$histCnt][12];
-                $balance[$histCnt] = $balance[$histCnt - 1] + $profit;
-                if ($historyArray[$histCnt][0] == "Depo") {
-                    $fullDepo[$histCnt] = $fullDepo[$histCnt - 1] + $profit;
-                } elseif ($historyArray[$histCnt][0] == "Fee") {
-                    $fee[$histCnt] = $fee[$histCnt - 1] + $profit;
-                } elseif ($historyArray[$histCnt][0] == "Adj") {
-                    $dividend[$histCnt] = $dividend[$histCnt - 1] + $profit;
-                } elseif ($historyArray[$histCnt][0] == "manual") {
-                    $manual[$histCnt] = $manual[$histCnt - 1] + $profit;
-                } else {
-                    $robot[$histCnt] = $robot[$histCnt - 1] + $profit;
-                }
-                $histCnt++;
-            }
+    $filterCnt = 0;
+    $dCnt = 0;
+    for ($i = 0; $i < count($dayArr)-6; $i++) {
+        
+        if ($dayFilteredHistory[$filterCnt + 1]['date'] == $dayArr[$i]) {
+            $filterCnt++;
+        }
+        if(date_create($dayArr[$i]) >= date_create($startDay)) {
+            $dailyHistory['date'][$dCnt] = '"'.str_replace("-",".",$dayArr[$i]).'"';
+            $dailyHistory['fullDepo'][$dCnt] = $dayFilteredHistory[$filterCnt]['fullDepo'];
+            $dailyHistory['fee'][$dCnt] = $dayFilteredHistory[$filterCnt]['fee'];
+            $dailyHistory['dividend'][$dCnt] = $dayFilteredHistory[$filterCnt]['dividend'];
+            $dailyHistory['balance'][$dCnt] = $dayFilteredHistory[$filterCnt]['balance'];
+            $dailyHistory['manual'][$dCnt] = $dayFilteredHistory[$filterCnt]['manual'];
+            $dailyHistory['robot'][$dCnt] = $dayFilteredHistory[$filterCnt]['robot'];
+            $dailyHistory['hozam'][$dCnt] = $dayFilteredHistory[$filterCnt]['hozam'];
+            $dCnt++;
         }
     }
+}
+//-------------------------------------------------------------------------------------
+// adatok napi szűrése a balance charthoz
+function filterHistoryForDay()
+{
+    global $historyArray;
+    global $dayFilteredHistory; //0:dátum, 1:fullDepo, 2:fee, 3:dividend, 4:balance, 5:manual, 6:robot
+    $tempRow = [];
+    $tempRow['date'] = substr($historyArray[0][8], 0, 10);
+    $tempRow['fullDepo'] = $historyArray[0][12];
+    $tempRow['fee'] = 0;
+    $tempRow['dividend'] = 0;
+    $tempRow['balance'] = $historyArray[0][12];
+    $tempRow['manual'] = 0;
+    $tempRow['robot'] = 0;
+    $tempRow['hozam'] = 0;
+
+    for ($i = 1; $i < count($historyArray); $i++) {
+        $tempDate = date_create(substr($tempRow['date'], 0, 10));
+        $histDate = date_create(substr($historyArray[$i][8], 0, 10));
+
+        if ($histDate > $tempDate) {
+            array_push($dayFilteredHistory, $tempRow);
+            // tempRow frissítés
+            $tempRow['date'] = substr($historyArray[$i][8], 0, 10);
+            $profit = $historyArray[$i][10] + $historyArray[$i][11] + $historyArray[$i][12];
+            $tempRow['balance'] += $profit;
+            if ($historyArray[$i][0] == "Depo") {
+                $tempRow['fullDepo'] += $profit;
+            } elseif ($historyArray[$i][0] == "Fee") {
+                $tempRow['fee'] += $profit;
+            } elseif ($historyArray[$i][0] == "Adj") {
+                $tempRow["dividend"] += $profit;
+            } elseif ($historyArray[$i][0] == "manual") {
+                $tempRow['manual'] += $profit;
+            } else {
+                $tempRow['robot'] += $profit;
+            }
+            $tempRow['hozam'] = $tempRow['fee'] + $tempRow["dividend"] + $tempRow['manual'] + $tempRow['robot'];
+        } else {
+            // tempRow frissítés
+            $profit = $historyArray[$i][10] + $historyArray[$i][11] + $historyArray[$i][12];
+            $tempRow['balance'] += $profit;
+            if ($historyArray[$i][0] == "Depo") {
+                $tempRow['fullDepo'] += $profit;
+            } elseif ($historyArray[$i][0] == "Fee") {
+                $tempRow['fee'] += $profit;
+            } elseif ($historyArray[$i][0] == "Adj") {
+                $tempRow["dividend"] += $profit;
+            } elseif ($historyArray[$i][0] == "manual") {
+                $tempRow['manual'] += $profit;
+            } else {
+                $tempRow['robot'] += $profit;
+            }
+            $tempRow['hozam'] = $tempRow['fee'] + $tempRow["dividend"] + $tempRow['manual'] + $tempRow['robot'];
+        }
+
+    }
+    array_push($dayFilteredHistory, $tempRow);
 }
 //-------------------------------------------------------------------------------------
 // napi vizsgálat idő intervallumának betöltése a dayArr tömbbe
@@ -144,4 +149,7 @@ function processHistory($file)
 processHistory('mt4data/FullHistory_27019217.csv');
 //echo substr($historyArray[1][1],0,10);
 dayRange(substr($historyArray[1][1], 0, 10));
-processBalanceChart();
+filterHistoryForDay();
+dailyHistoryAggregator();
+// print_r($dayArr[0]);
+//print_r($dailyHistory);
