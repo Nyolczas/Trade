@@ -1,10 +1,22 @@
 <?php
+require('monthNames.php');
+
 $dayArr = [];
+$monthArr = [];
 $historyArray = [];
+$monthlyData = ["honap" => [], "profit" => [], "manualProfit" => [], "robotProfit" => []];
 
 //napi adatok a balance charthoz
 $dayFilteredHistory = [];
 $dailyHistory = [];
+
+processHistory('mt4data/FullHistory_27019217.csv');
+//echo substr($historyArray[1][1],0,10);
+dayRange(substr($historyArray[1][1], 0, 10));
+filterHistoryForDay();
+dailyHistoryAggregator();
+// print_r($dayArr[0]);
+var_dump($dayArr);
 //-------------------------------------------------------------------------------------
 // napra szűrt adatok kiegészítése a teljes range-ben szereplő napokra
 function dailyHistoryAggregator()
@@ -14,19 +26,20 @@ function dailyHistoryAggregator()
     global $dailyHistory;
     global $startDay;
 
+    $
+
     $filterCnt = 0;
     $dCnt = 0;
     for ($i = 0; $i < count($dayArr); $i++) {
-        
-        if ($dayFilteredHistory[$filterCnt + 1]['date'] == $dayArr[$i]) {
-            if($filterCnt >= count($dayFilteredHistory)){
-                // vége az adatnak.
-            } else {
+        if ($filterCnt < count($dayFilteredHistory)-1) { // vége az adatnak.
+            if ($dayFilteredHistory[$filterCnt+1]['date'] == $dayArr[$i]) {
+
                 $filterCnt++;
             }
         }
-        if(date_create($dayArr[$i]) >= date_create($startDay)) {
-            $dailyHistory['date'][$dCnt] = '"'.str_replace("-",".",$dayArr[$i]).'"';
+        
+        if (date_create($dayArr[$i]) >= date_create($startDay)) {
+            $dailyHistory['date'][$dCnt] = '"' . str_replace("-", ".", $dayArr[$i]) . '"';
             $dailyHistory['fullDepo'][$dCnt] = $dayFilteredHistory[$filterCnt]['fullDepo'];
             $dailyHistory['fee'][$dCnt] = $dayFilteredHistory[$filterCnt]['fee'];
             $dailyHistory['dividend'][$dCnt] = $dayFilteredHistory[$filterCnt]['dividend'];
@@ -36,6 +49,7 @@ function dailyHistoryAggregator()
             $dailyHistory['hozam'][$dCnt] = $dayFilteredHistory[$filterCnt]['hozam'];
             $dCnt++;
         }
+        
     }
 }
 //-------------------------------------------------------------------------------------
@@ -102,18 +116,27 @@ function filterHistoryForDay()
 function dayRange($startDateString)
 {
     global $dayArr;
+    global $monthArr;
+
     // kezdő dátum
     $startDate = date_create($startDateString);
     date_add($startDate, date_interval_create_from_date_string("-1 days"));
+    //első hónap
+    array_push($monthArr, intval(date_format($startDate, "m")));
+    $monthCnt = 0;
     // befejező dátum
     $now = date_create(date("Y-m-d", time()));
     date_add($now, date_interval_create_from_date_string("5 days"));
     // tömb feltöltése
     while ($startDate != $now) {
         array_push($dayArr, date_format($startDate, "Y-m-d"));
+        $tempMonth = intval(date_format($startDate, "m"));
+        if ($tempMonth != $monthArr[$monthCnt]) {
+            array_push($monthArr, $tempMonth);
+            $monthCnt++;
+        }
         date_add($startDate, date_interval_create_from_date_string("1 days"));
     }
-    //var_dump($dayArr);
 }
 //-------------------------------------------------------------------------------------
 // mt4 jelentés betöltése a historyArray tömbbe
@@ -141,10 +164,3 @@ function processHistory($file)
     //var_dump($historyArray);
 }
 
-processHistory('mt4data/FullHistory_27019217.csv');
-//echo substr($historyArray[1][1],0,10);
-dayRange(substr($historyArray[1][1], 0, 10));
-filterHistoryForDay();
-dailyHistoryAggregator();
-// print_r($dayArr[0]);
-//print_r($dailyHistory);
