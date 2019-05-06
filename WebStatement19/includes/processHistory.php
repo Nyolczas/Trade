@@ -14,21 +14,16 @@ function dailyHistoryAggregator()
     global $dailyHistory;
     global $startDay;
 
-    // $dailyHistory['date'][0] = '"'.str_replace("-",".",$startDay).'"';
-    // $dailyHistory['fullDepo'][0] = 0;
-    // $dailyHistory['fee'][0] = 0;
-    // $dailyHistory['dividend'][0] = 0;
-    // $dailyHistory['balance'][0] = 0;
-    // $dailyHistory['manual'][0] = 0;
-    // $dailyHistory['robot'][0] = 0;
-    // $dailyHistory['hozam'][0] = 0;
-
     $filterCnt = 0;
     $dCnt = 0;
-    for ($i = 0; $i < count($dayArr)-6; $i++) {
+    for ($i = 0; $i < count($dayArr); $i++) {
         
         if ($dayFilteredHistory[$filterCnt + 1]['date'] == $dayArr[$i]) {
-            $filterCnt++;
+            if($filterCnt >= count($dayFilteredHistory)){
+                // vége az adatnak.
+            } else {
+                $filterCnt++;
+            }
         }
         if(date_create($dayArr[$i]) >= date_create($startDay)) {
             $dailyHistory['date'][$dCnt] = '"'.str_replace("-",".",$dayArr[$i]).'"';
@@ -146,7 +141,7 @@ function processHistory($file)
     //var_dump($historyArray);
 }
 
-processHistory('mt4data/FullHistory_19061180.csv');
+processHistory('mt4data/FullHistory_27019217.csv');
 //echo substr($historyArray[1][1],0,10);
 dayRange(substr($historyArray[1][1], 0, 10));
 filterHistoryForDay();
