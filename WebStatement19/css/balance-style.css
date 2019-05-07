@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: grid;
+    max-width: 1800px;
+    margin: auto;
+}
+
+.bala-chart-cont {
+    grid-area: 1 / 3 / 4 / 11;
+    background-color: pink;
+    width: calc(100vw/12*8);
+}
+
+.avr-mon-prof {
+    grid-area: 1 / 1 / 2 / 3;
+    background-color: lightblue;
+    width: calc(100vw/6);
+}
+
+.avr-wkl-prof {
+    grid-area: 2 / 1 / 3 / 3;
+    background-color: rgb(183, 231, 225);
+    width: calc(100vw/6);
+}
+
+.avr-dly-prof {
+    grid-area: 3 / 1 / 4 / 3;
+    background-color: rgb(203, 247, 232);
+    width: calc(100vw/6);
+}
+
+.cur-mon-prof {
+    grid-area: 1 / 11 / 2 / 13;
+    background-color: lightblue;
+    width: calc(100vw/6);
+}
+
+.cur-wkl-prof {
+    grid-column: 11 / span 2;
+    grid-row: 2;
+    background-color: rgb(183, 231, 225);
+    width: calc(100vw/6);
+}
+
+.cur-dly-prof {
+    grid-column: 11 / span 2;
+    grid-row: 3;
+    background-color: rgb(203, 247, 232);
+    width: calc(100vw/6);
+}
+
+.profit-bars-cont {
+    grid-area: 4 / 1 / 8 / 7;
+    background-color: gold;
+    width: 50vw;
+}
+
+.strat-ctrl-cont {
+    grid-area: 4 / 7 / 8 / 13;
+    grid-row: 4;
+    background-color: rgb(199, 160, 221);
+    width: 50vw;
+}
+
+.strat-win-cont {
+    grid-area: 5 / 7 / 8 / 10;
+    background-color: rgb(177, 221, 160);
+    width: 25vw;
+}
+
+.strat-los-cont {
+    grid-area: 5 / 10 / 8 / 13;
+    background-color: rgb(221, 160, 160);
+    width: 25vw;
+}
