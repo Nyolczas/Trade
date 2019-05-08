@@ -7,17 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Layout</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Oswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/balance-style.css">
 </head>
 
 <body>
     <main class="main">
         <div class="bala-chart-cont">
+            <div class="balance-head"> 
+                <p>Account 27019217</p> 
+                <form action="balance.php" method="get">
+                        Start Day: <input type="date" name="sday">
+                        <input type="submit" value="Beállítás">
+                    </form>
+            </div>
             <canvas id="balance"></canvas>
         </div>
         <div class="avr-mon-prof">
-            <h3 class="cim">Átlag Havi Profit</h3>
+            <p class="cim oswald">Átlag Havi Profit</p>
         </div>
         <div class="avr-wkl-prof">Average Weekly Profit</div>
         <div class="avr-dly-prof">Average Daily Profit</div>
@@ -139,6 +146,7 @@
                 }]
             },
             options: {
+                responsive: true,
                 maintainAspectRatio: false,
                 elements: {
                     line: {

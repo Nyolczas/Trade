@@ -13,12 +13,32 @@ body {
     color: var(--dark-green);
 }
 
+.oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
 .cim {
     margin: 0;
     padding: 5px;
-    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
     background-color: var(--dark-green);
     color: var(--light-green);
+}
+
+.balance-head{
+    display: flex;
+}
+
+input[type = submit] {
+    background-color: var(--medium-green);
+    border: none;
+    padding: 8px 15px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    color: white;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
 }
 /* =================================== grid layout =================================== */
 .main {
@@ -30,8 +50,10 @@ body {
 .bala-chart-cont {
     grid-area: 1 / 3 / 4 / 11;
     width: calc(100vw/12*8);
-    min-height: 400px;
+    height: 700px;
+    padding-bottom: 80px;
 }
+
 
 .avr-mon-prof {
     grid-area: 1 / 1 / 2 / 3;
