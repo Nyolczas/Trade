@@ -1,8 +1,26 @@
+:root {
+    --dark-green: rgb(0, 67, 88);
+    --medium-green: rgb(31, 138, 112);
+    --light-green: rgb(190, 219, 57);
+    --yellow: rgb(255, 225, 26);
+    --orange: rgb(253, 116, 0);
+}
+
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Lato', sans-serif;
+    color: var(--dark-green);
 }
 
+.cim {
+    margin: 0;
+    padding: 5px;
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--dark-green);
+    color: var(--light-green);
+}
+/* =================================== grid layout =================================== */
 .main {
     display: grid;
     max-width: 1800px;
@@ -11,69 +29,115 @@ body {
 
 .bala-chart-cont {
     grid-area: 1 / 3 / 4 / 11;
-    background-color: pink;
     width: calc(100vw/12*8);
+    min-height: 400px;
 }
 
 .avr-mon-prof {
     grid-area: 1 / 1 / 2 / 3;
-    background-color: lightblue;
     width: calc(100vw/6);
 }
 
 .avr-wkl-prof {
     grid-area: 2 / 1 / 3 / 3;
-    background-color: rgb(183, 231, 225);
     width: calc(100vw/6);
 }
 
 .avr-dly-prof {
     grid-area: 3 / 1 / 4 / 3;
-    background-color: rgb(203, 247, 232);
     width: calc(100vw/6);
 }
 
 .cur-mon-prof {
     grid-area: 1 / 11 / 2 / 13;
-    background-color: lightblue;
     width: calc(100vw/6);
 }
 
 .cur-wkl-prof {
     grid-column: 11 / span 2;
     grid-row: 2;
-    background-color: rgb(183, 231, 225);
     width: calc(100vw/6);
 }
 
 .cur-dly-prof {
     grid-column: 11 / span 2;
     grid-row: 3;
-    background-color: rgb(203, 247, 232);
     width: calc(100vw/6);
 }
 
 .profit-bars-cont {
     grid-area: 4 / 1 / 8 / 7;
-    background-color: gold;
     width: 50vw;
 }
 
 .strat-ctrl-cont {
-    grid-area: 4 / 7 / 8 / 13;
-    grid-row: 4;
-    background-color: rgb(199, 160, 221);
+    grid-area: 4 / 7 / 5 / 13;
     width: 50vw;
 }
 
 .strat-win-cont {
     grid-area: 5 / 7 / 8 / 10;
-    background-color: rgb(177, 221, 160);
     width: 25vw;
 }
 
 .strat-los-cont {
     grid-area: 5 / 10 / 8 / 13;
-    background-color: rgb(221, 160, 160);
     width: 25vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .bala-chart-cont {
+        grid-area: 4 / 1 / 5 / 3;
+        width: 100vw;
+    }
+
+    .avr-mon-prof {
+        grid-area: 1 / 1 / 2 / 2;
+        width: calc(100vw/2);
+    }
+
+    .avr-wkl-prof {
+        grid-area: 2 / 1 / 3 / 2;
+        width: calc(100vw/2);
+    }
+
+    .avr-dly-prof {
+        grid-area: 3 / 1 / 4 / 2;
+        width: calc(100vw/2);
+    }
+
+    .cur-mon-prof {
+        grid-area: 1 / 2 / 2 / 3;
+        width: calc(100vw/2);
+    }
+
+    .cur-wkl-prof {
+        grid-area: 2 / 2 / 3 / 3;
+        width: calc(100vw/2);
+    }
+
+    .cur-dly-prof {
+        grid-area: 3 / 2 / 4 / 3;
+        width: calc(100vw/2);
+    }
+
+    .profit-bars-cont {
+        grid-area: 5 / 1 / 6 / 3;
+        width: 100vw;
+    }
+
+    .strat-ctrl-cont {
+        grid-area: 6 / 1 / 7 / 3;
+        width: 100vw;
+    }
+
+    .strat-win-cont {
+        grid-area: 7 / 1 / 8 / 3;
+        width: 100vw;
+    }
+
+    .strat-los-cont {
+        grid-area: 8 / 1 / 9 / 3;
+        width: 100vw;
+    }
 }

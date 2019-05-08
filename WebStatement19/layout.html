@@ -1,25 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Layout</title>
-<link rel="stylesheet" href="css/balance-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/balance-style.css">
 </head>
+
 <body>
     <main class="main">
-        <div class="bala-chart-cont">Balance chart container</div>
-        <div class="avr-mon-prof">Average Monthly Profit</div>
+        <div class="bala-chart-cont">
+            <canvas id="balance"></canvas>
+        </div>
+        <div class="avr-mon-prof">
+            <h3 class="cim">Átlag Havi Profit</h3>
+        </div>
         <div class="avr-wkl-prof">Average Weekly Profit</div>
         <div class="avr-dly-prof">Average Daily Profit</div>
         <div class="cur-mon-prof">Current Monthly Profit</div>
         <div class="cur-wkl-prof">Current Weekly Profit</div>
         <div class="cur-dly-prof">Current Daily Profit</div>
-        <div class="profit-bars-cont">Profit Bars Container</div>
+        <div class="profit-bars-cont">
+            <canvas id="monthly"></canvas>
+        </div>
         <div class="strat-ctrl-cont">Startegy Control Container</div>
         <div class="strat-win-cont">Startegy Winners Container</div>
         <div class="strat-los-cont">Startegy Loosers Container</div>
     </main>
+
+    <script>
+        let balanceChart = document.getElementById('balance').getContext('2d');
+
+        let chart = new Chart(balanceChart, {
+            type: 'line',
+            data: {
+                labels: ["2019.03.25", "2019.03.26", "2019.03.27", "2019.03.28", "2019.03.29", "2019.03.30",
+                    "2019.03.31", "2019.04.01", "2019.04.02", "2019.04.03", "2019.04.04", "2019.04.05",
+                    "2019.04.06", "2019.04.07", "2019.04.08", "2019.04.09", "2019.04.10", "2019.04.11",
+                    "2019.04.12", "2019.04.13", "2019.04.14", "2019.04.15", "2019.04.16", "2019.04.17",
+                    "2019.04.18", "2019.04.19", "2019.04.20", "2019.04.21", "2019.04.22", "2019.04.23",
+                    "2019.04.24", "2019.04.25", "2019.04.26", "2019.04.27", "2019.04.28", "2019.04.29",
+                    "2019.04.30", "2019.05.01", "2019.05.02", "2019.05.03", "2019.05.04", "2019.05.05",
+                    "2019.05.06", "2019.05.07", "2019.05.08", "2019.05.09", "2019.05.10", "2019.05.11",
+                    "2019.05.12"
+                ],
+                datasets: [{
+                    label: 'balance',
+                    data: [0, 0, 288359.08, 283891.96, 284142.69, 284142.69, 284142.69, 284189.42,
+                        284514.61, 416096.75, 411958.72, 428566.23, 428566.23, 428566.23, 428736.49,
+                        470182.04, 470846.45, 487311.7, 484631.52, 484631.52, 484631.52, 498420.26,
+                        570129.69, 570725.55, 516961.03, 516961.03, 516961.03, 516961.03, 521506.81,
+                        524946.18, 594257.31, 575843.16, 564655.52, 564655.52, 564655.52, 577798.92,
+                        595446.54, 587871.98, 571488.81, 581085.86, 581085.86, 581085.86, 557200.2,
+                        527907.47, 527907.47, 527907.47, 527907.47, 527907.47, 527907.47
+                    ],
+                    backgroundColor: 'rgba(0, 67, 88,0.3)',
+                    borderColor: 'rgba(0, 67, 88,0.7)',
+                    borderWidth: '1'
+                }, {
+                    label: 'hozam',
+                    data: [-6930.5, -6930.5, -6930.5, -11397.62, -11146.89, -11146.89, -11146.89, -
+                        11100.16, -10774.97, -9192.83, -13330.86, 3276.65, 3276.65, 3276.65,
+                        3446.91, 44892.46, 45556.87, 62022.12, 59341.94, 59341.94, 59341.94,
+                        73130.68, 144840.11, 145435.97, 91671.45, 91671.45, 91671.45, 91671.45,
+                        96217.23, 99656.6, 168967.73, 150553.58, 139365.94, 139365.94, 139365.94,
+                        152509.34, 170156.96, 162582.4, 146199.23, 155796.28, 155796.28, 155796.28,
+                        131910.62, 102617.89, 102617.89, 102617.89, 102617.89, 102617.89, 102617.89
+                    ],
+                    backgroundColor: 'rgba(31, 138, 112,0.3)',
+                    borderColor: 'rgb(31, 138, 112)',
+                    borderWidth: '2'
+                }, {
+                    label: 'költség',
+                    data: [-6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -
+                        6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -
+                        6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -
+                        6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -
+                        6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -
+                        6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -6930.5, -
+                        6930.5
+                    ],
+                    backgroundColor: 'rgba(128,128,128,0)',
+                    borderColor: 'rgb(80,40,0)',
+                    borderWidth: '2'
+                }, {
+                    label: 'fulldepó',
+                    data: [6930.5, 6930.5, 295289.58, 295289.58, 295289.58, 295289.58, 295289.58,
+                        295289.58, 295289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58,
+                        425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58,
+                        425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58,
+                        425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58,
+                        425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58,
+                        425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58, 425289.58
+                    ],
+                    backgroundColor: 'rgba(128,128,128,0)',
+                    borderColor: 'rgb(0,0,0)',
+                    borderWidth: '1'
+                }, {
+                    label: 'manual',
+                    data: [0, 0, 0, -4467.12, -4467.12, -4467.12, -4467.12, -4467.12, -4467.12, -
+                        2884.98, -8852.49, 7689.07, 7689.07, 7689.07, 7689.07, 46423.62, 46641.68,
+                        63032.18, 59536.3, 59536.3, 59536.3, 73067.59, 145324.61, 145324.61,
+                        91310.38, 91310.38, 91310.38, 91310.38, 95568.12, 95568.12, 162626.51,
+                        144126.9, 134237.1, 134237.1, 134237.1, 147062.93, 164356.61, 157903.04,
+                        135681.94, 144443.8, 144443.8, 144443.8, 117811.75, 107779.29, 107779.29,
+                        107779.29, 107779.29, 107779.29, 107779.29
+                    ],
+                    backgroundColor: 'rgba(190, 219, 57,0)',
+                    borderColor: 'rgb(190, 219, 57)',
+                    borderWidth: '2'
+                }, {
+                    label: 'robot',
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -738.72, -
+                        574.59, -574.59, -574.59, -574.59, -574.59, -574.59, 2522.84, 4765.72,
+                        4851.18, 3553.34, 3553.34, 3553.34, 3553.34, 3749.09, 2568.15, 8742.61,
+                        8742.61, 8742.61, 8742.61, 10785.29, -8503.77, -8503.77, -8503.77, -8503.77,
+                        -8503.77, -8503.77
+                    ],
+                    backgroundColor: 'rgba(255, 225, 26,0)',
+                    borderColor: 'rgb(255, 225, 26)',
+                    borderWidth: '2'
+                }, {
+                    label: 'osztalék',
+                    data: [0, 0, 0, 0, 250.73, 250.73, 250.73, 297.46, 622.65, 622.65, 2452.13, 2518.08,
+                        2518.08, 2518.08, 2688.34, 5399.34, 5845.69, 5920.44, 6736.14, 6736.14,
+                        6736.14, 6993.59, 7184.72, 7616.45, 7866.16, 7866.16, 7866.16, 7866.16,
+                        8154.2, 8496.14, 8506, 8506, 8506, 8506, 8506, 8823.57, 8981.76, 9041.71,
+                        8705.18, 9540.37, 9540.37, 9540.37, 10244.08, 10272.87, 10272.87, 10272.87,
+                        10272.87, 10272.87, 10272.87
+                    ],
+                    backgroundColor: 'rgba(128,128,128,0)',
+                    borderColor: 'rgb(208,105,169)',
+                    borderWidth: '2'
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                elements: {
+                    line: {
+                        tension: 0 // disables bezier curves
+                    },
+                    point: {
+                        radius: 2
+                    }
+                },
+                title: {
+                    display: false
+                },
+                legend: {
+                    position: 'right',
+                    display: false
+                },
+                tooltips: {
+
+                    callbacks: {
+                        label: function (tooltipItem, data) {
+                            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                            if (label) {
+                                label += ': ';
+                            }
+                            label += thousands_separators(Math.round(tooltipItem.yLabel));
+                            return label;
+                        }
+                    }
+
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            fontColor: 'rgba(0, 67, 88,0.7)',
+                            // thousand Separator
+                            callback: function (value, index, values) {
+                                return thousands_separators(value);
+                            }
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontSize: 8,
+                            fontColor: 'rgba(0, 67, 88,0.7)'
+                        }
+                    }]
+                }
+            }
+
+        })
+
+        let monthlyChart = document.getElementById('monthly').getContext('2d');
+
+        let barChart = new Chart(monthlyChart, {
+            type: 'bar',
+            data: {
+                labels: ['március', 'április', 'május'],
+                datasets: [{
+                        label: 'profit',
+                        backgroundColor: 'rgba(31, 138, 112,0.7)',
+                        borderColor: 'rgb(31, 138, 112)',
+                        borderWidth: '2',
+                        data: [-25000, 46800, 262000]
+                    },
+                    {
+                        label: 'manuál profit',
+                        backgroundColor: 'rgba(190, 219, 57,0.7)',
+                        borderColor: 'rgb(190, 219, 57)',
+                        borderWidth: '2',
+                        data: [-25000, 48000, 250000]
+                    },
+                    {
+                        label: 'robot profit',
+                        backgroundColor: 'rgba(255, 225, 26,0.7)',
+                        borderColor: 'rgb(255, 225, 26)',
+                        borderWidth: '2', 
+                        data: [0, -1200, 12000]
+                    }
+                ]
+            },
+            options: {
+
+            }
+        })
+
+        function thousands_separators(num) {
+            var num_parts = num.toString().split(".");
+            num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+            return num_parts.join(".");
+        }
+    </script>
+
 </body>
+
 </html>
