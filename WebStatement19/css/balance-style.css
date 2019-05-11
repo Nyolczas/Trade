@@ -1,9 +1,9 @@
 :root {
-    --dark-green: rgb(0, 67, 88);
-    --medium-green: rgb(31, 138, 112);
-    --light-green: rgb(190, 219, 57);
-    --yellow: rgb(255, 225, 26);
-    --orange: rgb(253, 116, 0);
+    --dark-green: #004358;
+    --medium-green: #1f8a70;
+    --light-green: #bedb39;
+    --yellow: #ffe11a;
+    --orange: #fd7400;
 }
 
 body {
