@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="node_modules\jquery-csv\src\jquery.csv.js"></script>
+</head>
+
+<body>
+    <div id="chart"></div>
+    <script>
+        // load the visualization library from Google and set a listener
+        google.load("visualization", "1", {
+            packages: ["corechart"]
+        });
+        google.setOnLoadCallback(drawChart);
+
+        // this has to be a global function
+        function drawChart() {
+            // grab the CSV
+            $.get("csv/teszt.csv", function (csvString) {
+                // transform the CSV string into a 2-dimensional array
+                var arrayData = $.csv.toArrays(csvString, {
+                    onParseValue: $.csv.hooks.castToScalar
+                });
+
+                // this new DataTable object holds all the data
+                var data = new google.visualization.arrayToDataTable(arrayData);
+
+                // this view can select a subset of the data at a time
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0, 1]);
+
+                // set chart options
+                var options = {
+                    title: "A Chart from a CSV!",
+                    hAxis: {
+                        title: data.getColumnLabel(0),
+                        minValue: data.getColumnRange(0).min,
+                        maxValue: data.getColumnRange(0).max
+                    },
+                    vAxis: {
+                        title: data.getColumnLabel(1),
+                        minValue: data.getColumnRange(1).min,
+                        maxValue: data.getColumnRange(1).max
+                    },
+                    legend: 'none'
+                };
+
+                // create the chart object and draw it
+                var chart = new google.visualization.PieChart(document.getElementById('chart'));
+                chart.draw(view, options);
+            });
+        }
+    </script>
+</body>
+
+</html>
