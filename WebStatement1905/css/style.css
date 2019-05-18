@@ -1,0 +1,10 @@
+.balance-chart-wrapper {
+    width: 100%;
+    height: 68vh;
+    min-height: 500px;
+}
+
+#balance-chart {
+    width: 100%;
+    height: 100%;
+}
