@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
+        
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Balance</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <?php
+    if (isset($_GET['sday'])) {
+        $startDay = $_GET['sday'];
+    }else {
+        $startDay='2019-03-25';
+    }
+    
+    include 'includes/processHistory.php';
+    
+    ?>
     <!-- balance chart -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -50,12 +62,12 @@
         });
         }
     </script>
-
 </head>
 
 <body>
     <div class="balance-chart-wrapper">
         <div id="balance-chart"></div>
+        
     </div>
 </body>
 

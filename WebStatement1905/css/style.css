@@ -1,7 +1,8 @@
 .balance-chart-wrapper {
     width: 100%;
     height: 68vh;
-    min-height: 500px;
+    min-height: 640px;
+    position: relative;
 }
 
 #balance-chart {
