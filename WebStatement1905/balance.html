@@ -16,52 +16,239 @@
         google.charts.load('current', {
             'packages': ['corechart']
         });
-        google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(drawBalanceChart);
 
-        function drawChart() {
-             // grab the CSV
-             $.get("csv/balanceChartData.csv", function (csvString) {
+        function drawBalanceChart() {
+            // grab the CSV
+            $.get("csv/balanceChartData.csv", function (csvString) {
                 // transform the CSV string into a 2-dimensional array
                 var arrayData = $.csv.toArrays(csvString, {
                     onParseValue: $.csv.hooks.castToScalar
                 });
 
-            var data = new google.visualization.arrayToDataTable(arrayData);
+                var data = new google.visualization.arrayToDataTable(arrayData);
 
-            // this view can select a subset of the data at a time
-            var view = new google.visualization.DataView(data);
+                // this view can select a subset of the data at a time
+                var view = new google.visualization.DataView(data);
                 view.setColumns([0, 1]);
 
-            var options = {
-                seriesType: 'line',
-                series: {
-                    0: {
-                        type: 'area'
+                var options = {
+                    seriesType: 'line',
+                    series: {
+                        0: {
+                            type: 'area'
+                        },
+                        1: {
+                            type: 'area'
+                        },
                     },
-                    1: {
-                        type: 'area'
-                    },
-                },
-                colors: ['grey', 'forestGreen', 'black', 'crimson', 'royalBlue', 'rgb(80,40,0)', 'purple']
-            };
+                    colors: ['grey', 'forestGreen', 'black', 'crimson', 'royalBlue', 'rgb(80,40,0)',
+                        'purple'
+                    ]
+                };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('balance-chart'));
-            chart.draw(data, options);
-        });
+                var chart = new google.visualization.ComboChart(document.getElementById('balance-chart'));
+                chart.draw(data, options);
+            });
         }
     </script>
 
 </head>
 
 <body>
-    <div class="mainStat">
-        <p><span class="category">Full Depó:</span><span class="value">450 000<span class="ft">Ft</span></span></p>
-        <p><span class="category">Tőke:</span><span class="value">470 000<span class="ft">Ft</span></span></p>
-        <p><span class="category">Összes hozam:</span><span class="value">20 000<span class="ft">Ft</span></span></p>
-    </div>
-    <div class="balance-chart-wrapper">
+    <div class="chart-wrapper">
         <div id="balance-chart"></div>
     </div>
+    <div class="stat-cards">
+        <div class="single-card">
+            <h2 class="card-name">Mindeddig</h2>
+            <div class="stat-row">
+                <div class="category">Full Depó:</div>
+                <h4 class="value neutral">450 000<span class="ft">Ft</span></h4>
+            </div>
+            <div class="stat-row">
+                <div class="category">Tőke:</div>
+                <h4 class="value neutral">470 000<span class="ft">Ft</span></h4>
+            </div>
+            <div class="stat-row">
+                <div class="category">Össz költség:</div>
+                <h4 class="value neutral">20 000<span class="ft">Ft</span></h4>
+            </div>
+            <div class="stat-row">
+                <div class="category">Össz hozam:</div>
+                <h4 class="value neutral">20 000<span class="ft">Ft</span></h4>
+            </div>
+            <div class="stat-row">
+                <div class="category">Manuál hozam:</div>
+                <h4 class="value neutral">20 000<span class="ft">Ft</span></h4>
+            </div>
+            <div class="stat-row">
+                <div class="category">Robot hozam:</div>
+                <h4 class="value neutral">20 000<span class="ft">Ft</span></h4>
+            </div>
+            <div class="stat-row">
+                <div class="category">Osztalék hozam:</div>
+                <h4 class="value neutral">20 000<span class="ft">Ft</span></h4>
+            </div>
+        </div>
+        <!-- Havi card -->
+        <div class="card">
+            <div class="card-side card-side-front">
+                <h2 class="card-name">Havi átlag</h2>
+                <div class="stat-row">
+                    <div class="category">Össz:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Manuál:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Robot:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="card-side card-side-back">
+                <h2 class="card-name">Május</h2>
+                <div class="stat-row">
+                    <div class="category">Össz:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Manuál:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Robot:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Heti card -->
+        <div class="card">
+            <div class="card-side card-side-front">
+                <h2 class="card-name">Heti átlag</h2>
+                <div class="stat-row">
+                    <div class="category">Össz:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Manuál:</div>
+                    <div class="value-grp loss">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Robot:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="card-side card-side-back">
+                <h2 class="card-name">24. hét</h2>
+                <div class="stat-row">
+                    <div class="category">Össz:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Manuál:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Robot:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Napi card -->
+        <div class="card">
+            <div class="card-side card-side-front">
+                <h2 class="card-name">Napi átlag</h2>
+                <div class="stat-row">
+                    <div class="category">Össz:</div>
+                    <div class="value-grp loss">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Manuál:</div>
+                    <div class="value-grp loss">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Robot:</div>
+                    <div class="value-grp loss">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="card-side card-side-back">
+                <h2 class="card-name">Csütörtök</h2>
+                <div class="stat-row">
+                    <div class="category">Össz:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Manuál:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+                <div class="stat-row">
+                    <div class="category">Robot:</div>
+                    <div class="value-grp profit">
+                        <h4 class="value">450 000<span class="ft">Ft</span></h4>
+                        <h1 class="percent">0.5%</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-wrapper">
+            <div id="havi-bar-chart"></div>
+        </div>
 </body>
 
 </html>

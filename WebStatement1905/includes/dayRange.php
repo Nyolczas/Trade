@@ -4,6 +4,7 @@ function dayRange($startDateString)
 {
     global $dayArr;
     global $monthArr;
+    global $monthlyData;
 
     // kezdő dátum
     $startDate = date_create($startDateString);
@@ -18,8 +19,10 @@ function dayRange($startDateString)
     while ($startDate != $now) {
         array_push($dayArr, date_format($startDate, "Y-m-d"));
         $tempMonth = intval(date_format($startDate, "m"));
+
         if ($tempMonth != $monthArr[$monthCnt]) {
             array_push($monthArr, $tempMonth);
+            array_push($monthlyData['honap'], substr(intval(date_format($startDate, "Y")), -2)." ".monthNames(intval(date_format($startDate, "m"))));
             $monthCnt++;
         }
         date_add($startDate, date_interval_create_from_date_string("1 days"));

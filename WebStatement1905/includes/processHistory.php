@@ -17,14 +17,18 @@ $dailyHistory = [];
 
 // csv adat beolvasása a $historyArray tömbbe
 readMt4Data('mt4data/FullHistory_27019217.csv');
-// napi vizsgálat idő intervallumának betöltése a dayArr tömbbe
+
+// napi vizsgálat idő intervallumának betöltése a dayArr és a monthlyData tömbbe
 dayRange(substr($historyArray[1][1], 0, 10));
+
 // adatok napi szűrése a balance charthoz
 filterHistoryForDay();
+
 // napra szűrt adatok kiegészítése a teljes range-ben szereplő napokra
 dailyHistoryAggregator();
 
 // BalanceChart adatainak csv-be írása
 writeBalanceChartData();
-//print_r($dayFilteredHistory);
+
+print_r($dayArr);
 
