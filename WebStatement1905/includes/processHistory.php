@@ -9,11 +9,11 @@ require 'monthNames.php';
 $dayArr = [];
 $monthArr = [];
 $historyArray = [];
-$monthlyData = ["honap" => [], "profit" => [], "manualProfit" => [], "robotProfit" => []];
+$monthlyData = ["honap" => [], "profit" => [], "manualProfit" => [], "robotProfit" => [], "atlagProfit" => [], "atlagManual" => [], "atlagRobot" => []];
 
 //napi adatok a balance charthoz
-$dayFilteredHistory = [];
-$dailyHistory = [];
+$dayFilteredHistory = []; //egy bejegyzés a nap végi értékekkel, ha van (lyukacsos)
+$dailyHistory = []; //szétterítve a teljes időszakra
 
 // csv adat beolvasása a $historyArray tömbbe
 readMt4Data('mt4data/FullHistory_27019217.csv');
@@ -24,11 +24,11 @@ dayRange(substr($historyArray[1][1], 0, 10));
 // adatok napi szűrése a balance charthoz
 filterHistoryForDay();
 
-// napra szűrt adatok kiegészítése a teljes range-ben szereplő napokra
+// napra szűrt adatok kiegészítése a teljes range-ben szereplő napokra és tömbösítése hónapokra
 dailyHistoryAggregator();
 
 // BalanceChart adatainak csv-be írása
 writeBalanceChartData();
 
-print_r($dayArr);
+print_r($monthlyData);
 
