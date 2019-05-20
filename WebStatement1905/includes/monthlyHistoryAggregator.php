@@ -43,21 +43,4 @@ function monthlyHistoryAggregator()
             $monthlyData['robotProfit'][$monthCount] = $haviRobot;
         }
     }
-    print_r($dailyHistory);
 }
-/*
-//$tempDate = substr(intval(date_format($dayArr[$i], "Y")), -2)." ".monthNames(intval(date_format($dayArr[$i], "m")));
-$tempDate = substr($dayArr[$i], 2, 2) . " " . monthNames(substr($dayArr[$i], 5, 2));
-//echo $tempDate."<br>";
-if ($tempDate == $monthlyData['honap'][$monthCont]) {
-
-$monthlyData['profit'][$monthCont] += $dayFilteredHistory[$filterCnt]['hozam']-$prevHozam;
-echo $monthlyData['honap'][$monthCont].": " . $monthlyData['profit'][$monthCont] . "<br>";
-
-} else {
-
-$prevHozam += $monthlyData['profit'][$monthCont];
-$monthCont++;
-$monthlyData['profit'][$monthCont] = $dayFilteredHistory[$filterCnt]['hozam']-$prevHozam;
-echo $monthlyData['honap'][$monthCont]." ... " . $monthlyData['profit'][$monthCont] . "<br>";
-}*/

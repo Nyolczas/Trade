@@ -4,6 +4,7 @@ require 'dayRange.php';
 require 'filterHistoryForDay.php';
 require 'dailyHistoryAggregator.php';
 require 'monthlyHistoryAggregator.php';
+require 'monthlyAverages.php';
 require 'writeBalanceChartData.php';
 require 'monthNames.php';
 
@@ -28,8 +29,16 @@ filterHistoryForDay();
 // napra szűrt adatok kiegészítése a teljes range-ben szereplő napokra és tömbösítése hónapokra
 dailyHistoryAggregator();
 
-// havi adatok számolása ($monthlyData) a napi adatokból ($dailyHistory)
+// havi adatok számolása ($monthlyData) a napi adatokból ($dailyHistory) csak a havi profitok
 monthlyHistoryAggregator();
+
+// havi átlagok számítása (? havi átlagot)
+monthlyAverages(12);
+
+/*
+ToDo: 
+A havi profitokhoz és a havi átlag profitokhoz hozzáadni a %-os profitokat is!
+*/
 
 // BalanceChart adatainak csv-be írása
 writeBalanceChartData();
