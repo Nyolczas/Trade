@@ -3,6 +3,7 @@ require 'readMt4Data.php';
 require 'dayRange.php';
 require 'filterHistoryForDay.php';
 require 'dailyHistoryAggregator.php';
+require 'monthlyHistoryAggregator.php';
 require 'writeBalanceChartData.php';
 require 'monthNames.php';
 
@@ -26,6 +27,9 @@ filterHistoryForDay();
 
 // napra szűrt adatok kiegészítése a teljes range-ben szereplő napokra és tömbösítése hónapokra
 dailyHistoryAggregator();
+
+// havi adatok számolása ($monthlyData) a napi adatokból ($dailyHistory)
+monthlyHistoryAggregator();
 
 // BalanceChart adatainak csv-be írása
 writeBalanceChartData();
