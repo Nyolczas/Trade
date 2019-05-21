@@ -11,7 +11,12 @@ require 'monthNames.php';
 $dayArr = [];
 $monthArr = [];
 $historyArray = [];
-$monthlyData = ["honap" => [], "profit" => [], "manualProfit" => [], "robotProfit" => [], "atlagProfit" => [], "atlagManual" => [], "atlagRobot" => []];
+$monthlyData = ["honap" => [], 
+"profit" => [], "manualProfit" => [], "robotProfit" => [], 
+"atlagProfit" => [], "atlagManual" => [], "atlagRobot" => [],
+"refBalance" => [], // viszonyítási alap a százalékos profitok számításához
+"profitPercent" => [], "manualPercent" => [], "robotPercent" => [],
+"atlagProfitPerc" => [], "atlagManualPerc" => [], "atlagRobotPerc" =>[]];
 
 //napi adatok a balance charthoz
 $dayFilteredHistory = []; //egy bejegyzés a nap végi értékekkel, ha van (lyukacsos)
@@ -36,12 +41,11 @@ monthlyHistoryAggregator();
 monthlyAverages(12);
 
 /*
-ToDo: 
+ToDo:
 A havi profitokhoz és a havi átlag profitokhoz hozzáadni a %-os profitokat is!
-*/
+ */
 
 // BalanceChart adatainak csv-be írása
 writeBalanceChartData();
 
 print_r($monthlyData);
-

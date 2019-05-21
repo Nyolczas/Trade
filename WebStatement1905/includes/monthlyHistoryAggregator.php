@@ -17,6 +17,13 @@ function monthlyHistoryAggregator()
     $monthlyData['profit'][$monthCount] = $haviProfit;
     $monthlyData['manualProfit'][$monthCount] = $haviManual;
     $monthlyData['robotProfit'][$monthCount] = $haviRobot;
+    $monthlyData['refBalance'][$monthCount] = 0;
+    $monthlyData['profitPercent'][$monthCount] = 0;
+    $monthlyData['manualPercent'][$monthCount] = 0;
+    $monthlyData['robotPercent'][$monthCount] = 0;
+    $monthlyData['atlagProfitPerc'][$monthCount] = 0;
+    $monthlyData['atlagManualPerc'][$monthCount] = 0;
+    $monthlyData['atlagRobotPerc'][$monthCount] = 0;
 
     for ($i = 0; $i < count($dailyHistory['date']); $i++) {
         $actualDate = substr($dailyHistory['date'][$i], 3, 2) . " " . monthNames(substr($dailyHistory['date'][$i], 6, 2));
@@ -25,8 +32,16 @@ function monthlyHistoryAggregator()
             $monthCount++;
             $monthlyData['honap'][$monthCount] = $actualDate;
 
+            // refBalance számítás
+            if($monthCount == 1){
+                $monthlyData['refBalance'][$monthCount] = $dailyHistory['balance'][$i+30];
+            } else {
+                $monthlyData['refBalance'][$monthCount] = $dailyHistory['balance'][$i];
+            }
+
             $prevProfit += $haviProfit;
             $prevManual += $haviManual;
+
             $prevRobot += $haviRobot;
             $haviProfit = $dailyHistory['hozam'][$i] - $prevProfit;
             $haviManual = $dailyHistory['manual'][$i] - $prevManual;
