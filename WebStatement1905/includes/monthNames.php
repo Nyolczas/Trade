@@ -1,64 +1,112 @@
 <?php
 
-function monthNames($mn){
+function monthNames($mn, $isShort = true){
     switch($mn){
         case 1:
-        return "jan";
+        if($isShort){
+            return "jan";
+        }else{
+            return "Január";
+        }
         break;
     }
     switch($mn){
         case 2:
-        return "febr";
+        if($isShort){
+            return "febr";
+        }else{
+            return "Február";
+        }
         break;
     }
     switch($mn){
         case 3:
-        return "márc";
+        if($isShort){
+            return "márc";
+        }else{
+            return "Március";
+        }
         break;
     }
     switch($mn){
         case 4:
-        return "ápr";
+        if($isShort){
+            return "ápr";
+        }else{
+            return "Április";
+        }
         break;
     }
     switch($mn){
         case 5:
-        return "máj";
+        if($isShort){
+            return "máj";
+        }else{
+            return "Május";
+        }
         break;
     }
     switch($mn){
         case 6:
-        return "júni";
+        if($isShort){
+            return "júni";
+        }else{
+            return "Június";
+        }
         break;
     }
     switch($mn){
         case 7:
-        return "júli";
+        if($isShort){
+            return "júli";
+        }else{
+            return "Július";
+        }
         break;
     }
     switch($mn){
         case 8:
-        return "aug";
+        if($isShort){
+            return "aug";
+        }else{
+            return "Augusztus";
+        }
         break;
     }
     switch($mn){
         case 9:
-        return "szept";
+        if($isShort){
+            return "szept";
+        }else{
+            return "Szeptember";
+        }
         break;
     }
     switch($mn){
         case 10:
-        return "okt";
+        if($isShort){
+            return "okt";
+        }else{
+            return "Október";
+        }
         break;
     }
     switch($mn){
         case 11:
-        return "nov";
+        if($isShort){
+            return "nov";
+        }else{
+            return "November";
+        }
         break;
     }
     switch($mn){
         case 12:
-        return "dec";
+        if($isShort){
+            return "dec";
+        }else{
+            return "December";
+        }
         break;
     }
 }

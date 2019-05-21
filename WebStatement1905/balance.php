@@ -74,16 +74,28 @@
         <div class="single-card">
             <h2 class="card-name">Mindeddig</h2>
             <?php 
-            $lastData = count($dayFilteredHistory)-1;
-            singleCardRow("Full Depó", $dayFilteredHistory[$lastData]['fullDepo'],true); 
-            singleCardRow("Tőke", $dayFilteredHistory[$lastData]['balance'],true); 
-            singleCardRow("Össz Költség", $dayFilteredHistory[$lastData]['fee']); 
-            singleCardRow("Össz Hozam", $dayFilteredHistory[$lastData]['hozam']); 
-            singleCardRow("Manuál Hozam", $dayFilteredHistory[$lastData]['manual']); 
-            singleCardRow("Robot Hozam", $dayFilteredHistory[$lastData]['robot']); 
-            singleCardRow("Osztalék Hozam", $dayFilteredHistory[$lastData]['dividend']); 
+            $lastFilterData = count($dayFilteredHistory)-1;
+            singleCardRow("Full Depó", $dayFilteredHistory[$lastFilterData]['fullDepo'],true); 
+            singleCardRow("Tőke", $dayFilteredHistory[$lastFilterData]['balance'],true); 
+            singleCardRow("Össz Költség", $dayFilteredHistory[$lastFilterData]['fee']); 
+            singleCardRow("Össz Hozam", $dayFilteredHistory[$lastFilterData]['hozam']); 
+            singleCardRow("Manuál Hozam", $dayFilteredHistory[$lastFilterData]['manual']); 
+            singleCardRow("Robot Hozam", $dayFilteredHistory[$lastFilterData]['robot']); 
+            singleCardRow("Osztalék Hozam", $dayFilteredHistory[$lastFilterData]['dividend']); 
             ?>
         </div>
+        <?php 
+        //<!-- Havi card -->
+        $lastData = count($monthlyData['atlagProfit'])-1;
+        flipCard("Havi átlag",
+        $monthlyData['atlagProfit'][$lastData], $monthlyData['atlagProfitPerc'][$lastData],
+        $monthlyData['atlagManual'][$lastData], $monthlyData['atlagManualPerc'][$lastData],
+        $monthlyData['atlagRobot'][$lastData], $monthlyData['atlagRobotPerc'][$lastData],
+        monthNames(substr($dayFilteredHistory[$lastFilterData]['date'], 5, 2),false),
+        $monthlyData['profit'][$lastData], $monthlyData['profitPercent'][$lastData],
+        $monthlyData['manualProfit'][$lastData], $monthlyData['manualPercent'][$lastData],
+        $monthlyData['robotProfit'][$lastData], $monthlyData['robotPercent'][$lastData]);
+        ?>
 </body>
 
 </html>

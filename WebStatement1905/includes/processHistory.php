@@ -43,4 +43,4 @@ monthlyAverages(12);
 // BalanceChart adatainak csv-be írása
 writeBalanceChartData();
 
-print_r($dayFilteredHistory);
+print_r($monthlyData);
