@@ -1,3 +1,15 @@
+<?php
+    if (isset($_GET['sday'])) {
+        $startDay = $_GET['sday'];
+    }else {
+        $startDay='2019-03-25';
+    }
+    
+    include 'includes/processHistory.php';
+    include 'includes/cardCreator.php';
+    
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
         
@@ -9,16 +21,6 @@
     <title>Balance</title>
     <link rel="stylesheet" href="css/style.css">
 
-    <?php
-    if (isset($_GET['sday'])) {
-        $startDay = $_GET['sday'];
-    }else {
-        $startDay='2019-03-25';
-    }
-    
-    include 'includes/processHistory.php';
-    
-    ?>
     <!-- balance chart -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -65,10 +67,23 @@
 </head>
 
 <body>
-    <div class="balance-chart-wrapper">
+    <div class="chart-wrapper">
         <div id="balance-chart"></div>
-        
     </div>
+    <div class="stat-cards">
+        <div class="single-card">
+            <h2 class="card-name">Mindeddig</h2>
+            <?php 
+            $lastData = count($dayFilteredHistory)-1;
+            singleCardRow("Full Depó", $dayFilteredHistory[$lastData]['fullDepo'],true); 
+            singleCardRow("Tőke", $dayFilteredHistory[$lastData]['balance'],true); 
+            singleCardRow("Össz Költség", $dayFilteredHistory[$lastData]['fee']); 
+            singleCardRow("Össz Hozam", $dayFilteredHistory[$lastData]['hozam']); 
+            singleCardRow("Manuál Hozam", $dayFilteredHistory[$lastData]['manual']); 
+            singleCardRow("Robot Hozam", $dayFilteredHistory[$lastData]['robot']); 
+            singleCardRow("Osztalék Hozam", $dayFilteredHistory[$lastData]['dividend']); 
+            ?>
+        </div>
 </body>
 
 </html>

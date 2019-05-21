@@ -87,12 +87,10 @@ body {
 
 .card-name {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
     text-align: center;
     margin-bottom: 15px;
     font-size: 32px;
     color: var(--neutral-color);
-    /* text-transform: uppercase; */
 }
 
 .stat-row {

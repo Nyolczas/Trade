@@ -40,12 +40,7 @@ monthlyHistoryAggregator();
 // havi átlagok számítása (? havi átlagot)
 monthlyAverages(12);
 
-/*
-ToDo:
-A havi profitokhoz és a havi átlag profitokhoz hozzáadni a %-os profitokat is!
- */
-
 // BalanceChart adatainak csv-be írása
 writeBalanceChartData();
 
-print_r($monthlyData);
+print_r($dayFilteredHistory);
