@@ -86,15 +86,45 @@
         </div>
         <?php 
         //<!-- Havi card -->
-        $lastData = count($monthlyData['atlagProfit'])-1;
+        $lastMonthlyData = count($monthlyData['atlagProfit'])-1;
+
         flipCard("Havi átlag",
-        $monthlyData['atlagProfit'][$lastData], $monthlyData['atlagProfitPerc'][$lastData],
-        $monthlyData['atlagManual'][$lastData], $monthlyData['atlagManualPerc'][$lastData],
-        $monthlyData['atlagRobot'][$lastData], $monthlyData['atlagRobotPerc'][$lastData],
+        $monthlyData['atlagProfit'][$lastMonthlyData], $monthlyData['atlagProfitPerc'][$lastMonthlyData],
+        $monthlyData['atlagManual'][$lastMonthlyData], $monthlyData['atlagManualPerc'][$lastMonthlyData],
+        $monthlyData['atlagRobot'][$lastMonthlyData], $monthlyData['atlagRobotPerc'][$lastMonthlyData],
         monthNames(substr($dayFilteredHistory[$lastFilterData]['date'], 5, 2),false),
-        $monthlyData['profit'][$lastData], $monthlyData['profitPercent'][$lastData],
-        $monthlyData['manualProfit'][$lastData], $monthlyData['manualPercent'][$lastData],
-        $monthlyData['robotProfit'][$lastData], $monthlyData['robotPercent'][$lastData]);
+        $monthlyData['profit'][$lastMonthlyData], $monthlyData['profitPercent'][$lastMonthlyData],
+        $monthlyData['manualProfit'][$lastMonthlyData], $monthlyData['manualPercent'][$lastMonthlyData],
+        $monthlyData['robotProfit'][$lastMonthlyData], $monthlyData['robotPercent'][$lastMonthlyData]);
+
+        //<!-- Heti card -->
+        $lastData = count($weeklyData['atlagProfit'])-1;
+
+        flipCard("Heti átlag",
+        $weeklyData['atlagProfit'][$lastData], $weeklyData['atlagProfitPerc'][$lastData],
+        $weeklyData['atlagManual'][$lastData], $weeklyData['atlagManualPerc'][$lastData],
+        $weeklyData['atlagRobot'][$lastData], $weeklyData['atlagRobotPerc'][$lastData],
+        $weeklyData['het'][$lastData].". hét",
+        $weeklyData['profit'][$lastData], $weeklyData['profitPercent'][$lastData],
+        $weeklyData['manualProfit'][$lastData], $weeklyData['manualPercent'][$lastData],
+        $weeklyData['robotProfit'][$lastData], $weeklyData['robotPercent'][$lastData]);
+        
+        //<!-- Napi card -->
+        $days = count($dailyHistory['date'])-5;
+        $lastData = $days-1;
+        $lastDay = str_replace(".","-",$dailyHistory['date'][$lastData]);
+        $maiProfit = $dailyHistory['hozam'][$lastData] - $dailyHistory['hozam'][$lastData-1];
+        $maiManualProfit = $dailyHistory['manual'][$lastData] - $dailyHistory['manual'][$lastData-1];
+        $maiRobotProfit = $dailyHistory['robot'][$lastData] - $dailyHistory['robot'][$lastData-1];
+
+        flipCard("Napi átlag",
+        $monthlyData['atlagProfit'][$lastMonthlyData] / $days, $monthlyData['atlagProfitPerc'][$lastMonthlyData] / $days,
+        $monthlyData['atlagManual'][$lastMonthlyData] / $days, $monthlyData['atlagManualPerc'][$lastMonthlyData] / $days,
+        $monthlyData['atlagRobot'][$lastMonthlyData] / $days, $monthlyData['atlagRobotPerc'][$lastMonthlyData] / $days,
+        weekdayNames(formatMyStringDate($lastDay, "l")),//$lastDay, //date("l"),
+        $maiProfit, $maiProfit / ($dailyHistory['balance'][$lastData - 1] / 100),
+        $maiManualProfit, $maiManualProfit / ($dailyHistory['balance'][$lastData - 1] / 100),
+        $maiRobotProfit, $maiRobotProfit / ($dailyHistory['balance'][$lastData - 1] / 100)) ;
         ?>
 </body>
 
