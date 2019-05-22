@@ -8,9 +8,12 @@ require 'monthlyHistoryAggregator.php';
 require 'monthlyAverages.php';
 require 'weeklyHistoryAggregator.php';
 require 'weeklyAverages.php';
-require 'writeBalanceChartData.php';
+
 require 'monthNames.php';
 require 'weekdayNames.php';
+
+require 'writeBalanceChartData.php';
+require 'writeMonthlyChartData.php';
 
 $dayArr = [];
 $monthArr = [];
@@ -57,7 +60,8 @@ weeklyHistoryAggregator();
 // heti átlagok számítása (? heti átlagot)
 weeklyAverages(12);
 
-// BalanceChart adatainak csv-be írása
+// Chartok adatainak csv-be írása
 writeBalanceChartData();
+writeMonthlyChartData();
 
-print_r($dailyHistory);
+print_r($monthlyData);

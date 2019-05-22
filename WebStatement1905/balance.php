@@ -68,7 +68,7 @@
 
 <body>
     <div class="chart-wrapper">
-        <div id="balance-chart"></div>
+        <div id="balance-chart" class="chart"></div>
     </div>
     <div class="stat-cards">
         <div class="single-card">

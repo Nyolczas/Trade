@@ -3,25 +3,25 @@ function weekdayNames($weekday)
 {
     switch ($weekday) {
         case "Monday":
-            return "hétfő";
+            return "Hétfő";
             break;
         case "Tuesday":
-            return "kedd";
+            return "Kedd";
             break;
         case "Wednesday":
-            return "szerda";
+            return "Szerda";
             break;
         case "Thursday":
-            return "csütörtök";
+            return "Csütörtök";
             break;
         case "Friday":
-            return "péntek";
+            return "Péntek";
             break;
         case "Saturday":
-            return "szombat";
+            return "Szombat";
             break;
         case "Sunday":
-            return "vasárnap";
+            return "Vasárnap";
             break;
     }
 }
