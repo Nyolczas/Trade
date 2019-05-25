@@ -98,7 +98,7 @@
         $monthlyData['robotProfit'][$lastMonthlyData], $monthlyData['robotPercent'][$lastMonthlyData]);
 
         //<!-- Heti card -->
-        $lastData = count($weeklyData['atlagProfit'])-1;
+        $lastData = count($weeklyData['atlagProfit'])-2;
 
         flipCard("Heti átlag",
         $weeklyData['atlagProfit'][$lastData], $weeklyData['atlagProfitPerc'][$lastData],
