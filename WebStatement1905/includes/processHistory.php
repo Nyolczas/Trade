@@ -37,7 +37,10 @@ $dayFilteredHistory = []; //egy bejegyzés a nap végi értékekkel, ha van (lyu
 $dailyHistory = []; //szétterítve a teljes időszakra
 
 // csv adat beolvasása a $historyArray tömbbe
-readMt4Data('mt4data/FullHistory_27019217.csv');
+
+$ip = dirname(__FILE__);
+print_r($ip);
+readMt4Data("C:/Users/User/Documents/Tozsde/MT4ek/Admiral2/MQL4/Files/FullHistory_27019217.csv");
 
 // napi vizsgálat idő intervallumának betöltése a dayArr tömbbe
 dayRange(substr($historyArray[1][1], 0, 10));
@@ -64,4 +67,4 @@ weeklyAverages(12);
 writeBalanceChartData();
 writeMonthlyChartData();
 
-print_r($monthlyData);
+//print_r($monthlyData);

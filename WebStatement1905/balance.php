@@ -12,7 +12,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-        
+
 <head>
 
     <meta charset="UTF-8">
@@ -31,37 +31,76 @@
             'packages': ['corechart']
         });
         google.charts.setOnLoadCallback(drawChart);
+        google.charts.setOnLoadCallback(drawMonthlyChart);
 
         function drawChart() {
-             // grab the CSV
-             $.get("csv/balanceChartData.csv", function (csvString) {
+            // grab the CSV
+            $.get("csv/balanceChartData.csv", function (csvString) {
                 // transform the CSV string into a 2-dimensional array
                 var arrayData = $.csv.toArrays(csvString, {
                     onParseValue: $.csv.hooks.castToScalar
                 });
 
-            var data = new google.visualization.arrayToDataTable(arrayData);
+                var data = new google.visualization.arrayToDataTable(arrayData);
 
-            // this view can select a subset of the data at a time
-            var view = new google.visualization.DataView(data);
+                // this view can select a subset of the data at a time
+                var view = new google.visualization.DataView(data);
                 view.setColumns([0, 1]);
 
-            var options = {
-                seriesType: 'line',
-                series: {
-                    0: {
-                        type: 'area'
+                var options = {
+                    seriesType: 'line',
+                    series: {
+                        0: {
+                            type: 'area'
+                        },
+                        1: {
+                            type: 'area'
+                        },
                     },
-                    1: {
-                        type: 'area'
-                    },
-                },
-                colors: ['grey', 'forestGreen', 'black', 'crimson', 'royalBlue', 'rgb(80,40,0)', 'purple']
-            };
+                    colors: ['grey', 'forestGreen', 'black', 'crimson', 'royalBlue', 'rgb(80,40,0)',
+                        'purple'
+                    ]
+                };
 
-            var chart = new google.visualization.ComboChart(document.getElementById('balance-chart'));
-            chart.draw(data, options);
-        });
+                var chart = new google.visualization.ComboChart(document.getElementById('balance-chart'));
+                chart.draw(data, options);
+            });
+        }
+
+        function drawMonthlyChart() {
+            // grab the CSV
+            $.get("csv/MonthlyChartData.csv", function (csvString) {
+                // transform the CSV string into a 2-dimensional array
+                var arrayData = $.csv.toArrays(csvString, {
+                    onParseValue: $.csv.hooks.castToScalar
+                });
+
+                var data = new google.visualization.arrayToDataTable(arrayData);
+
+                // this view can select a subset of the data at a time
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0, 1]);
+
+                var options = {
+                    seriesType: 'bars',
+                    series: {
+                        3: {
+                            type: 'line'
+                        },
+                        4: {
+                            type: 'line'
+                        },
+                        5: {
+                            type: 'line'
+                        },
+                    },
+                    
+                    colors: ['#a5c9a5', '#d8bac0', '#b0b9d4','forestGreen', 'crimson', 'royalBlue']
+                };
+
+                var chart = new google.visualization.ComboChart(document.getElementById('monthly-chart'));
+                chart.draw(data, options);
+            });
         }
     </script>
 </head>
@@ -126,6 +165,10 @@
         $maiManualProfit, $maiManualProfit / ($dailyHistory['balance'][$lastData - 1] / 100),
         $maiRobotProfit, $maiRobotProfit / ($dailyHistory['balance'][$lastData - 1] / 100)) ;
         ?>
+
+        <div class="chart-wrapper">
+            <div id="monthly-chart" class="chart"></div>
+        </div>
 </body>
 
 </html>
