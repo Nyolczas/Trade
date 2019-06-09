@@ -25,6 +25,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.3/jquery.csv.min.js"></script>
     <script type="text/javascript">
         google.charts.load('current', {
@@ -32,6 +33,15 @@
         });
         google.charts.setOnLoadCallback(drawChart);
         google.charts.setOnLoadCallback(drawMonthlyChart);
+
+        //balance chart colors
+        var balanceChartColors = [];
+
+        $.getJSON('csv/balanceChartColors.json', function(data) {
+            $.each(data.colors, function(i, c) {
+                balanceChartColors.push(c.color);
+            });
+        });
 
         function drawChart() {
             // grab the CSV
@@ -57,9 +67,7 @@
                             type: 'area'
                         },
                     },
-                    colors: ['grey', 'forestGreen', 'black', 'crimson', 'royalBlue', 'rgb(80,40,0)',
-                        'purple'
-                    ]
+                    colors: balanceChartColors
                 };
 
                 var chart = new google.visualization.ComboChart(document.getElementById('balance-chart'));
