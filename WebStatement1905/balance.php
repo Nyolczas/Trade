@@ -37,7 +37,7 @@
         //balance chart colors
         var balanceChartColors = [];
 
-        $.getJSON('csv/balanceChartColors.json', function(data) {
+        $.getJSON('data/balanceChartColors.json', function(data) {
             $.each(data.colors, function(i, c) {
                 balanceChartColors.push(c.color);
             });

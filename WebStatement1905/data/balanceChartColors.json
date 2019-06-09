@@ -1,0 +1,25 @@
+{
+    "colors" : [
+        {
+            "color": "rgb(0,50,50)"
+        },
+        {
+            "color": "forestGreen"
+        },
+        {
+            "color": "black"
+        },
+        {
+            "color": "crimson"
+        },
+        {
+            "color": "royalBlue"
+        },
+        {
+            "color": "rgb(80,40,0)"
+        },
+        {
+            "color": "purple"
+        }
+    ]
+}
