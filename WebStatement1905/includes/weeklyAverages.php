@@ -39,5 +39,7 @@ function weeklyAverages($weeks)
         if ($range > 0) {$weeklyData['atlagManual'][$i] = $weeklyData['atlagManual'][$i] / $range;}
         if ($range > 0) {$weeklyData['atlagRobot'][$i] = $weeklyData['atlagRobot'][$i] / $range;}
         if ($range > 0) {$weeklyData['atlagProfitPerc'][$i] = $weeklyData['atlagProfitPerc'][$i] / $range;}
+        if ($range > 0) {$weeklyData['atlagManualPerc'][$i] = $weeklyData['atlagManualPerc'][$i] / $range;}
+        if ($range > 0) {$weeklyData['atlagRobotPerc'][$i] = $weeklyData['atlagRobotPerc'][$i] / $range;}
     }
 }

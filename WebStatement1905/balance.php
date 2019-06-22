@@ -31,86 +31,10 @@
         google.charts.load('current', {
             'packages': ['corechart']
         });
-        google.charts.setOnLoadCallback(drawChart);
-        google.charts.setOnLoadCallback(drawMonthlyChart);
-
-        //balance chart colors
-        var balanceChartColors = [];
-
-        $.getJSON('data/balanceChartColors.json', function(data) {
-            $.each(data.colors, function(i, c) {
-                balanceChartColors.push(c.color);
-            });
-        });
-
-        function drawChart() {
-            // grab the CSV
-            $.get("csv/balanceChartData.csv", function (csvString) {
-                // transform the CSV string into a 2-dimensional array
-                var arrayData = $.csv.toArrays(csvString, {
-                    onParseValue: $.csv.hooks.castToScalar
-                });
-
-                var data = new google.visualization.arrayToDataTable(arrayData);
-
-                // this view can select a subset of the data at a time
-                var view = new google.visualization.DataView(data);
-                view.setColumns([0, 1]);
-
-                var options = {
-                    seriesType: 'line',
-                    series: {
-                        0: {
-                            type: 'area'
-                        },
-                        1: {
-                            type: 'area'
-                        },
-                    },
-                    colors: balanceChartColors
-                };
-
-                var chart = new google.visualization.ComboChart(document.getElementById('balance-chart'));
-                chart.draw(data, options);
-            });
-        }
-
-        function drawMonthlyChart() {
-            // grab the CSV
-            $.get("csv/MonthlyChartData.csv", function (csvString) {
-                // transform the CSV string into a 2-dimensional array
-                var arrayData = $.csv.toArrays(csvString, {
-                    onParseValue: $.csv.hooks.castToScalar
-                });
-
-                var data = new google.visualization.arrayToDataTable(arrayData);
-
-                // this view can select a subset of the data at a time
-                var view = new google.visualization.DataView(data);
-                view.setColumns([0, 1]);
-
-                var options = {
-                    seriesType: 'bars',
-                    series: {
-                        3: {
-                            type: 'line'
-                        },
-                        4: {
-                            type: 'line'
-                        },
-                        5: {
-                            type: 'line'
-                        },
-                    },
-                    
-                    colors: ['#a5c9a5', '#d8bac0', '#b0b9d4','forestGreen', 'crimson', 'royalBlue']
-                };
-
-                var chart = new google.visualization.ComboChart(document.getElementById('monthly-chart'));
-                chart.draw(data, options);
-            });
-        }
     </script>
+    <script src="js/drawBalanceChart.js"></script>
+    <script src="js/drawMonthlyChart.js"></script>
+    <script src="js/drawWeeklyChart.js"></script>
 </head>
 
 <body>
@@ -145,7 +69,7 @@
         $monthlyData['robotProfit'][$lastMonthlyData], $monthlyData['robotPercent'][$lastMonthlyData]);
 
         //<!-- Heti card -->
-        $lastData = count($weeklyData['atlagProfit'])-2;
+        $lastData = date('W') - 12;
 
         flipCard("Heti átlag",
         $weeklyData['atlagProfit'][$lastData], $weeklyData['atlagProfitPerc'][$lastData],
@@ -158,7 +82,7 @@
         
         //<!-- Napi card -->
         $days = count($dailyHistory['date'])-5;
-        $lastData = $days-1;
+        $lastData = $days;
         $lastDay = str_replace(".","-",$dailyHistory['date'][$lastData]);
         $maiProfit = $dailyHistory['hozam'][$lastData] - $dailyHistory['hozam'][$lastData-1];
         $maiManualProfit = $dailyHistory['manual'][$lastData] - $dailyHistory['manual'][$lastData-1];
@@ -173,9 +97,13 @@
         $maiManualProfit, $maiManualProfit / ($dailyHistory['balance'][$lastData - 1] / 100),
         $maiRobotProfit, $maiRobotProfit / ($dailyHistory['balance'][$lastData - 1] / 100)) ;
         ?>
-
+        </div>
+        <h2>Havi eredmények</h2>
         <div class="chart-wrapper">
             <div id="monthly-chart" class="chart"></div>
+        </div>
+        <div class="chart-wrapper">
+            <div id="weekly-chart" class="chart"></div>
         </div>
 </body>
 

@@ -13,7 +13,7 @@ require 'monthNames.php';
 require 'weekdayNames.php';
 
 require 'writeBalanceChartData.php';
-require 'writeMonthlyChartData.php';
+require 'writeBarChartData.php';
 
 $dayArr = [];
 $monthArr = [];
@@ -38,9 +38,7 @@ $dailyHistory = []; //szétterítve a teljes időszakra
 
 // csv adat beolvasása a $historyArray tömbbe
 
-$ip = dirname(__FILE__);
-print_r($ip);
-readMt4Data("C:/Users/User/Documents/Tozsde/MT4ek/Admiral2/MQL4/Files/FullHistory_27019217.csv");
+readMt4Data("mt4data/FullHistory_27019217.csv");
 
 // napi vizsgálat idő intervallumának betöltése a dayArr tömbbe
 dayRange(substr($historyArray[1][1], 0, 10));
@@ -54,7 +52,7 @@ dailyHistoryAggregator();
 // havi adatok számolása ($monthlyData) a napi adatokból ($dailyHistory) csak a havi profitok
 monthlyHistoryAggregator();
 
-// havi átlagok számítása (? havi átlagot)
+// havi átlagok számítása (? havi átlagot) // és százalékok számítása
 monthlyAverages(12);
 
 // heti adatok számolása ($weeklyData) a napi adatokból ($dailyHistory) csak a heti profitok
@@ -65,6 +63,7 @@ weeklyAverages(12);
 
 // Chartok adatainak csv-be írása
 writeBalanceChartData();
-writeMonthlyChartData();
+writeBarChartData($monthlyData, 'csv/monthlyChartData.csv', 'honap');
+writeBarChartData($weeklyData, 'csv/weeklyChartData.csv', 'het');
 
 //print_r($monthlyData);
