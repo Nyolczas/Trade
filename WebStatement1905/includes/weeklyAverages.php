@@ -5,9 +5,15 @@ function weeklyAverages($weeks)
 
     // százalékok számítása
     for ($i = 1; $i < count($weeklyData['het']); $i++) {
-        $weeklyData['profitPercent'][$i] = $weeklyData['profit'][$i] / ($weeklyData['refBalance'][$i] / 100);
-        $weeklyData['manualPercent'][$i] = $weeklyData['manualProfit'][$i] / ($weeklyData['refBalance'][$i] / 100);
-        $weeklyData['robotPercent'][$i] = $weeklyData['robotProfit'][$i] / ($weeklyData['refBalance'][$i] / 100);
+        if($weeklyData['refBalance'][$i] > 0) {
+            $weeklyData['profitPercent'][$i] = $weeklyData['profit'][$i] / ($weeklyData['refBalance'][$i] / 100);
+            $weeklyData['manualPercent'][$i] = $weeklyData['manualProfit'][$i] / ($weeklyData['refBalance'][$i] / 100);
+            $weeklyData['robotPercent'][$i] = $weeklyData['robotProfit'][$i] / ($weeklyData['refBalance'][$i] / 100);
+        } else {
+            $weeklyData['profitPercent'][$i] = 0;
+            $weeklyData['manualPercent'][$i] = 0;
+            $weeklyData['robotPercent'][$i] = 0;
+        }
     }
 
     // --- átlagok számítása

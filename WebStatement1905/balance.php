@@ -1,9 +1,5 @@
 <?php
-    if (isset($_GET['sday'])) {
-        $startDay = $_GET['sday'];
-    }else {
-        $startDay='2019-03-25';
-    }
+
     
     include 'includes/processHistory.php';
     include 'includes/cardCreator.php';
@@ -19,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Balance</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- balance chart -->
@@ -41,9 +38,9 @@
     <div class="chart-wrapper">
         <div id="balance-chart" class="chart"></div>
     </div>
-    <div class="stat-cards">
+    
         <div class="single-card">
-            <h2 class="card-name">Mindeddig</h2>
+            <h2 class="card-name text-secondary text-center">Mindeddig</h2>
             <?php 
             $lastFilterData = count($dayFilteredHistory)-1;
             singleCardRow("Full Depó", $dayFilteredHistory[$lastFilterData]['fullDepo'],true); 
@@ -55,6 +52,7 @@
             singleCardRow("Osztalék Hozam", $dayFilteredHistory[$lastFilterData]['dividend']); 
             ?>
         </div>
+        <div class="stat-cards">
         <?php 
         //<!-- Havi card -->
         $lastMonthlyData = count($monthlyData['atlagProfit'])-1;
@@ -98,11 +96,21 @@
         $maiRobotProfit, $maiRobotProfit / ($dailyHistory['balance'][$lastData - 1] / 100)) ;
         ?>
         </div>
-        <h2>Havi eredmények</h2>
         <div class="chart-wrapper">
+            <div class="jumbotron">
+                <div class="container text-center">
+                    <h2 >Havi eredmények</h2>
+                </div>
+            </div>
             <div id="monthly-chart" class="chart"></div>
         </div>
+
         <div class="chart-wrapper">
+            <div class="jumbotron">
+                <div class="container text-center">
+                    <h2 >Heti eredmények</h2>
+                </div>
+            </div>
             <div id="weekly-chart" class="chart"></div>
         </div>
 </body>

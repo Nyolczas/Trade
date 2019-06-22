@@ -5,9 +5,15 @@ function monthlyAverages($months)
 
     // százalékok számítása
     for ($i = 1; $i < count($monthlyData['honap']); $i++) {
-        $monthlyData['profitPercent'][$i] = $monthlyData['profit'][$i] / ($monthlyData['refBalance'][$i] / 100);
-        $monthlyData['manualPercent'][$i] = $monthlyData['manualProfit'][$i] / ($monthlyData['refBalance'][$i] / 100);
-        $monthlyData['robotPercent'][$i] = $monthlyData['robotProfit'][$i] / ($monthlyData['refBalance'][$i] / 100);
+        if($monthlyData['refBalance'][$i] > 0) {
+            $monthlyData['profitPercent'][$i] = $monthlyData['profit'][$i] / ($monthlyData['refBalance'][$i] / 100);
+            $monthlyData['manualPercent'][$i] = $monthlyData['manualProfit'][$i] / ($monthlyData['refBalance'][$i] / 100);
+            $monthlyData['robotPercent'][$i] = $monthlyData['robotProfit'][$i] / ($monthlyData['refBalance'][$i] / 100);
+        } else {
+            $monthlyData['profitPercent'][$i] = 0;
+            $monthlyData['manualPercent'][$i] = 0;
+            $monthlyData['robotPercent'][$i] = 0;
+        }
     }
     
     // --- átlagok számítása

@@ -37,8 +37,11 @@ $dayFilteredHistory = []; //egy bejegyzés a nap végi értékekkel, ha van (lyu
 $dailyHistory = []; //szétterítve a teljes időszakra
 
 // csv adat beolvasása a $historyArray tömbbe
-
-readMt4Data("mt4data/FullHistory_27019217.csv");
+$startDay='2019-03-25';
+//readMt4Data("mt4data/FullHistory_23129454.csv"); // admiral demo
+readMt4Data("mt4data/FullHistory_27019217.csv"); // admiral live
+//readMt4Data("mt4data/FullHistory_9107935.csv"); // xm demo
+//readMt4Data("mt4data/FullHistory_19061180.csv"); // xm live
 
 // napi vizsgálat idő intervallumának betöltése a dayArr tömbbe
 dayRange(substr($historyArray[1][1], 0, 10));
@@ -63,7 +66,7 @@ weeklyAverages(12);
 
 // Chartok adatainak csv-be írása
 writeBalanceChartData();
-writeBarChartData($monthlyData, 'csv/monthlyChartData.csv', 'honap');
-writeBarChartData($weeklyData, 'csv/weeklyChartData.csv', 'het');
+writeBarChartData($monthlyData, 'csv/monthlyChartData.csv', 'honap', 12);
+writeBarChartData($weeklyData, 'csv/weeklyChartData.csv', 'het', 12);
 
 //print_r($monthlyData);
