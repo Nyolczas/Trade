@@ -35,6 +35,7 @@
 </head>
 
 <body>
+    í<?php include 'includes/navbar.php'; ?>
     <div class="chart-wrapper">
         <div id="balance-chart" class="chart"></div>
     </div>
